@@ -41,47 +41,22 @@
                         <input type="password" class="form-control input" id="password" placeholder="Digite sua senha">
                         <i class="bi bi-eye eye" id="btn-password" onclick="mostrarSenha()"></i>
                     </div>
-                    <div class="row mb-3">
+                    <div class="row mb-3 mt-3">
                         <div class="col">
                             <div class="form-check">
-                                <input type="checkbox" name="remember" id="remember" class="form-check-input">
-                                <label for="remember" class="form-check-label remember">Manter conectado</label>
+                                <input type="checkbox" name="manterConectado" id="manterConectado" class="form-check-input">
+                                <label for="remember" class="form-check-label">Manter conectado</label>
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <a href="#" class="btn btn-primary w-100 button_a" onclick="logar()">Entrar</a>
-                        </div>
+                    <div class="row justify-content-center align-items-center">
+                        <input class="btn-primary button_a" onclick="logar()" value="Entrar">
                     </div>
+
                 </form>
             </div>
         </div>
     </div>
-
-
-
-
-<div class="container">
-    <div class="row">
-        <div class="col mt-5">
-
-
-<?php
-    include("config.php");
-    switch(@$_REQUEST["page"]){case "editar":
-        include ("editar.php");
-        break;
-
-    }
-?>
-
-        </div>
-    </div>
-</div>
-
-
-
 
     <script>
         function mostrarSenha(){
@@ -97,18 +72,46 @@
             }
         }
         
-        function logar(){
-        
+          function logar() {
             var login = document.getElementById('usuario').value;
             var senha = document.getElementById('password').value;
+            var manterConectado = document.getElementById('manterConectado').checked;
         
-            if(login == "admin" && senha == "admin"){
-                alert('Login efetuado com Sucesso!');
-                location.href = "inicio.html";
-            }else{
-                alert('Usuário e/ou senha incorretos, tente novamente!')
+            if (login == "admin" && senha == "admin") {
+              sessionStorage.setItem("loggedIn", "true");
+        
+              if (manterConectado) {
+                localStorage.setItem("loggedIn", "true");
+              } else {
+                localStorage.removeItem("loggedIn");
+              }
+              
+              window.location.href = "inicio.html";
+            } else {
+              alert('Usuário e/ou senha incorretos, tente novamente!');
             }
-        }
+          }
+        
+          function verificarAcesso() {
+            var loggedIn = sessionStorage.getItem("loggedIn");
+        
+            // Verifica se o usuário não está logado no sessionStorage
+            if (loggedIn !== "true") {
+              loggedIn = localStorage.getItem("loggedIn");
+            }
+        
+            // Verifica se o usuário não está logado no localStorage
+            if (loggedIn !== "true") {
+              window.location.href = "index.php";
+            }
+          }
+        
+          function logout() {
+            sessionStorage.removeItem("loggedIn");
+            localStorage.removeItem("loggedIn");
+            window.location.href = "index.php";
+          }
     </script>
+    
 </body>
 </html>
