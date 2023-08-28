@@ -1,9 +1,9 @@
 <?php
 // Conecta-se ao banco de dados usando as credenciais fornecidas
-$dbhost = "localhost";
+$dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "colegioa_chromeuser";
 $dbpass = "mateus@2023";
-$dbname = "colegioa_controlechrome"; // Nome do banco de dados
+$dbname = "colegioacontrolechrome"; // Nome do banco de dados
 
 // Cria uma variável para armazenar a conexão
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
