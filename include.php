@@ -1,10 +1,10 @@
 
 <?php
 // Conecta-se ao banco de dados usando as credenciais fornecidas
-$dbhost = "localhost";
+$dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "colegioa_chromeuser";
 $dbpass = "mateus@2023";
-$db = "colegioa_controlechrome";
+$db = "colegioacontrolechrome";
 
 
 // Cria uma vari���vel para armazenar a conex���o
