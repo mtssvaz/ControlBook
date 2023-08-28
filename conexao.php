@@ -1,8 +1,8 @@
 <?php
- $dbhost = "localhost";
+ $dbhost = "chromelocalhost.mysql.database.azure.com";
  $dbuser = "colegioa_chromeuser";
  $dbpass = "mateus@2023";
- $db = "colegioa_controlechrome";
+ $db = "colegioacontrolechrome";
  
  $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
