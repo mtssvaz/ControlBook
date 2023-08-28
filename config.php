@@ -1,8 +1,8 @@
 <?php
-define ('host',  'localhost');
+define ('host',  'chromelocalhost.mysql.database.azure.com');
 define ('dbuser',  'colegioa_chromeuser');
 define ('dbpass',  'mateus@2023');
-define ('db',  'colegioa_controlechrome');
+define ('db',  'colegioacontrolechrome');
 
  $conn = new mysqli ($dbhost, $dbuser, $dbpass, $db);
  
