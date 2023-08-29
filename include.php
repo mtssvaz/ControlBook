@@ -1,40 +1,38 @@
 
 <?php
-// Conecta-se ao banco de dados usando as credenciais fornecidas
-$dbhost = "chromelocalhost.mysql.database.azure.com";
-$dbuser = "colegioa_chromeuser";
-$dbpass = "mateus@2023";
-$db = "colegioacontrolechrome";
+// Conexão ao banco de dados usando as credenciais fornecidas
+ $dbhost = "chromelocalhost.mysql.database.azure.com";
+ $dbuser = "colegioa_chromeuser";
+ $dbpass = "mateus@2023";
+ $db = "colegioacontrolechrome";
 
-
-// Cria uma vari���vel para armazenar a conex���o
+// Cria uma conexão com o banco de dados
 $conn = mysqli_connect($dbhost, $dbuser, $dbpass, $db);
 
-// Verifica se a conex���o foi bem sucedida
+// Verifica se a conexão foi bem-sucedida
 if (!$conn) {
-  die("Falha na conex���o: " . mysqli_connect_error());
+    die("Falha na conexão: " . mysqli_connect_error());
 }
 
-// Obt���m os dados do formul���rio
-$aluno = $_POST['aluno'];
-$responsavel = $_POST['responsavel'];
-$MATRICULA = $_POST['MATRICULA'];
-$n_de_serie = $_POST['n_de_serie'];
-$dt_entrega = $_POST['dt_entrega'];
-$conservacao = $_POST['conservacao'];
+// Obtém os dados do formulário e previne ataques de injeção de SQL
+$aluno = mysqli_real_escape_string($conn, $_POST['aluno']);
+$responsavel = mysqli_real_escape_string($conn, $_POST['responsavel']);
+$MATRICULA = mysqli_real_escape_string($conn, $_POST['MATRICULA']);
+$n_de_serie = mysqli_real_escape_string($conn, $_POST['n_de_serie']);
+$dt_entrega = mysqli_real_escape_string($conn, $_POST['dt_entrega']);
+$conservacao = mysqli_real_escape_string($conn, $_POST['conservacao']);
 
-// Prepara uma consulta SQL para inserir os dados na tabela
+// Prepara uma consulta SQL segura para inserir os dados na tabela
 $sql = "INSERT INTO CADASTRO (aluno, responsavel, MATRICULA, n_de_serie, dt_entrega, conservacao) VALUES ('$aluno', '$responsavel', '$MATRICULA', '$n_de_serie', '$dt_entrega', '$conservacao')";
 
-// Executa a consulta e verifica se foi bem sucedida
+// Executa a consulta e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
-  print "<script>alert('Cadastro realizado com sucesso!');</script>";
-  print "<script>location.href='buscardozero.php';</script>";
+    echo "<script>alert('Cadastro realizado com sucesso!');</script>";
+    echo "<script>location.href='buscardozero.php';</script>";
 } else {
-  print "Erro ao cadastrar: " . mysqli_error($conn);
+    echo "Erro ao cadastrar: " . mysqli_error($conn);
 }
 
-// Fecha a conex���o
+// Fecha a conexão
 mysqli_close($conn);
 ?>
-
