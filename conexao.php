@@ -10,7 +10,7 @@ $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "https://chrome.vault.azure.net/certificates/Controlbook/8020b26d86554f648c977c6d1cd978ec", NULL, NULL);
 
 // Establish the connection
-mysqli_real_connect($conn, $dbhost, $dbuser, $dbpass, $db, 3306, NULL, MYSQLI_CLIENT_SSL);
+mysqli_real_connect($conn, 'chromelocalhost.mysql.database.azure.com', 'chromelocalhost.mysql.database.azure.com', 'colegioa_chromeuser', 'mateus@2023', 'colegioacontrolechrome', 3306, NULL, MYSQLI_CLIENT_SSL);
 
 //If connection failed, show the error
 if (mysqli_connect_errno())
