@@ -7,7 +7,7 @@
 //Initializes MySQLi
 $conn = mysqli_init();
 
-mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootG2.crt.pem", NULL, NULL);
+mysqli_ssl_set($conn,NULL,NULL, "https://chrome.vault.azure.net/certificates/Controlbook/8020b26d86554f648c977c6d1cd978ec", NULL, NULL);
 
 // Establish the connection
 mysqli_real_connect($conn, $dbhost, $dbuser, $dbpass, $db, 3306, NULL, MYSQLI_CLIENT_SSL);
