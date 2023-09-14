@@ -344,10 +344,10 @@
 						$ID = $receber_cadastros['ID'];
 						$aluno = $receber_cadastros['aluno'];
 						$responsavel = $receber_cadastros ['responsavel'];
-						$contrato = $receber_cadastros['contrato'];
+						$conservacao = $receber_cadastros['conservacao'];
 						$dt_entrega = $receber_cadastros['dt_entrega'];
-						$matricula = $receber_cadastros['matricula'];
-						$serial = $receber_cadastros['serial'];
+						MATRICULA = $receber_cadastros['MATRICULA'];
+						n_de_serie = $receber_cadastros['n_de_serie'];
 						
 					?>
 						
@@ -355,10 +355,10 @@
 						<td scope="row"> <?php echo $ $ID; ?></td>
 						<td>             <?php echo $aluno; ?></td>
 						<td>             <?php echo $responsavel; ?></td>
-						<td>             <?php echo $contrato; ?></td>
+						<td>             <?php echo $conservacao; ?></td>
 						<td>             <?php echo $dt_entrega; ?></td>
-						<td>             <?php echo $matricula; ?></td>
-						<td>             <?php echo $serial; ?></td>
+						<td>             <?php echo $MATRICULA; ?></td>
+						<td>             <?php echo $n_de_serie; ?></td>
 					</tr>
 					<?php }; ?>
     		            </table>
