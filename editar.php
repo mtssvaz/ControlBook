@@ -1,17 +1,23 @@
 <?php
-// Conecta-se ao banco de dados usando as credenciais fornecidas
 $dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "chromelocalhost";
 $dbpass = "mateus@2023";
-$dbname = "colegioacontrolechrome"; // Nome do banco de dados
+$db = "colegiocontrolechrome";
 
-// Cria uma variável para armazenar a conexão
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+// Inicializa o MySQLi
+$conn = mysqli_init();
 
-// Verifica se a conexão foi bem sucedida
-if (!$conn) {
-  die("Falha na conexão: " . mysqli_connect_error());
-}
+// Estabelece a conexão
+mysqli_real_connect(
+    $conn,
+    $dbhost,
+    $dbuser,
+    $dbpass,
+    $db,
+    3306,
+    NULL,
+    0 // Sem SSL
+);
 
 // Obtém os dados do formulário
 $ID = $_POST['ID'];
