@@ -1,7 +1,7 @@
 
 <?php
 $dbhost = "chromelocalhost.mysql.database.azure.com";
-$dbuser = "colegioa_chromeuser";
+$dbuser = "chromelocalhost";
 $dbpass = "mateus@2023";
 $db = "colegiocontrolechrome";
 
