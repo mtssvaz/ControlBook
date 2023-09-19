@@ -1,7 +1,7 @@
 <?php
 // Conecta-se ao banco de dados usando as credenciais fornecidas
 $dbhost = "chromelocalhost.mysql.database.azure.com";
-$dbuser = "colegioa_chromeuser";
+$dbuser = "chromelocalhost";
 $dbpass = "mateus@2023";
 $dbname = "colegioacontrolechrome"; // Nome do banco de dados
 
