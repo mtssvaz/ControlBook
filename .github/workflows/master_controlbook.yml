@@ -56,5 +56,5 @@ jobs:
         with:
           app-name: 'controlbook'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_12DBE83767794FF6BA399F4A65485DC8 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_4E246B7B309D49B5B898AB6C0607150D }}
           package: .
