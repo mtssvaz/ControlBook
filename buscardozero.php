@@ -29,7 +29,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 	
 	<link rel="stylesheet" href="/styles/buscar.css" />
 
-	<title>Diretório de Chromebooks</title>
+	<title>Diretório de Contratos</title>
 
 </head>
 <body>
@@ -52,6 +52,12 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                 </li>
 		     <li class="nav-item dropdown">
                     <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrarchrome</a>
+                </li>
+		     <li class="nav-item dropdown">
+                    <a class="nav-link link-nav" href="buscardozero.php">Diretorio de Contratos</a>
+                </li>]
+		     <li class="nav-item dropdown">
+                    <a class="nav-link link-nav" href="estoque.php">Estoque</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
