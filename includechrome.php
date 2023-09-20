@@ -33,7 +33,7 @@ $localizacao = mysqli_real_escape_string($conn, $_POST['localizacao']);
 
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-$sql = "INSERT INTO cadastrochrome (serial, modelo, ID, dt_entrada, ) VALUES ('$serial', '$modelo', '$ID', '$dt_entrada',)";
+$sql = "INSERT INTO cadastrochrome (serial, modelo, ID, dt_entrada, localizacao) VALUES ('$serial', '$modelo', '$ID', '$dt_entrada', $localizacao)";
 
 // Executa a consulta e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
