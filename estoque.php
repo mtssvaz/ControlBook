@@ -120,6 +120,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						<th>Modelo</th>
 						<th>ID</th>
 						<th>Data de entrega</th>
+						<th>Localização</th>
 					</tr>
 				</thead>
 				
@@ -132,6 +133,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						    echo "<td>".$receber_cadastros['modelo']."</td>";
 						    echo "<td>".$receber_cadastros['ID']."</td>";
 						    echo "<td>".$receber_cadastros['dt_entrega']."</td>";
+						    echo "<td>".$receber_cadastros['dt_localizacao']."</td>";
 						    echo "<td>
     			                    
     			                    <button onclick=\"location.href='editar_usuario.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
