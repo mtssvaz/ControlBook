@@ -44,25 +44,25 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item">
+                    <li class="nav-item">
                     <a class="nav-link link-nav" href="inicio.html">Início</a>
                 </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link link-nav" href="cadastrar.html">Cadastrar</a>
+                <li class="nav-item">
+                    <a class="nav-link link-nav" href="cadastrar.html">Cadastrar Contrato</a>
                 </li>
-		     <li class="nav-item dropdown">
-                    <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrarchrome</a>
+		 <li class="nav-item">
+                    <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrar Chromebook</a>
                 </li>
-		     <li class="nav-item dropdown">
-                    <a class="nav-link link-nav" href="buscardozero.php">Diretorio de Contratos</a>
-                </li>]
-		     <li class="nav-item dropdown">
+                <li class="nav-item">
+                    <a class="nav-link link-nav" href="buscardozero.php">Diretório de Contrato</a>
+                </li>
+		<li class="nav-item">
                     <a class="nav-link link-nav" href="estoque.php">Estoque</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
                 </li>
-		  <li class="nav-item">
+                <li class="nav-item">
                     <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
                 </li>
 				
