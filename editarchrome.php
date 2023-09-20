@@ -63,27 +63,34 @@
     
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                      <li class="nav-item">
-                    <a class="nav-link link-nav" href="inicio.html">Início</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="cadastrar.html">Cadastrar Contrato</a>
-                </li>
-		 <li class="nav-item">
-                    <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="buscardozero.php">Diretório de Contratos</a>
-                </li>
-		<li class="nav-item">
-                    <a class="nav-link link-nav" href="estoque.php">Diretório de Chromebooks</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
-                </li>
+                     <li class="nav-item">
+    <a class="nav-link link-nav" href="inicio.html">Início</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cadastro
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuCadastro">
+        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+        <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+    </div>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Diretório
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
+        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+        <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+    </div>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+</li>
+
             </ul>
         </div>
     </nav>
