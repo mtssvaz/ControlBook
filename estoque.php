@@ -133,7 +133,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						    echo "<td>".$receber_cadastros['modelo']."</td>";
 						    echo "<td>".$receber_cadastros['ID']."</td>";
 						    echo "<td>".$receber_cadastros['dt_entrega']."</td>";
-						    echo "<td>".$receber_cadastros['dt_localizacao']."</td>";
+						    echo "<td>".$receber_cadastros['localizacao']."</td>";
 						    echo "<td>
     			                    
     			                    <button onclick=\"location.href='editarchrome.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
