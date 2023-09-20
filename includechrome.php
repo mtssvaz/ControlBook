@@ -28,11 +28,11 @@ if (mysqli_connect_errno()) {
 $serial = mysqli_real_escape_string($conn, $_POST['serial']);
 $modelo = mysqli_real_escape_string($conn, $_POST['modelo']);
 $ID = mysqli_real_escape_string($conn, $_POST['ID']);
-$dt_entrega = mysqli_real_escape_string($conn, $_POST['dt_entrega']);
+$dt_entrada = mysqli_real_escape_string($conn, $_POST['dt_entrada']);
 
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-$sql = "INSERT INTO cadastrochrome (serial, modelo, ID, dt_entrega, ) VALUES ('$serial', '$modelo', '$ID', '$dt_entrega',)";
+$sql = "INSERT INTO cadastrochrome (serial, modelo, ID, dt_entrada, ) VALUES ('$serial', '$modelo', '$ID', '$dt_entrada',)";
 
 // Executa a consulta e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
