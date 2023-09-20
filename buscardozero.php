@@ -119,7 +119,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 					    <th>ID</th>
 						<th>Aluno</th>
 						<th>Resp. Financeiro</th>
-						<th>Conservação</th>
+						<th>Contrato</th>
 						<th>Data de entrega</th>
 						<th>Matrícula</th>
 						<th>Nº de série</th>
