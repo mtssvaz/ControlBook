@@ -74,7 +74,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
         <div class="row justify-content-center align-items-center"> <!--style="height: 100vh;"-->
             <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
                 <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center" >
-                    Diretório de Chromebooks
+                    Diretório de Contratos
                 </h4>
             </div>
 		</div>
