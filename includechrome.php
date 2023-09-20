@@ -31,7 +31,6 @@ $ID = mysqli_real_escape_string($conn, $_POST['ID']);
 $dt_entrada = mysqli_real_escape_string($conn, $_POST['dt_entrada']);
 $localizacao = mysqli_real_escape_string($conn, $_POST['localizacao']);
 
-
 // Prepara uma consulta SQL segura para inserir os dados na tabela
 $sql = "INSERT INTO cadastrochrome (serial, modelo, ID, dt_entrada, localizacao) VALUES ('$serial', '$modelo', '$ID', '$dt_entrada', '$localizacao')";
 
