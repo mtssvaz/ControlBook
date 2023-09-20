@@ -44,7 +44,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                     <li class="nav-item">
+                  <li class="nav-item">
     <a class="nav-link link-nav" href="inicio.html">Início</a>
 </li>
 <li class="nav-item dropdown">
@@ -72,7 +72,6 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
 </li>
 
-				
             </ul>
         </div>
     </nav>
