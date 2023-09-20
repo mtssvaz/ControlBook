@@ -29,7 +29,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 	
 	<link rel="stylesheet" href="/styles/buscar.css" />
 
-	<title>Diretório de Estoques</title>
+	<title>Diretório de Chromebooks</title>
 
 </head>
 <body>
