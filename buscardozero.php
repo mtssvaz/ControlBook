@@ -50,6 +50,9 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                 <li class="nav-item dropdown">
                     <a class="nav-link link-nav" href="cadastrar.html">Cadastrar</a>
                 </li>
+		     <li class="nav-item dropdown">
+                    <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrarchrome</a>
+                </li>
                 <li class="nav-item">
                     <a class="nav-link link-nav" href="buscardozero.php">Buscar</a>
                 </li>
