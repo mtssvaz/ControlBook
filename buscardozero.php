@@ -59,6 +59,9 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                 <li class="nav-item">
                     <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
                 </li>
+		  <li class="nav-item">
+                    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+                </li>
 				
             </ul>
         </div>
