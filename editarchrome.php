@@ -99,7 +99,7 @@
         
             
             <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
-                <form action="editar.php" method="post">
+                <form action="aeditarchrome.php" method="post">
                     <div class="row">
                         <div class="col-12">
                             <label for="usuario" class="pt-3 font-weight-bold">Serial</label>
