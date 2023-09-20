@@ -148,14 +148,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 	</div>
 
 
-	<footer class="footer">
-        <div>
-            <div>
-                <p>Avenida Esperança, nº 191 - Centro, Guarulhos/SP</p>
-                <p>Todos os direitos reservados © 2023</p>
-            </div>
-        </div>
-    </footer>
+	
 
 	<script>
 		$('input#txt_consulta').quicksearch('table#tabela tbody tr');
