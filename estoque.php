@@ -44,7 +44,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                   <li class="nav-item">
+                      <li class="nav-item">
                     <a class="nav-link link-nav" href="inicio.html">Início</a>
                 </li>
                 <li class="nav-item">
@@ -54,10 +54,10 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                     <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrar Chromebook</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link link-nav" href="buscardozero.php">Diretório de Contrato</a>
+                    <a class="nav-link link-nav" href="buscardozero.php">Diretório de Contratos</a>
                 </li>
 		<li class="nav-item">
-                    <a class="nav-link link-nav" href="estoque.php">Diretório de Estoque</a>
+                    <a class="nav-link link-nav" href="estoque.php">Diretório de Chromebooks</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
