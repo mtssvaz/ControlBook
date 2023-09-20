@@ -29,6 +29,7 @@ $serial = mysqli_real_escape_string($conn, $_POST['serial']);
 $modelo = mysqli_real_escape_string($conn, $_POST['modelo']);
 $ID = mysqli_real_escape_string($conn, $_POST['ID']);
 $dt_entrada = mysqli_real_escape_string($conn, $_POST['dt_entrada']);
+$localizacao = mysqli_real_escape_string($conn, $_POST['localizacao']);
 
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
