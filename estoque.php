@@ -119,7 +119,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 					    <th>Serial</th>
 						<th>Modelo</th>
 						<th>ID</th>
-						<th>Data de entrega</th>
+						<th>Data de entrada</th>
 						<th>Localização</th>
 					</tr>
 				</thead>
@@ -132,7 +132,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						    echo "<td>".$receber_cadastros['serial']."</td>";
 						    echo "<td>".$receber_cadastros['modelo']."</td>";
 						    echo "<td>".$receber_cadastros['ID']."</td>";
-						    echo "<td>".$receber_cadastros['dt_entrega']."</td>";
+						    echo "<td>".$receber_cadastros['dt_entrada']."</td>";
 						    echo "<td>".$receber_cadastros['localizacao']."</td>";
 						    echo "<td>
     			                    
