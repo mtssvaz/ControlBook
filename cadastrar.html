@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="/styles/cadastrar.css" />
 
     <title> Cadastro de Contrato </title>
+
 </head>
 
 <body>
@@ -57,33 +58,34 @@
     
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="inicio.html">Início</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cadastro
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="menuCadastro">
-                        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
-                        <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Diretório
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-                        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
-                        <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
-                </li>
+                 <li class="nav-item">
+    <a class="nav-link link-nav" href="inicio.html">Início</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cadastro
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuCadastro">
+        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+        <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+    </div>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Diretório
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
+        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+        <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+    </div>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+</li>
+
             </ul>
         </div>
     </nav>
@@ -102,43 +104,52 @@
                             <label for="usuario" class="pt-3 font-weight-bold">Nome do aluno</label>
                             <input type="text" name="aluno" class="form-control input">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">Responsável financeiro</label>
-                            <input type="text" name="responsavel" class="form-control input">
-                        </div>
-                    </div>
-                    <div class="row">
+			 <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold">Núm. da matrícula</label>
                             <input type="number" name="matricula" class="form-control input">
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+			 <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="status" class="pt-3">Ano</label>
                             <select id="status" name="ano" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
                                 <option value="6">6º ano</option>
                                 <option value="7">7º ano</option>
-                                <option value="8">8º ano</option>
+				<option value="8">8º ano</option>
                                 <option value="9">9º ano</option> 
+				<option value="8">8º ano</option>
                                 <option value="1">1° Ano - Ensino Médio</option> 
-                                <option value="2">2° Ano - Ensino Médio</option> 
-                                <option value="3">3° Ano - Ensino Médio</option> 
+				<option value="2">2° Ano - Ensino Médio</option> 
+				<option value="3">3° Ano - Ensino Médio</option> 
                             </select>
                         </div>    
-                    </div>
-                    <div class="row">
+                    
+		    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="status" class="pt-3">Atendente</label>
+                            <select id="status" name="atendente" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="mateus">Mateus Vaz</option>
+                                <option value="patrickrocha">Patrick Rocha</option>
+				<option value="manzo">Patrick Manzo</option>
+                                <option value="solange">Solange Mendonça</option> 
+				<option value="renato">Renato Vieira</option>
+                                <option value="rosana">Rosana Rosanita</option> 
+				<option value="valdimey">Valdiney Costa</option> 
+				
+                            </select>
+                        </div>    
+                
+                  
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="password" class="pt-3 font-weight-bold">ID do Chromebook</label>
                             <input type="number" name="idchrome" class="form-control input" required>
                         </div>
+                    </div>
+                    <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="dt_entrega" class="pt-3 font-weight-bold">Data de entrega</label>
                             <input type="date" name="dt_entrega" class="form-control input">
                         </div>
-                    </div>
-                    <div class="row">
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="status" class="pt-3">Contrato</label>
                             <select id="status" name="conservacao" class="form-control input" required>
