@@ -104,21 +104,45 @@
                             <label for="usuario" class="pt-3 font-weight-bold">Nome do aluno</label>
                             <input type="text" name="aluno" class="form-control input">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">Responsável financeiro</label>
-                            <input type="text" name="responsavel" class="form-control input">
-                        </div>
-                    </div>
-                    <div class="row">
+			 <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold">Núm. da matrícula</label>
-                            <input type="number" name="MATRICULA" class="form-control input">
+                            <input type="number" name="matricula" class="form-control input">
                         </div>
+			 <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="status" class="pt-3">Ano</label>
+                            <select id="status" name="ano" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="6">6º ano</option>
+                                <option value="7">7º ano</option>
+				<option value="8">8º ano</option>
+                                <option value="9">9º ano</option> 
+				<option value="8">8º ano</option>
+                                <option value="1">1° Ano - Ensino Médio</option> 
+				<option value="2">2° Ano - Ensino Médio</option> 
+				<option value="3">3° Ano - Ensino Médio</option> 
+                            </select>
+                        </div>    
+                    </div>
+		    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="status" class="pt-3">Atendente</label>
+                            <select id="status" name="atendente" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="mateus">Mateus Vaz</option>
+                                <option value="patrickrocha">Patrick Rocha</option>
+				<option value="manzo">Patrick Manzo</option>
+                                <option value="solange">Solange Mendonça</option> 
+				<option value="renato">Renato Vieira</option>
+                                <option value="rosana">Rosana Rosanita</option> 
+				<option value="valdimey">Valdiney Costa</option> 
+				
+                            </select>
+                        </div>    
+                    </div>
+                  
                         <div class="col-12 col-sm-12 col-md-6">
-                            <label for="password" class="pt-3 font-weight-bold">Serial</label>
-                            <input type="number" name="n_de_serie" class="form-control input" required>
+                            <label for="password" class="pt-3 font-weight-bold">ID do Chromebook</label>
+                            <input type="number" name="idchrome" class="form-control input" required>
                         </div>
                     </div>
                     <div class="row">
