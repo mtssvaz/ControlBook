@@ -35,7 +35,7 @@ $sql = "UPDATE CADASTRO SET
             ano='{$ano}',
             atendente='{$atendente}',
             idchrome='{$idchrome}',
-            dt_entrega='{$dt_entrega}'
+            dt_entrega='{$dt_entrega}',
             contrato='{$contrato}'
         WHERE
             ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
