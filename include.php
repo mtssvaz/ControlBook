@@ -35,7 +35,7 @@ $dt_entrega = mysqli_real_escape_string($conn, $_POST['dt_entrega']);
 $contrato = mysqli_real_escape_string($conn, $_POST['contrato']);
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-$sql = "INSERT INTO cadastro (aluno, matricula, ano, atendente, idchrome, dt_entrega, contrato) VALUES ('$aluno', '$matricula', '$ano', '$atendente', '$idchrome', '$dt_entrega' '$contrato')";
+$sql = "INSERT INTO cadastro (aluno, matricula, ano, atendente, idchrome, dt_entrega, contrato) VALUES ('$aluno', '$matricula', '$ano', '$atendente', '$idchrome', '$dt_entrega', '$contrato')";
 
 
 
