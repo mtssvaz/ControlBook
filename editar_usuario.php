@@ -118,29 +118,22 @@
                     <div class="row">
                         <div class="col-12">
                             <label for="password" class="pt-3 font-weight-bold">Núm. da matrícula</label>
-                            <input type="number" name="matricula" class="form-control input" value="<?php echo $matricula ?>"required>
+                            <input type="text" name="matricula" class="form-control input" value="<?php echo $matricula ?>"required>
                         </div>
                     </div>
-                     <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                            <label for="status" class="pt-3">Status</label>
-                            <select id="status" name="ano" class="form-control input" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option value="Ativo" <?php echo ($contrato == '6') ? 'selected' : '' ?> >6</option>
-                                <option value="Inativo" <?php echo ($contrato == '7') ? 'selected' : '' ?> >7</option>
-                            </select>
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="usuario" class="pt-3 font-weight-bold">Ano</label>
+                            <input type="text" name="ano" class="form-control input" value="<?php echo $ano ?>" required>
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                            <label for="status" class="pt-3">Status</label>
-                            <select id="status" name="atendente" class="form-control input" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option value="Ativo" <?php echo ($contrato == 'mateus') ? 'selected' : '' ?> >Mateus</option>
-                                <option value="Inativo" <?php echo ($contrato == 'patrick') ? 'selected' : '' ?> >Patrick</option>
-                            </select>
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="password" class="pt-3 font-weight-bold">Atendente</label>
+                            <input type="text" name="atendente" class="form-control input" value="<?php echo $atendente ?>" required>
                         </div>
                          <div class="row">
                         <div class="col-12">
                             <label for="usuario" class="pt-3 font-weight-bold">ID Chromebook</label>
-                            <input type="number" name="idchrome" class="form-control input" value="<?php echo $idchrome ?>" required>
+                            <input type="text" name="idchrome" class="form-control input" value="<?php echo $idchrome ?>" required>
                         </div>
                     </div>
                     </div>
@@ -167,6 +160,12 @@
             </div>
         </div>
     </div>
+
+  
+
+</body>
+
+</html>
 
   
 
