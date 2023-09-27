@@ -15,10 +15,10 @@
         	while($receber_cadastros = mysqli_fetch_array($query_cadastros))
         	{
             	$aluno = $receber_cadastros['aluno'];
-            	$responsavel = $receber_cadastros ['matricula'];
+            	$matriucla = $receber_cadastros ['matricula'];
             	$ano = $receber_cadastros['ano'];
-                $MATRICULA = $receber_cadastros['atendente'];
-            	$MATRICULA = $receber_cadastros['idchrome'];
+                $atendente = $receber_cadastros['atendente'];
+            	$idchrome = $receber_cadastros['idchrome'];
                 $dt_entrega = $receber_cadastros['dt_entrega'];
             	$contrato = $receber_cadastros['contrato'];
         	}
@@ -117,19 +117,25 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">Responsável financeiro</label>
-                            <input type="text" name="responsavel" class="form-control input" value="<?php echo $responsavel ?>"required>
+                            <label for="password" class="pt-3 font-weight-bold">Núm. da matrícula</label>
+                            <input type="text" name="matricula" class="form-control input" value="<?php echo $matricula ?>"required>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
-                            <label for="usuario" class="pt-3 font-weight-bold">Núm. da matrícula</label>
-                            <input type="text" name="MATRICULA" class="form-control input" value="<?php echo $MATRICULA ?>" required>
+                            <label for="usuario" class="pt-3 font-weight-bold">Ano</label>
+                            <input type="text" name="ano" class="form-control input" value="<?php echo $ano ?>" required>
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
-                            <label for="password" class="pt-3 font-weight-bold">Serial</label>
-                            <input type="text" name="n_de_serie" class="form-control input" value="<?php echo $n_de_serie ?>" required>
+                            <label for="password" class="pt-3 font-weight-bold">Atendente</label>
+                            <input type="text" name="atendente" class="form-control input" value="<?php echo $atendente ?>" required>
                         </div>
+                         <div class="row">
+                        <div class="col-12">
+                            <label for="usuario" class="pt-3 font-weight-bold">ID Chromebook</label>
+                            <input type="text" name="idchrome" class="form-control input" value="<?php echo $idchrome ?>" required>
+                        </div>
+                    </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
@@ -138,11 +144,10 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="status" class="pt-3">Status</label>
-                            <select id="status" name="conservacao" class="form-control input" required>
+                            <select id="status" name="contrato" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
-                                <option value="em_uso" <?php echo ($conservacao == 'em_uso') ? 'selected' : '' ?> >Em uso</option>
-                                <option value="manutenção" <?php echo ($conservacao == 'manutenção') ? 'selected' : '' ?> >Em manutenção</option>
-                                <option value="quebrado" <?php echo ($conservacao == 'quebrado') ? 'selected' : '' ?> >Quebrado</option>
+                                <option value="Ativo" <?php echo ($contrato == 'Ativo') ? 'selected' : '' ?> >Ativo</option>
+                                <option value="Inativo" <?php echo ($contrato == 'Inativo') ? 'selected' : '' ?> >Inativo</option>
                             </select>
                         </div>
                     </div>
