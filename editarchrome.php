@@ -116,7 +116,7 @@
                     <div class="row">
                         <div class="col-12">
                             <label for="password" class="pt-3 font-weight-bold">Modelo</label>
-                            <input type="text" name="modelo" class="form-control input" value="<?php echo $Modelo ?>"required>
+                            <input type="text" name="modelo" class="form-control input" value="<?php echo $modelo ?>"required>
                         </div>
                     </div>
                     <div class="row">
