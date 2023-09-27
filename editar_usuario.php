@@ -15,11 +15,12 @@
         	while($receber_cadastros = mysqli_fetch_array($query_cadastros))
         	{
             	$aluno = $receber_cadastros['aluno'];
-            	$responsavel = $receber_cadastros ['responsavel'];
-            	$conservacao = $receber_cadastros['conservacao'];
-            	$dt_entrega = $receber_cadastros['dt_entrega'];
-            	$MATRICULA = $receber_cadastros['MATRICULA'];
-            	$n_de_serie = $receber_cadastros['n_de_serie'];
+            	$responsavel = $receber_cadastros ['matricula'];
+            	$ano = $receber_cadastros['ano'];
+                $MATRICULA = $receber_cadastros['atendente'];
+            	$MATRICULA = $receber_cadastros['idchrome'];
+                $dt_entrega = $receber_cadastros['dt_entrega'];
+            	$contrato = $receber_cadastros['contrato'];
         	}
         }
         else{
