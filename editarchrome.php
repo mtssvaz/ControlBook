@@ -16,7 +16,6 @@
         	{
             	$serial = $receber_cadastros['serial'];
             	$modelo = $receber_cadastros ['modelo'];
-            	$ID = $receber_cadastros['ID'];
             	$dt_entrada = $receber_cadastros['dt_entrada'];
             	$localizacao = $receber_cadastros['localizacao'];
         	}
@@ -119,12 +118,7 @@
                             <input type="text" name="modelo" class="form-control input" value="<?php echo $Modelo ?>"required>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="usuario" class="pt-3 font-weight-bold">ID</label>
-                            <input type="text" name="ID" class="form-control input" value="<?php echo $ID ?>" required>
-                        
-                    </div>
+                   
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="dt_entrega" class="pt-3 font-weight-bold">Data de entrada</label>
