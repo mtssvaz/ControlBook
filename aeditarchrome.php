@@ -25,37 +25,23 @@ $modelo = $_POST['modelo'];
 $dt_entrada = $_POST['dt_entrada'];
 $localizacao = $_POST['localizacao'];
 
-// Prepara uma consulta SQL segura para atualizar os dados na tabela
+// Prepara uma consulta SQL para atualizar os dados na tabela
 $sql = "UPDATE CADASTRO SET
-            serial=?,
-            modelo=?,
-            dt_entrada=?,
-            localizacao=?
+            serial='{$serial}',
+            modelo='{$modelo}',
+            dt_entrada='{$dt_entrada}',
+            localizacao='{$localizacao}'
         WHERE
-            ID=?";
+            ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
 
-// Prepara a declaração
-$stmt = mysqli_prepare($conn, $sql);
-
-// Verifica se a preparação foi bem sucedida
-if ($stmt) {
-    // Associa as variáveis aos parâmetros da declaração
-    mysqli_stmt_bind_param($stmt, "ssssi", $serial, $modelo, $dt_entrada, $localizacao, $ID);
-
-    // Executa a declaração
-    if (mysqli_stmt_execute($stmt)) {
-        print "<script>alert('Cadastro editado com sucesso!');</script>";
-        print "<script>location.href='estoque.php';</script>";
-    } else {
-        print "Erro ao cadastrar: " . mysqli_stmt_error($stmt);
-    }
-
-    // Fecha a declaração
-    mysqli_stmt_close($stmt);
+// Executa a consulta e verifica se foi bem sucedida
+if (mysqli_query($conn, $sql)) {
+  print "<script>alert('Cadastro editado com sucesso!');</script>";
+  print "<script>location.href='estoque.php';</script>";
 } else {
-    print "Erro na preparação da declaração: " . mysqli_error($conn);
+  print "Erro ao cadastrar: " . mysqli_error($conn);
 }
 
-// Fecha a conexão
+// Fecha a conex���o
 mysqli_close($conn);
 ?>
