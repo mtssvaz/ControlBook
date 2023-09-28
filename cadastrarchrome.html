@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="/styles/cadastrar.css" />
 
-    <title>Cadastro de Chromebook</title>
+    <title> Cadastro de Contrato </title>
 
 </head>
 
@@ -94,44 +94,40 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
                 <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center " >
-                    Cadastro de Chromebook
+                    Cadastro de Contrato
                 </h4>
             </div>
             <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
                 <form action="includechrome.php" method="post">
                     <div class="row">
                         <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">Serial</label>
-                            <input type="number" name="serial" class="form-control input">
+                            <label for="usuario" class="pt-3 font-weight-bold">Serial</label>
+                            <input type="text" name="serial" class="form-control input">
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">modelo</label>
-                            <input type="text" name="modelo" class="form-control input">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="usuario" class="pt-3 font-weight-bold">Núm. de identificação</label>
-                            <input type="number" name="ID" class="form-control input">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="dt_entrada" class="pt-3 font-weight-bold">Data de Entrada no estoque</label>
-                            <input type="date" name="dt_entrada" class="form-control input">
-                        </div>
-			   <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                            <label for="status" class="pt-3">localização</label>
-                            <select id="status" name="localizacao" class="form-control input" required>
+			 <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="usuario" class="pt-3">Modelo</label>
+                            <select id="idmodelo" name="modelo" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
-                                <option value="Ativo">Ativo</option>
-                                <option value="Manutencao">Manutenção</option>
-                                <option value="Estoque">Estoque</option>
+                                <option value="Samsung XE310XBA">Samsung XE310XBA </option>
+                                <option value="Lenovo 100E 81MA001TBR">Lenovo 100E 81MA001TBR</option>
+                            </select>
+                        </div>    
+                
+                
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="dt_entrega" class="pt-3 font-weight-bold">Data de entrega</label>
+                            <input type="date" name="dt_entrega" class="form-control input">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="statuslo" class="pt-3">Localização</label>
+                            <select id="idlo" name="localizacao" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="manutencao">Manutenção</option>
+				<option value="ESTOQUE">Estoque</option>
                             </select>
                         </div>
-                       
                     </div>
                     <div class="row justify-content-center align-items-center">
                         <input class="btn-primary button_a" type="submit" value="Cadastrar">
