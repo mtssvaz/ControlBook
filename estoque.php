@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$buscar_cadastros = " SELECT * FROM  CADASTROCHROME";
+$buscar_cadastros = " SELECT * FROM  CADASTRO";
 $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
     ?>
@@ -29,7 +29,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 	
 	<link rel="stylesheet" href="/styles/buscar.css" />
 
-	<title>Diretório de Chromebooks</title>
+	<title> Diretório de Chromebooks </title>
 
 </head>
 <body>
@@ -44,7 +44,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav">
-                  <li class="nav-item">
+                   <li class="nav-item">
     <a class="nav-link link-nav" href="inicio.html">Início</a>
 </li>
 <li class="nav-item dropdown">
@@ -122,11 +122,12 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 			<table id="tabela" class="table table-hover">
 				<thead>
 					<tr>
-					    <th>Serial</th>
+					    <th>ID</th>
+						<th>Serial</th>
 						<th>Modelo</th>
-						<th>ID</th>
-						<th>Data de entrada</th>
+						<th>Data de entrega</th>
 						<th>Localização</th>
+						<th>Ações</th>
 					</tr>
 				</thead>
 				
@@ -135,15 +136,15 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						while($receber_cadastros = mysqli_fetch_array($query_cadastros))
 						{
 						    echo "<tr>";
+						    echo "<td>".$receber_cadastros['ID']."</td>";
 						    echo "<td>".$receber_cadastros['serial']."</td>";
 						    echo "<td>".$receber_cadastros['modelo']."</td>";
-						    echo "<td>".$receber_cadastros['ID']."</td>";
 						    echo "<td>".$receber_cadastros['dt_entrada']."</td>";
 						    echo "<td>".$receber_cadastros['localizacao']."</td>";
 						    echo "<td>
     			                    
     			                    <button onclick=\"location.href='editarchrome.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
-    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluirchrome.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
+    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluir.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
         				    	    
     			                  </td>";
 						    echo "</tr>";
