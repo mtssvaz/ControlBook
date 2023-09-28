@@ -1,3 +1,4 @@
+<?php
 $dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "chromelocalhost";
 $dbpass = "mateus@2023";
@@ -57,3 +58,4 @@ if ($stmt) {
 
 // Fecha a conexão
 mysqli_close($conn);
+?>
