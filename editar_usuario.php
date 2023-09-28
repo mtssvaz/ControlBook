@@ -7,7 +7,7 @@
         
         $ID = $_GET['ID'];
         
-        $buscar_cadastros = " SELECT * FROM  CADASTRO WHERE ID=$ID";
+        $buscar_cadastros = " SELECT * FROM  CADASTROCHROME WHERE ID=$ID";
         $query_cadastros = mysqli_query($conn, $buscar_cadastros);
         
         if($query_cadastros->num_rows > 0)
