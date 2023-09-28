@@ -29,7 +29,6 @@ $localizacao = $_POST['localizacao'];
 $sql = "UPDATE CADASTRO SET
             serial='{$serial}',
             modelo='{$modelo}',
-            ID='{$ID}',
             dt_entrada='{$dt_entrada}',
             localizacao='{$localizacao}'
         WHERE
