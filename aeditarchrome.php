@@ -19,9 +19,9 @@ mysqli_real_connect(
     0 // Sem SSL
 );
 // Obtém os dados do formulário
+$ID = $_POST['ID'];
 $serial = $_POST['serial'];
 $modelo = $_POST['modelo'];
-$ID = $_POST['ID'];
 $dt_entrada = $_POST['dt_entrada'];
 $localizacao = $_POST['localizacao'];
 
