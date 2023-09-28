@@ -16,38 +16,33 @@ mysqli_real_connect(
     $db,
     3306,
     NULL,
-    MYSQLI_CLIENT_SSL // Use MYSQLI_CLIENT_SSL para SSL
+    0 // Sem SSL
 );
+// Obtém os dados do formulário
+$serial = $_POST['serial'];
+$modelo = $_POST['modelo'];
+$ID = $_POST['ID'];
+$dt_entrada = $_POST['dt_entrada'];
+$localizacao = $_POST['localizacao'];
 
-// Verifica a conexão
-if (mysqli_connect_errno()) {
-    die('Falha na conexão com o MySQL: ' . mysqli_connect_error());
-}
-
-// Obtém os dados do formulário e previne ataques de injeção de SQL
-$serial = mysqli_real_escape_string($conn, $_POST['serial']);
-$modelo = mysqli_real_escape_string($conn, $_POST['modelo']);
-$ID = mysqli_real_escape_string($conn, $_POST['ID']);
-$dt_entrada = mysqli_real_escape_string($conn, $_POST['dt_entrada']);
-$localizacao = mysqli_real_escape_string($conn, $_POST['localizacao']);
-
-// Prepara uma consulta SQL segura para atualizar os dados na tabela
+// Prepara uma consulta SQL para atualizar os dados na tabela
 $sql = "UPDATE CADASTRO SET
             serial='{$serial}',
             modelo='{$modelo}',
+            ID='{$ID}',
             dt_entrada='{$dt_entrada}',
             localizacao='{$localizacao}'
         WHERE
-            ID='{$ID}'";
+            ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
 
-// Executa a consulta e verifica se foi bem-sucedida
+// Executa a consulta e verifica se foi bem sucedida
 if (mysqli_query($conn, $sql)) {
-    echo "<script>alert('Cadastro editado com sucesso!');</script>";
-    echo "<script>location.href='estoque.php';</script>";
+  print "<script>alert('Cadastro editado com sucesso!');</script>";
+  print "<script>location.href='estoque.php';</script>";
 } else {
-    echo "Erro ao editar cadastro: " . mysqli_error($conn);
+  print "Erro ao cadastrar: " . mysqli_error($conn);
 }
 
-// Fecha a conexão
+// Fecha a conex���o
 mysqli_close($conn);
 ?>
