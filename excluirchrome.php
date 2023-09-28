@@ -26,7 +26,7 @@ $sqlDel = mysqli_query($conn, $sql);
 // Executa a consulta e verifica se foi bem sucedida
 if ($sqlDel) {
   print "<script>alert('Cadastro excluído com sucesso!');</script>";
-  print "<script>location.href='cadastrochrome.php';</script>";
+  print "<script>location.href='estoque.php';</script>";
 } else {
   print "Erro ao descadastrar: " . mysqli_error($conn);
 }
