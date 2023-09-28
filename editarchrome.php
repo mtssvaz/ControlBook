@@ -113,9 +113,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">Modelo</label>
-                            <input type="text" name="modelo" class="form-control input" value="<?php echo $Modelo ?>"required>
+                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="status" class="pt-3">Modelo</label>
+                            <select id="status" name="modelo" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="Samsung XE310XBA" <?php echo ($modelo == 'Samsung XE310XBA') ? 'selected' : '' ?> >Samsung XE310XBA</option>
+                                <option value="Lenovo 100E 81MA001TBR" <?php echo ($modelo == 'Lenovo 100E 81MA001TBR') ? 'selected' : '' ?> >Lenovo 100E 81MA001TBR</option>
+                            </select>
                         </div>
                     </div>
                    
