@@ -122,14 +122,34 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="usuario" class="pt-3 font-weight-bold">Ano</label>
-                            <input type="text" name="ano" class="form-control input" value="<?php echo $ano ?>" required>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="password" class="pt-3 font-weight-bold">Atendente</label>
-                            <input type="text" name="atendente" class="form-control input" value="<?php echo $atendente ?>" required>
-                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="forano" class="pt-3">Ano</label>
+                            <select id="idano" name="ano" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="6">6º ano</option>
+                                <option value="7">7º ano</option>
+				                <option value="8">8º ano</option>
+                                <option value="9">9º ano</option> 
+				                <option value="8">8º ano</option>
+                                <option value="1">1° Ano - Ensino Médio</option> 
+				                <option value="2">2° Ano - Ensino Médio</option> 
+				                <option value="3">3° Ano - Ensino Médio</option> 
+                            </select>
+                        </div>    
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="foraten" class="pt-3">Atendente</label>
+                            <select id="idaten" name="atendente" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="mateus">Mateus Vaz</option>
+                                <option value="patrickrocha">Patrick Rocha</option>
+				                <option value="manzo">Patrick Manzo</option>
+                                <option value="solange">Solange Mendonça</option> 
+				                <option value="renato">Renato Vieira</option>
+                                <option value="rosana">Rosana Rosanita</option> 
+				                <option value="valdimey">Valdiney Costa</option> 
+				
+                            </select>
+                        </div>    
                          <div class="row">
                         <div class="col-12">
                             <label for="usuario" class="pt-3 font-weight-bold">ID Chromebook</label>
