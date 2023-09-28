@@ -2,7 +2,7 @@
 
 include 'conexao.php';
 
-$buscar_cadastros = " SELECT * FROM  CADASTRO";
+$buscar_cadastros = " SELECT * FROM  CADASTROCHROME";
 $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
     ?>
