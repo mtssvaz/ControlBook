@@ -1,4 +1,3 @@
-<?php
 $dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "chromelocalhost";
 $dbpass = "mateus@2023";
@@ -25,23 +24,36 @@ $modelo = $_POST['modelo'];
 $dt_entrada = $_POST['dt_entrada'];
 $localizacao = $_POST['localizacao'];
 
-// Prepara uma consulta SQL para atualizar os dados na tabela
+// Prepara uma consulta SQL segura para atualizar os dados na tabela
 $sql = "UPDATE CADASTRO SET
-            serial='{$serial}',
-            modelo='{$modelo}',
-            dt_entrada='{$dt_entrada}',
-            localizacao='{$localizacao}'
+            serial=?,
+            modelo=?,
+            dt_entrada=?,
+            localizacao=?
         WHERE
-            ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
+            ID=?";
 
-// Executa a consulta e verifica se foi bem sucedida
-if (mysqli_query($conn, $sql)) {
-  print "<script>alert('Cadastro editado com sucesso!');</script>";
-  print "<script>location.href='estoque.php';</script>";
+// Prepara a declaração
+$stmt = mysqli_prepare($conn, $sql);
+
+// Verifica se a preparação foi bem sucedida
+if ($stmt) {
+    // Associa as variáveis aos parâmetros da declaração
+    mysqli_stmt_bind_param($stmt, "ssssi", $serial, $modelo, $dt_entrada, $localizacao, $ID);
+
+    // Executa a declaração
+    if (mysqli_stmt_execute($stmt)) {
+        print "<script>alert('Cadastro editado com sucesso!');</script>";
+        print "<script>location.href='estoque.php';</script>";
+    } else {
+        print "Erro ao cadastrar: " . mysqli_stmt_error($stmt);
+    }
+
+    // Fecha a declaração
+    mysqli_stmt_close($stmt);
 } else {
-  print "Erro ao cadastrar: " . mysqli_error($conn);
+    print "Erro na preparação da declaração: " . mysqli_error($conn);
 }
 
-// Fecha a conex���o
+// Fecha a conexão
 mysqli_close($conn);
-?>
