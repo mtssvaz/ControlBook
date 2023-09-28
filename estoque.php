@@ -144,7 +144,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						    echo "<td>
     			                    
     			                    <button onclick=\"location.href='editarchrome.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
-    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluir.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
+    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluirchrome.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
         				    	    
     			                  </td>";
 						    echo "</tr>";
