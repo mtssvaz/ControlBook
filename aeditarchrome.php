@@ -26,7 +26,7 @@ $dt_entrada = $_POST['dt_entrada'];
 $localizacao = $_POST['localizacao'];
 
 // Prepara uma consulta SQL para atualizar os dados na tabela
-$sql = "UPDATE CADASTRO SET
+$sql = "UPDATE CADASTROCHROME SET
             serial='{$serial}',
             modelo='{$modelo}',
             dt_entrada='{$dt_entrada}',
