@@ -26,6 +26,31 @@
 
     <title>Página Inicial</title>
 
+	
+</head>
+<body>
+    <script>
+      function verificarAcesso() {
+        var loggedIn = sessionStorage.getItem("loggedIn");
+    
+        if (loggedIn !== "true") {
+          loggedIn = localStorage.getItem("loggedIn");
+        }
+    
+        if (loggedIn !== "true") {
+          window.location.href = "index.php";
+        }
+      }
+    
+      function logout() {
+        sessionStorage.removeItem("loggedIn");
+        localStorage.removeItem("loggedIn");
+        window.location.href = "index.php";
+      }
+      
+      verificarAcesso();
+    </script>
+
 	<!-- INICIO ACESSIBILIDADE -->
 	<script type="text/javascript" charset="utf-8">
 	var $z = jQuery.noConflict();
@@ -51,30 +76,7 @@
 	});
 	});
 	</script>
-	<!-- FIM ACESSIBILIDADE -->
-</head>
-<body>
-    <script>
-      function verificarAcesso() {
-        var loggedIn = sessionStorage.getItem("loggedIn");
-    
-        if (loggedIn !== "true") {
-          loggedIn = localStorage.getItem("loggedIn");
-        }
-    
-        if (loggedIn !== "true") {
-          window.location.href = "index.php";
-        }
-      }
-    
-      function logout() {
-        sessionStorage.removeItem("loggedIn");
-        localStorage.removeItem("loggedIn");
-        window.location.href = "index.php";
-      }
-      
-      verificarAcesso();
-    </script>
+	<!-- FIM ACESSIBILIDADE --> 
 	
 	<nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
         <a class="navbar-brand" href="#">
