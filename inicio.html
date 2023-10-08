@@ -58,11 +58,11 @@
 		$z("#aumentar-fonte").click(function(){
 			var size = $z("#content p").css('font-size');
 			
-			size = parseInt(size.replace("px", ""))+2;
-			/*
-			size = size.replace("px", "");
+			//size = parseInt(size.replace("px", ""))+2;
+			
+			//size = size.replace("px", "");
 			size = parseInt(size) + 2;
-   			*/
+   			
 			
 			$z("#content p").animate({'font-size' : size + 'px'});
 			return false;
