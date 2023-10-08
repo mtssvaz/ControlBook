@@ -49,43 +49,40 @@
       }
       
       verificarAcesso();
+
+	//INICIO ACESSIBILIDADE
+	function mudaContraste() {
+	var btnStyle = document.getElementById('mudaEstilo') //ID DO BOTÃO DE MUDANÇA DE CONTRASTE
+	var btnActive = btnStyle.classList.contains('active') //IDENTIFICA CLASSE ACTIVE DO BOTÃO
+	
+	if (btnActive) {
+		//FORMATAÇÃO DO BOTÃO, MUDANÇA DO CSS E CRIAÇÃO DO COOKIE DE CSS
+		btnStyle.className = 'btn btn-dark btn-sm'
+		btnStyle.innerHTML = 'PRETO'
+		mudaStyleSheet('style.css')
+		//createCookie("styleSheet", 'style.css',365)
+	} else {
+		//FORMATAÇÃO DO BOTÃO, MUDANÇA DO CSS E CRIAÇÃO DO COOKIE DE CSS
+		btnStyle.className = 'active btn btn-light btn-sm'
+		btnStyle.innerHTML = 'BRANCO'
+		mudaStyleSheet('contraste.css')
+		//createCookie("styleSheet", 'contraste.css',365)
+		}
+	
+	}
+	//FIM ACESSIBILIDADE
     </script>
 
-	<!-- INICIO ACESSIBILIDADE -->
-	<script type="text/javascript" charset="utf-8">
-	var $z = jQuery.noConflict();
-	$z(document).ready(function(){
-		$z("#aumentar-fonte").click(function(){
-			var size = $z("#content p").css('font-size');
-			
-			//size = parseInt(size.replace("px", ""))+2;
-			
-			size = size.replace("px", "");
-			size = parseInt(size) + 2;
-   			
-			
-			$z("#content p").animate({'font-size' : size + 'px'});
-			return false;
-		});
-		
-		$z("#diminuir-fonte").click(function(){
-			var size = $z("#content p").css('font-size');
-		
-			size = size.replace("px", "");
-			size = parseInt(size) - 2;
-			
-			$z("#content p").animate({'font-size' : size + 'px'});
-			return false;
-		});
-	});
-	</script>
-	<!-- FIM ACESSIBILIDADE --> 
+	
 	
 	<nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
         <a class="navbar-brand" href="#">
             <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
         </a>
-				
+		<!-- INICIO ACESSIBILIDADE -->
+		<span class="font-con"><button id="mudaEstilo" onClick="mudaContraste()" class="btn btn-secondary btn-sm">Alto Constraste</button>
+		</span>
+		<!-- FIM ACESSIBILIDADE -->			
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -125,15 +122,7 @@
     
     <div class="container">
         <div class="row justify-content-center align-items-center text-center" style="height: 85vh;">
-		<!-- INICIO ACESSIBILIDADE -->
-		<span id="diminuir-fonte">
-		<a title="Diminuir Fonte" alt="Diminuir">A-</a>
-		</span>
-		<span id="aumentar-fonte">
-		<a title="Aumentar Fonte" alt="Aumentar">A+</a>
-		</span>
-		<!-- FIM ACESSIBILIDADE -->
-            <h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borge.</h4>
+		<h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borge.</h4>
         </div>
     </div>
     
