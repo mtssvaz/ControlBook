@@ -16,11 +16,42 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     
+	<!-- INICIO ACESSIBILIDADE -->
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+	<!-- FIM ACESSIBILIDADE -->
+	
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
     <link rel="stylesheet" href="/styles/inicio.css"/>
 
     <title>Página Inicial</title>
+
+	<!-- INICIO ACESSIBILIDADE -->
+	<script type="text/javascript" charset="utf-8">
+	var $z = jQuery.noConflict();
+	$z(document).ready(function(){
+	$z("#aumentar-fonte").click(function () {
+	var size = $z("#content p").css('font-size');
+	
+	size = size.replace('px', '');
+	size = parseInt(size) + 2;
+	
+	$z("#content p").animate({'font-size' : size + 'px'});
+	return false;
+	});
+	
+	$z("#diminuir-fonte").click(function () {
+	var size = $z("#content p").css('font-size');
+	
+	size = size.replace('px', '');
+	size = parseInt(size) - 2;
+	
+	$z("#content p").animate({'font-size' : size + 'px'});
+	return false;
+	});
+	});
+	</script>
+	<!-- FIM ACESSIBILIDADE -->
 </head>
 <body>
     <script>
@@ -44,20 +75,21 @@
       
       verificarAcesso();
     </script>
-    	<nav class="navbar navbar-expand-md fixed-top">
-	    	<!-- INICIO ACESSIBILDIADE -->
-		<span id="diminuir-fonte">
-		<a title="Diminuir Fonte" alt="Diminuir">A-</a>
-		</span>
-		<span id="aumentar-fonte">
-		<a title="Aumentar Fonte" alt="Aumentar">A+</a>
-		</span>
-		<!-- FIM ACESSIBILDIADE -->	
-	</nav>
+	
 	<nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
         <a class="navbar-brand" href="#">
             <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
         </a>
+		
+	<!-- INICIO ACESSIBILIDADE -->
+	<span id="diminuir-fonte">
+	<a title="Diminuir Fonte" alt="Diminuir">A-</a>
+	</span>
+	<span id="aumentar-fonte">
+	<a title="Aumentar Fonte" alt="Aumentar">A+</a>
+	</span>
+	<!-- FIM ACESSIBILIDADE -->
+		
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
