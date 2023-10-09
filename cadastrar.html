@@ -88,6 +88,56 @@
 
             </ul>
         </div>
+   <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
+        </a>
+		<!-- INICIO ACESSIBILIDADE -->
+		<span class="font-con"><button id="ativaContraste" onClick="contrasteON()" class="btn btn-secondary btn-sm">Alto Constraste</button>
+		<button onClick="tamanhoFonte('mais');">A+</button>
+		<button onClick="tamanhoFonte('menos');">A-</button>
+		</span>
+		<!-- FIM ACESSIBILIDADE -->			
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                   <li class="nav-item">
+    <a class="nav-link link-nav" href="inicio.html">Início</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cadastro
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuCadastro">
+	<a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
+	<a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+      
+	 
+    </div>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Diretório
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
+	<a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
+	<a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+      
+    </div>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+</li>
+
+            </ul>
+        </div>
     </nav>
     
     <div class="container">
