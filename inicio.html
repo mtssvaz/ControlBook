@@ -18,7 +18,7 @@
     	
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
-    <link rel="stylesheet" href="/styles/inicio.css"/>
+    <link rel="stylesheet" id="styleSheet" href="/styles/inicio.css"/>
 
     <title>Página Inicial</title>
 
@@ -70,7 +70,7 @@
 	function mudaStyleSheet(sheet) {
 		var baseUrl = window.location.origin + '/styles/' //AJUSTAR URL PADRÃO DA PASTA CSS
 		var styleUrl = baseUrl + sheet
-		document.getElementById("stylesheet").setAttribute('href', styleUrl)
+		document.getElementById("styleSheet").setAttribute('href', styleUrl)
 	}
 	//FIM ACESSIBILIDADE
     </script>
