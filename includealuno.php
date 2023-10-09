@@ -27,22 +27,22 @@ if (mysqli_connect_errno()) {
 
 // Obtém os dados do formulário e previne ataques de injeção de SQL
 $aluno = mysqli_real_escape_string($conn, $_POST['aluno']);
-$matricula = mysqli_real_escape_string($conn, $_POST['matricula']);
-$ano = mysqli_real_escape_string($conn, $_POST['ano']);
-$atendente = mysqli_real_escape_string($conn, $_POST['atendente']);
-$idchrome = mysqli_real_escape_string($conn, $_POST['idchrome']);
-$dt_entrega = mysqli_real_escape_string($conn, $_POST['dt_entrega']);
-$contrato = mysqli_real_escape_string($conn, $_POST['contrato']);
+$responsavel = mysqli_real_escape_string($conn, $_POST['responsavel']);
+$cep = mysqli_real_escape_string($conn, $_POST['cep']);
+$rua = mysqli_real_escape_string($conn, $_POST['rua']);
+$bairro = mysqli_real_escape_string($conn, $_POST['bairro']);
+$cidade = mysqli_real_escape_string($conn, $_POST['cidade']);
+$uf = mysqli_real_escape_string($conn, $_POST['uf']);
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-$sql = "INSERT INTO cadastro (aluno, matricula, ano, atendente, idchrome, dt_entrega, contrato) VALUES ('$aluno', '$matricula', '$ano', '$atendente', '$idchrome', '$dt_entrega', '$contrato')";
+$sql = "INSERT INTO cadastroaluno (aluno, responsavel, cep, rua, bairro, cidade, uf) VALUES ('$aluno', '$responsavel', 'cep', '$rua', '$bairro', '$cidade', '$uf')";
 
 
 
 // Executa a consulta e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
     echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-    echo "<script>location.href='buscardozero.php';</script>";
+    echo "<script>location.href='diretorioaluno.php';</script>";
 } else {
     echo "Erro ao cadastrar: " . mysqli_error($conn);
 }
