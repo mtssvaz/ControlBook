@@ -12,7 +12,7 @@
             document.getElementById('bairro').value=("");
             document.getElementById('cidade').value=("");
             document.getElementById('uf').value=("");
-            document.getElementById('ibge').value=("");
+            
     }
 
     function meu_callback(conteudo) {
@@ -22,7 +22,7 @@
             document.getElementById('bairro').value=(conteudo.bairro);
             document.getElementById('cidade').value=(conteudo.localidade);
             document.getElementById('uf').value=(conteudo.uf);
-            document.getElementById('ibge').value=(conteudo.ibge);
+            
         } //end if.
         else {
             //CEP não Encontrado.
@@ -79,14 +79,14 @@
 
     <body>
     <!-- Inicio do formulario -->
-      <form action="include.php" method="post">
-        <label>Cep:
-        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
-               onblur="pesquisacep(this.value);" /></label><br />
-        <label>Aluno:
+      <form action="includealuno.php" method="post">
+	 <label>Aluno:
         <input name="aluno" type="text" id="aluno" size="60" /></label><br />	      
 	<label>Responsavel:
         <input name="responsavel" type="text" id="responsavel" size="60" /></label><br />      
+        <label>Cep:
+        <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+               onblur="pesquisacep(this.value);" /></label><br />
         <label>Rua:
         <input name="rua" type="text" id="rua" size="60" /></label><br />
         <label>Bairro:
