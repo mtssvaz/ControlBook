@@ -69,10 +69,12 @@
 	
 	function tamanhoFonte(tipo){
 		let elemento = $(".row justify-content-center align-items-center text-center");
-		let fonte = elemento.css('font-size');
+		let fonte = document.body.style.fontSize;
+		//let fonte = elemento.css('font-size');
 		
 		if (tipo == 'mais') {
-			elemento.css("fontSize", parseInt(fonte) + 1, "px");
+			document.body.style.fontSize=parseInt(fonte) + 1+"px";
+			//elemento.css("fontSize", parseInt(fonte) + 1, "px");
 		} else if('menos'){
 			elemento.css("fontSize", parseInt(fonte) - 1, "px");
 		}
