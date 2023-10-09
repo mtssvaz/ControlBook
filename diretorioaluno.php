@@ -153,6 +153,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						    echo "<tr>";
 						    echo "<td>".$receber_cadastros['ID']."</td>";
 						    echo "<td>".$receber_cadastros['aluno']."</td>";
+						    echo "<td>".$receber_cadastros['responsavel']."</td>";
 						    echo "<td>".$receber_cadastros['ano']."</td>";
 						    echo "<td>".$receber_cadastros['cep']."</td>";
 						    echo "<td>".$receber_cadastros['numero']."</td>";
