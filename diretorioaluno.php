@@ -133,10 +133,15 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 				<thead>
 					<tr>
 					    <th>ID</th>
-						<th>Serial</th>
-						<th>Modelo</th>
-						<th>Data de entrega</th>
-						<th>Localização</th>
+						<th>Aluno</th>
+						<th>Responsavel</th>
+						<th>Ano</th>
+						<th>CEP</th>
+						<th>Nº</th>
+						<th>Rua</th>
+						<th>Bairro</th>
+						<th>Cidade</th>
+						<th>Estado</th>
 						<th>Ações</th>
 					</tr>
 				</thead>
@@ -147,10 +152,14 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						{
 						    echo "<tr>";
 						    echo "<td>".$receber_cadastros['ID']."</td>";
-						    echo "<td>".$receber_cadastros['serial']."</td>";
-						    echo "<td>".$receber_cadastros['modelo']."</td>";
-						    echo "<td>".$receber_cadastros['dt_entrada']."</td>";
-						    echo "<td>".$receber_cadastros['localizacao']."</td>";
+						    echo "<td>".$receber_cadastros['aluno']."</td>";
+						    echo "<td>".$receber_cadastros['ano']."</td>";
+						    echo "<td>".$receber_cadastros['cep']."</td>";
+						    echo "<td>".$receber_cadastros['numero']."</td>";
+						    echo "<td>".$receber_cadastros['rua']."</td>";
+						    echo "<td>".$receber_cadastros['bairro']."</td>";
+						    echo "<td>".$receber_cadastros['cidade']."</td>";
+						    echo "<td>".$receber_cadastros['uf']."</td>";
 						    echo "<td>
     			                    
     			                    <button onclick=\"location.href='editarchrome.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
