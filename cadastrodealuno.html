@@ -16,20 +16,27 @@
     }
 
     function meu_callback(conteudo) {
-        if (!("erro" in conteudo)) {
-            //Atualiza os campos com os valores.
-            document.getElementById('rua').value=(conteudo.logradouro);
-            document.getElementById('bairro').value=(conteudo.bairro);
-            document.getElementById('cidade').value=(conteudo.localidade);
-            document.getElementById('uf').value=(conteudo.uf);
-            
-        } //end if.
-        else {
-            //CEP não Encontrado.
-            limpa_formulário_cep();
-            alert("CEP não encontrado.");
+    if (!("erro" in conteudo)) {
+        // Verifica se os campos existem antes de preenchê-los.
+        if (document.getElementById('rua')) {
+            document.getElementById('rua').value = (conteudo.logradouro);
         }
+        if (document.getElementById('bairro')) {
+            document.getElementById('bairro').value = (conteudo.bairro);
+        }
+        if (document.getElementById('cidade')) {
+            document.getElementById('cidade').value = (conteudo.localidade);
+        }
+        if (document.getElementById('uf')) {
+            document.getElementById('uf').value = (conteudo.uf);
+        }
+    } else {
+        // CEP não Encontrado.
+        limpa_formulário_cep();
+        alert("CEP não encontrado.");
     }
+}
+
         
     function pesquisacep(valor) {
 
