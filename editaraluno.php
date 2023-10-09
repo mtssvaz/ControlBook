@@ -14,19 +14,19 @@
         {
         	while($receber_cadastros = mysqli_fetch_array($query_cadastros))
         	{
-            	$serial = $receber_cadastros['aluno'];
-            	$modelo = $receber_cadastros ['responsavel'];
-            	$dt_entrada = $receber_cadastros['ano'];
-            	$localizacao = $receber_cadastros['cep'];
-              $serial = $receber_cadastros['numero'];
-            	$modelo = $receber_cadastros ['rua'];
-            	$dt_entrada = $receber_cadastros['bairro'];
-            	$localizacao = $receber_cadastros['cidade'];
-              $localizacao = $receber_cadastros['uf'];
+            	$aluno = $receber_cadastros['aluno'];
+            	responsavel = $receber_cadastros ['responsavel'];
+            	ano = $receber_cadastros['ano'];
+            	cep = $receber_cadastros['cep'];
+              $numero = $receber_cadastros['numero'];
+            	$rua = $receber_cadastros ['rua'];
+            	$bairro = $receber_cadastros['bairro'];
+            	$cidade = $receber_cadastros['cidade'];
+              $uf = $receber_cadastros['uf'];
         	}
         }
         else{
-            header('Location: estoque.php');
+            header('Location: diretorioaluno.php');
         }
     }
 
@@ -50,7 +50,62 @@
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
     <link rel="stylesheet" href="/styles/cadastrar.css" />
+    <!-- Adicionando JavaScript -->
+    <script>
+    function limpa_formulário_cep() {
+        // Limpa valores do formulário de CEP.
+        document.getElementById('rua').value = "";
+        document.getElementById('bairro').value = "";
+        document.getElementById('cidade').value = "";
+        document.getElementById('uf').value = "";
+    }
 
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            // Atualiza os campos com os valores.
+            document.getElementById('rua').value = conteudo.logradouro;
+            document.getElementById('bairro').value = conteudo.bairro;
+            document.getElementById('cidade').value = conteudo.localidade;
+            document.getElementById('uf').value = conteudo.uf;
+        } else {
+            // CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+
+    function pesquisacep(valor) {
+        var cep = valor.replace(/\D/g, '');
+
+        if (cep != "") {
+            var validacep = /^[0-9]{8}$/;
+
+            if (validacep.test(cep)) {
+                // Preenche os campos com "..." enquanto consulta o webservice.
+                document.getElementById('rua').value = "...";
+                document.getElementById('bairro').value = "...";
+                document.getElementById('cidade').value = "...";
+                document.getElementById('uf').value = "...";
+
+                // Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                // Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+
+                // Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+            } else {
+                // CEP é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } else {
+            // CEP sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+    </script>
     <title>Editar Cadastro</title>
 
 </head>
@@ -120,39 +175,40 @@
         
             
             <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
-                <form action="aeditarchrome.php" method="post">
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Serial</label>
-                            <input type="text" name="serial" class="form-control input" value="<?php echo $serial ?>" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                            <label for="status" class="pt-3">Modelo</label>
-                            <select id="status" name="modelo" class="form-control input" required>
+                <form action="aeditaraluno.php" method="post">
+                   <label>Aluno:
+            <input name="aluno" type="text" id="aluno" size="60" /></label><br />
+        <label>Responsável:
+            <input name="responsavel" type="text" id="responsavel" size="60" /></label><br />
+	 <label>Ano:
+            <select id="ano" name="ano" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
-                                <option value="Samsung XE310XBA" <?php echo ($modelo == 'Samsung XE310XBA') ? 'selected' : '' ?> >Samsung XE310XBA</option>
-                                <option value="Lenovo 100E 81MA001TBR" <?php echo ($modelo == 'Lenovo 100E 81MA001TBR') ? 'selected' : '' ?> >Lenovo 100E 81MA001TBR</option>
-                            </select>
-                        </div>
-                    </div>
-                   
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="dt_entrega" class="pt-3 font-weight-bold">Data de entrada</label>
-                            <input type="date" name="dt_entrada" class="form-control input" value="<?php echo $dt_entrada ?>" required>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                            <label for="status" class="pt-3">Status</label>
-                            <select id="status" name="localizacao" class="form-control input" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option value="Ativo" <?php echo ($localizacao == 'Ativo') ? 'selected' : '' ?> >Ativo</option>
-                                <option value="Manutencao" <?php echo ($localizacao == 'Manutencao') ? 'selected' : '' ?> >Manutenção</option>
-                                <option value="Estoque" <?php echo ($localizacao == 'Estoque') ? 'selected' : '' ?> >Estoque</option>
-                            </select>
-                        </div>
-                    </div>
+                                <option value="6">6º ano</option>
+                                <option value="7">7º ano</option>
+				<option value="8">8º ano</option>
+                                <option value="9">9º ano</option> 
+				<option value="8">8º ano</option>
+                                <option value="1">1° Ano - Ensino Médio</option> 
+				<option value="2">2° Ano - Ensino Médio</option> 
+				<option value="3">3° Ano - Ensino Médio</option> 
+                            </select> /></label><br />
+        <label>Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                   onblur="pesquisacep(this.value);" /></label><br />
+	 <label>Nº:
+            <input name="numero" type="number" id="numero" size="60" /></label><br />
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+        <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+       
+        <div class="row justify-content-center align-items-center">
+            <input class="btn-primary button_a" type="submit" value="Cadastrar">
+        </div>
                     <input type="hidden" name="ID" value="<?php echo $ID ?>">
                     <div class="row justify-content-center align-items-center">
                         
