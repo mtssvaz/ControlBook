@@ -37,7 +37,7 @@ $cidade = mysqli_real_escape_string($conn, $_POST['cidade']);
 $uf = mysqli_real_escape_string($conn, $_POST['uf']);
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-$sql = "INSERT INTO cadastroaluno (aluno, responsavel, ano, cep, numero, rua, bairro, cidade, uf) VALUES ('$aluno', '$responsavel', '$ano', '$cep', '$numero', '$rua', '$bairro', '$cidade', '$uf')";
+$sql = "INSERT INTO CADASTROALUNO (aluno, responsavel, ano, cep, numero, rua, bairro, cidade, uf) VALUES ('$aluno', '$responsavel', '$ano', '$cep', '$numero', '$rua', '$bairro', '$cidade', '$uf')";
 
 
 
