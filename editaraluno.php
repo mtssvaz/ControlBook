@@ -40,7 +40,7 @@ if (!empty($_GET['ID'])) {
 
 <body>
     <!-- Restante do seu código HTML permanece inalterado -->
-    
+
     <form action="aeditaraluno.php" method="post">
         <label>Aluno:
             <input name="aluno" type="text" id="aluno" size="60" value="<?php echo $aluno; ?>" /></label><br />
