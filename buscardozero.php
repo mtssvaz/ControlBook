@@ -134,8 +134,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 					<tr>
 					    <th>ID</th>
 						<th>Aluno</th>
-						<th>Núm. da matrícula</th>
-						<th>Ano</th>
+						<th>RM</th>
 						<th>Atendente</th>
 						<th>ID Chromebook</th>
 						<th>Data de entrega</th>
@@ -152,7 +151,6 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						    echo "<td>".$receber_cadastros['ID']."</td>";
 						    echo "<td>".$receber_cadastros['aluno']."</td>";
 						    echo "<td>".$receber_cadastros['matricula']."</td>";
-						    echo "<td>".$receber_cadastros['ano']."</td>";
 						    echo "<td>".$receber_cadastros['atendente']."</td>";
 						    echo "<td>".$receber_cadastros['idchrome']."</td>";
 						    echo "<td>".$receber_cadastros['dt_entrega']."</td>";
