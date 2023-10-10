@@ -132,7 +132,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 			<table id="tabela" class="table table-hover">
 				<thead>
 					<tr>
-					    <th>ID</th>
+					    <th>RM</th>
 						<th>Aluno</th>
 						<th>Responsavel</th>
 						<th>Ano</th>
