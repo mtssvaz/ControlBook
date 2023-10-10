@@ -84,7 +84,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
             </ul>
         </div>
-    </nav> </nav>
+    </nav> 
 
     <div class="container">
         <div class="row justify-content-center align-items-center"> <!--style="height: 100vh;"-->
