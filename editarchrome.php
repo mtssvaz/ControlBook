@@ -142,9 +142,9 @@
                             <label for="status" class="pt-3">Status</label>
                             <select id="status" name="localizacao" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
-                                <option value="Ativo" <?php echo ($localizacao == 'Ativo') ? 'selected' : '' ?> >Ativo</option>
-                                <option value="Manutencao" <?php echo ($localizacao == 'Manutencao') ? 'selected' : '' ?> >Manutenção</option>
-                                <option value="Estoque" <?php echo ($localizacao == 'Estoque') ? 'selected' : '' ?> >Estoque</option>
+                                <option value="Ativo" <?php echo ($localizacao == 'ativo') ? 'selected' : '' ?> >Ativo</option>
+                                <option value="Manutenção" <?php echo ($localizacao == 'manutencao') ? 'selected' : '' ?> >Manutenção</option>
+                                <option value="Estoque" <?php echo ($localizacao == 'estoque') ? 'selected' : '' ?> >Estoque</option>
                             </select>
                         </div>
                     </div>
