@@ -1,28 +1,35 @@
 <?php
-if (!empty($_GET['ID'])) {
-    include 'conexao.php';
 
-    $ID = $_GET['ID'];
+    if(!empty($_GET['ID']))
+    {
 
-    $buscar_cadastros = "SELECT * FROM CADASTROALUNO WHERE ID=$ID";
-    $query_cadastros = mysqli_query($conn, $buscar_cadastros);
-
-    if ($query_cadastros->num_rows > 0) {
-        while ($receber_cadastros = mysqli_fetch_array($query_cadastros)) {
-            $aluno = $receber_cadastros['aluno'];
-            $responsavel = $receber_cadastros['responsavel'];
-            $ano = $receber_cadastros['ano'];
-            $cep = $receber_cadastros['cep'];
-            $numero = $receber_cadastros['numero'];
-            $rua = $receber_cadastros['rua'];
-            $bairro = $receber_cadastros['bairro'];
-            $cidade = $receber_cadastros['cidade'];
-            $uf = $receber_cadastros['uf'];
+        include 'conexao.php';
+        
+        $ID = $_GET['ID'];
+        
+        $buscar_cadastros = " SELECT * FROM  CADASTROALUNO WHERE ID=$ID";
+        $query_cadastros = mysqli_query($conn, $buscar_cadastros);
+        
+        if($query_cadastros->num_rows > 0)
+        {
+        	while($receber_cadastros = mysqli_fetch_array($query_cadastros))
+        	{
+            	$aluno = $receber_cadastros['aluno'];
+            	responsavel = $receber_cadastros ['responsavel'];
+            	ano = $receber_cadastros['ano'];
+            	cep = $receber_cadastros['cep'];
+              $numero = $receber_cadastros['numero'];
+            	$rua = $receber_cadastros ['rua'];
+            	$bairro = $receber_cadastros['bairro'];
+            	$cidade = $receber_cadastros['cidade'];
+              $uf = $receber_cadastros['uf'];
+        	}
         }
-    } else {
-        header('Location: diretorioaluno.php');
+        else{
+            header('Location: diretorioaluno.php');
+        }
     }
-}
+
 ?>
 
 <!DOCTYPE html>
@@ -43,14 +50,69 @@ if (!empty($_GET['ID'])) {
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
     <link rel="stylesheet" href="/styles/cadastrar.css" />
+    <!-- Adicionando JavaScript -->
+    <script>
+    function limpa_formulário_cep() {
+        // Limpa valores do formulário de CEP.
+        document.getElementById('rua').value = "";
+        document.getElementById('bairro').value = "";
+        document.getElementById('cidade').value = "";
+        document.getElementById('uf').value = "";
+    }
 
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            // Atualiza os campos com os valores.
+            document.getElementById('rua').value = conteudo.logradouro;
+            document.getElementById('bairro').value = conteudo.bairro;
+            document.getElementById('cidade').value = conteudo.localidade;
+            document.getElementById('uf').value = conteudo.uf;
+        } else {
+            // CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
 
+    function pesquisacep(valor) {
+        var cep = valor.replace(/\D/g, '');
 
+        if (cep != "") {
+            var validacep = /^[0-9]{8}$/;
+
+            if (validacep.test(cep)) {
+                // Preenche os campos com "..." enquanto consulta o webservice.
+                document.getElementById('rua').value = "...";
+                document.getElementById('bairro').value = "...";
+                document.getElementById('cidade').value = "...";
+                document.getElementById('uf').value = "...";
+
+                // Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                // Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+
+                // Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+            } else {
+                // CEP é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } else {
+            // CEP sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+    </script>
     <title>Editar Cadastro</title>
+
 </head>
 
 <body>
-     <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
+
+   <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
         <a class="navbar-brand" href="#">
             <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
         </a>
@@ -102,58 +164,63 @@ if (!empty($_GET['ID'])) {
         </div>
     </nav>
 
-
-	 <div class="container">
+    <div class="container">
         <div class="row justify-content-center align-items-center"> <!--style="height: 100vh;"-->
             <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
                 <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center " >
-                    Editar Aluno
+                    Editar Cadastro
                 </h4>
             </div>
-		
-     <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
-    <form action="aeditaraluno.php" method="post">
-        <label>Aluno:
-            <input name="aluno" type="text" id="aluno" size="60" value="<?php echo $aluno; ?>" /></label><br />
+        
+        
+            
+            <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
+                <form action="aeditaraluno.php" method="post">
+                   <label>Aluno:
+            <input name="aluno" type="text" id="aluno" size="60" /></label><br />
         <label>Responsável:
-            <input name="responsavel" type="text" id="responsavel" size="60" value="<?php echo $responsavel; ?>" /></label><br />
-        <label>Ano:
+            <input name="responsavel" type="text" id="responsavel" size="60" /></label><br />
+	 <label>Ano:
             <select id="ano" name="ano" class="form-control input" required>
-                <option value="" selected disabled>Selecione</option>
-                <option value="6" <?php if ($ano == "6º ano") echo "selected"; ?>>6º ano</option>
-                <option value="7" <?php if ($ano == "7º ano") echo "selected"; ?>>7º ano</option>
-                <option value="8" <?php if ($ano == "8º ano") echo "selected"; ?>>8º ano</option>
-                <option value="9" <?php if ($ano == "9º ano") echo "selected"; ?>>9º ano</option>
-                <option value="1" <?php if ($ano == "1° Ano - Ensino Médio") echo "selected"; ?>>1° Ano - Ensino Médio</option>
-                <option value="2" <?php if ($ano == "2° Ano - Ensino Médio") echo "selected"; ?>>2° Ano - Ensino Médio</option>
-                <option value="3" <?php if ($ano == "3° Ano - Ensino Médio") echo "selected"; ?>>3° Ano - Ensino Médio</option>
-            </select>
-        </label><br />
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="6">6º ano</option>
+                                <option value="7">7º ano</option>
+				<option value="8">8º ano</option>
+                                <option value="9">9º ano</option> 
+				<option value="8">8º ano</option>
+                                <option value="1">1° Ano - Ensino Médio</option> 
+				<option value="2">2° Ano - Ensino Médio</option> 
+				<option value="3">3° Ano - Ensino Médio</option> 
+                            </select> /></label><br />
         <label>Cep:
-            <input name="cep" type="text" id="cep" value="<?php echo $cep; ?>" size="10" maxlength="8"
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
                    onblur="pesquisacep(this.value);" /></label><br />
-        <label>Nº:
-            <input name="numero" type="number" id="numero" value="<?php echo $numero; ?>" size="60" /></label><br />
+	 <label>Nº:
+            <input name="numero" type="number" id="numero" size="60" /></label><br />
         <label>Rua:
-            <input name="rua" type="text" id="rua" value="<?php echo $rua; ?>" size="60" /></label><br />
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
         <label>Bairro:
-            <input name="bairro" type="text" id="bairro" value="<?php echo $bairro; ?>" size="40" /></label><br />
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
         <label>Cidade:
-            <input name="cidade" type="text" id="cidade" value="<?php echo $cidade; ?>" size="40" /></label><br />
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
         <label>Estado:
-            <input name="uf" type="text" id="uf" value="<?php echo $uf; ?>" size="2" /></label><br />
-
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+       
         <div class="row justify-content-center align-items-center">
             <input class="btn-primary button_a" type="submit" value="Cadastrar">
         </div>
-        <input type="hidden" name="ID" value="<?php echo $ID; ?>">
-        <div class="row justify-content-center align-items-center">
-            <input class="col-7 mt-4 button" type="submit" value="Salvar Alterações">
+                    <input type="hidden" name="ID" value="<?php echo $ID ?>">
+                    <div class="row justify-content-center align-items-center">
+                        
+                        <input class="col-7 mt-4 button" type="submit" value="Salvar Alterações">
+                    </div>
+                </form>
+            </div>
         </div>
-    </form>
-  </div>
- </div>
-</div>
+    </div>
+
+  
+
 </body>
 
 </html>
