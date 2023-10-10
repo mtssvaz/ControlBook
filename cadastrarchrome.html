@@ -19,14 +19,21 @@
 
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
+<<<<<<< HEAD
     <link rel="stylesheet" href="styles/cadastrar.css" />
 
     <title>Cadastro de Chromebook</title>
+=======
+    <link rel="stylesheet" href="/styles/cadastrar.css" />
+
+    <title> Cadastro de Chromebook </title>
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 
 </head>
 
 <body>
     <script>
+<<<<<<< HEAD
         function verificarAcesso() {
             var loggedIn = sessionStorage.getItem("loggedIn");
         
@@ -49,12 +56,37 @@
     </script>
 
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
+=======
+      function verificarAcesso() {
+        var loggedIn = sessionStorage.getItem("loggedIn");
+    
+        if (loggedIn !== "true") {
+          loggedIn = localStorage.getItem("loggedIn");
+        }
+    
+        if (loggedIn !== "true") {
+          window.location.href = "index.php";
+        }
+      }
+    
+      function logout() {
+        sessionStorage.removeItem("loggedIn");
+        localStorage.removeItem("loggedIn");
+        window.location.href = "index.php";
+      }
+      
+      verificarAcesso();
+    </script>
+
+	<nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
         <a class="navbar-brand" href="#">
             <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
+<<<<<<< HEAD
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
                 <li class="nav-item">
@@ -84,6 +116,43 @@
                 <li class="nav-item">
                     <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
                 </li>
+=======
+    
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                 <li class="nav-item">
+    <a class="nav-link link-nav" href="inicio.html">Início</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cadastro
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuCadastro">
+	<a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
+	<a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+      
+    </div>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Diretório
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
+	<a class="dropdown-item" href="diretorioaluno.php">Diretorio de Aluno</a>
+	<a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+      
+    </div>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+</li>
+
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
             </ul>
         </div>
     </nav>
@@ -99,6 +168,7 @@
                 <form action="includechrome.php" method="post">
                     <div class="row">
                         <div class="col-12">
+<<<<<<< HEAD
                             <label for="password" class="pt-3 font-weight-bold">Serial</label>
                             <input type="number" name="serial" class="form-control input">
                         </div>
@@ -127,6 +197,33 @@
                                 <option value="Ativo">Ativo</option>
                                 <option value="Manutencao">Manutenção</option>
                                 <option value="Estoque">Estoque</option>
+=======
+                            <label for="usuario" class="pt-3 font-weight-bold">Serial</label>
+                            <input type="text" name="serial" class="form-control input">
+                        </div>
+			 <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="usuario" class="pt-3">Modelo</label>
+                            <select id="idmodelo" name="modelo" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="Samsung XE310XBA">Samsung XE310XBA </option>
+                                <option value="Lenovo 100E 81MA001TBR">Lenovo 100E 81MA001TBR</option>
+                            </select>
+                        </div>    
+                
+                
+                    <div class="row">
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="dt_entrada" class="pt-3 font-weight-bold">Data de entrada</label>
+                            <input type="date" name="dt_entrada" class="form-control input">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="statuslo" class="pt-3">Localização</label>
+                            <select id="idlo" name="localizacao" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="ativo">Ativo</option>
+                                <option value="manutencao">Manutenção</option>
+				<option value="ESTOQUE">Estoque</option>
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
                             </select>
                         </div>
                     </div>

@@ -14,7 +14,11 @@ body{
 
 .container-login{
     background-color: #ffff;
+<<<<<<< HEAD
     border-radius: 5px;
+=======
+    border-radius: 20px;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     box-shadow: 0px 2px 6px #888888;
 }
 
@@ -38,7 +42,11 @@ body{
 
 .input{
     outline: none;
+<<<<<<< HEAD
     border-radius: 5px;
+=======
+    border-radius: 15px;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     box-shadow: 0px 2px 6px #888888;
     padding: 0px 30px 0px 20px;
 }
@@ -53,7 +61,11 @@ body{
     cursor: pointer;
     position: absolute;
     right: 10%;
+<<<<<<< HEAD
     top: 65%;
+=======
+    top: 66%;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     color: #000000;
 }
 
@@ -70,8 +82,12 @@ body{
 }
 
 .button_a{
+<<<<<<< HEAD
     padding: 7px;
     border-radius: 5px;
+=======
+    border-radius: 15px;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     border: 2px solid #0098DA;
     color: #ffff;
     background-color: #0098DA;
@@ -80,7 +96,10 @@ body{
     outline: none;
     transition-duration: 0.4s;
     text-decoration: none;
+<<<<<<< HEAD
     text-align: center;
+=======
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }
 
 .button_a:hover {

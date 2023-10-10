@@ -2,11 +2,19 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
+<<<<<<< HEAD
+=======
+    font-size: 16px;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }
 
 body{
     background-color: #f1f1f1;
+<<<<<<< HEAD
     margin-top: 105px;
+=======
+    margin-top: 60px;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }
 
 .barnav{
@@ -23,8 +31,13 @@ body{
 }
 
 .logo{
+<<<<<<< HEAD
     width: 85px;
     height: 85px;
+=======
+    width: 80px;
+    height: 80px;
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     padding: 5px 0 5px 10px;
 }
 
@@ -33,9 +46,12 @@ body{
     text-decoration: none;
     text-transform: none;
     font-weight: bold;
+<<<<<<< HEAD
     font-size: 1.1rem;
     border-radius: 5px;
     padding: 8px 10px;
+=======
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }
 
 .link-nav:hover{
@@ -45,6 +61,7 @@ body{
     transition: all 0.4s;
     text-decoration: none;
 }
+<<<<<<< HEAD
 
 .link-nav-logout{
     background-color: #0098DA;
@@ -65,3 +82,5 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+=======
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2

@@ -17,9 +17,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
     
+<<<<<<< HEAD
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
     
     <link rel="stylesheet" href="styles/duvidas.css"/>
+=======
+    <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon" />
+    
+    <link rel="stylesheet" href="/styles/duvidas.css"/>
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     
     <title>Dúvidas Frequentes</title>
 
@@ -27,6 +33,7 @@
 
 <body>
     <script>
+<<<<<<< HEAD
         function verificarAcesso() {
             var loggedIn = sessionStorage.getItem("loggedIn");
         
@@ -52,11 +59,45 @@
         <a class="navbar-brand" href="#">
             <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
         </a>
+=======
+      function verificarAcesso() {
+        var loggedIn = sessionStorage.getItem("loggedIn");
+    
+        if (loggedIn !== "true") {
+          loggedIn = localStorage.getItem("loggedIn");
+        }
+    
+        if (loggedIn !== "true") {
+          window.location.href = "index.php";
+        }
+      }
+    
+      function logout() {
+        sessionStorage.removeItem("loggedIn");
+        localStorage.removeItem("loggedIn");
+        window.location.href = "index.php";
+      }
+      
+      verificarAcesso();
+    </script>
+
+	<nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
+        </a>
+		<!-- INICIO ACESSIBILIDADE -->
+		<span class="font-con"><button id="ativaContraste" onClick="contrasteON()" class="btn btn-secondary btn-sm">Alto Constraste</button>
+		<button onClick="tamanhoFonte('mais');">A+</button>
+		<button onClick="tamanhoFonte('menos');">A-</button>
+		</span>
+		<!-- FIM ACESSIBILIDADE -->			
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
+<<<<<<< HEAD
                 <li class="nav-item">
                     <a class="nav-link link-nav" href="inicio.html">Início</a>
                 </li>
@@ -84,6 +125,41 @@
                 <li class="nav-item">
                     <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
                 </li>
+=======
+                   <li class="nav-item">
+    <a class="nav-link link-nav" href="inicio.html">Início</a>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Cadastro
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuCadastro">
+	<a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
+	<a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+      
+	 
+    </div>
+</li>
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Diretório
+    </a>
+    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
+	<a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
+	<a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+      
+    </div>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+</li>
+
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
             </ul>
         </div>
     </nav>
@@ -93,7 +169,11 @@
             <h4 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 col-xxl-8 font-weight-bold text-center mt-4 mb-4" >
                 Dúvidas Frequentes
             </h4>
+<<<<<<< HEAD
             <h5 class="mb-4">Aqui você encontrará as informações necessárias para utilizar a aplicação web de forma correta:</h5>
+=======
+            <h5 class="mb-4">AquiTESTE você encontrará as informações necessárias para utilizar a aplicação web de forma correta:</h5>
+>>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
             <div id="accordion">
                 <div class="container_duvidas">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="container_duvidas_titulo">Qual é a finalidade desse sistema?</a>

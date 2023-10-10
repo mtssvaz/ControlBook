@@ -2,25 +2,11 @@
 
 include 'conexao.php';
 
-$buscar_cadastros = " SELECT * FROM  CADASTROCHROME";
+$buscar_cadastros = " SELECT * FROM  CADASTROALUNO";
 $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
     ?>
 
-<<<<<<< HEAD
-<!doctype html>
-<html lang="pt-br">
-
-<head>
-	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    
-=======
 
 <!doctype html>
 <html lang="en">
@@ -29,51 +15,10 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     
-<<<<<<< HEAD
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-    
-    <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
-	
-	<link rel="stylesheet" href="styles/buscar.css" />
-
-	<title>Diretório de Chromebooks</title>
-
-</head>
-
-<body>
-<script>
-        function verificarAcesso() {
-            var loggedIn = sessionStorage.getItem("loggedIn");
-        
-            if (loggedIn !== "true") {
-                loggedIn = localStorage.getItem("loggedIn");
-            }
-        
-            if (loggedIn !== "true") {
-                window.location.href = "index.php";
-            }
-        }
-    
-        function logout() {
-            sessionStorage.removeItem("loggedIn");
-            localStorage.removeItem("loggedIn");
-            window.location.href = "index.php";
-        }
-        verificarAcesso();
-        
-    </script>
-
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
-        <a class="navbar-brand" href="#">
-            <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
-        </a>
-=======
 	<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.quicksearch/2.3.1/jquery.quicksearch.js"></script>
@@ -84,7 +29,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 	
 	<link rel="stylesheet" href="/styles/buscar.css" />
 
-	<title> Diretório de Chromebooks </title>
+	<title> Diretório de Alunos </title>
 
 </head>
 <body>
@@ -99,41 +44,11 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 		<button onClick="tamanhoFonte('menos');">A-</button>
 		</span>
 		<!-- FIM ACESSIBILIDADE -->			
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
-<<<<<<< HEAD
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="inicio.html">Início</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cadastro
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="menuCadastro">
-                        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
-                        <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Diretório
-                    </a>
-                <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-                    <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
-                    <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
-                </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
-                </li>
-=======
                    <li class="nav-item">
     <a class="nav-link link-nav" href="inicio.html">Início</a>
 </li>
@@ -167,7 +82,6 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
     <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
 </li>
 
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
             </ul>
         </div>
     </nav>
@@ -176,7 +90,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
         <div class="row justify-content-center align-items-center"> <!--style="height: 100vh;"-->
             <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
                 <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center" >
-                    Diretório de Chromebooks
+                    Diretório de Alunos
                 </h4>
             </div>
 		</div>
@@ -218,20 +132,17 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 			<table id="tabela" class="table table-hover">
 				<thead>
 					<tr>
-<<<<<<< HEAD
-					    <th>Serial</th>
-						<th>Modelo</th>
-						<th>ID</th>
-						<th>Data de entrada</th>
-						<th>Localização</th>
-=======
 					    <th>ID</th>
-						<th>Serial</th>
-						<th>Modelo</th>
-						<th>Data de entrega</th>
-						<th>Localização</th>
+						<th>Aluno</th>
+						<th>Responsavel</th>
+						<th>Ano</th>
+						<th>CEP</th>
+						<th>Nº</th>
+						<th>Rua</th>
+						<th>Bairro</th>
+						<th>Cidade</th>
+						<th>Estado</th>
 						<th>Ações</th>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 					</tr>
 				</thead>
 				
@@ -240,21 +151,20 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 						while($receber_cadastros = mysqli_fetch_array($query_cadastros))
 						{
 						    echo "<tr>";
-<<<<<<< HEAD
-						    echo "<td>".$receber_cadastros['serial']."</td>";
-						    echo "<td>".$receber_cadastros['modelo']."</td>";
 						    echo "<td>".$receber_cadastros['ID']."</td>";
-=======
-						    echo "<td>".$receber_cadastros['ID']."</td>";
-						    echo "<td>".$receber_cadastros['serial']."</td>";
-						    echo "<td>".$receber_cadastros['modelo']."</td>";
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
-						    echo "<td>".$receber_cadastros['dt_entrada']."</td>";
-						    echo "<td>".$receber_cadastros['localizacao']."</td>";
+						    echo "<td>".$receber_cadastros['aluno']."</td>";
+						    echo "<td>".$receber_cadastros['responsavel']."</td>";
+						    echo "<td>".$receber_cadastros['ano']."</td>";
+						    echo "<td>".$receber_cadastros['cep']."</td>";
+						    echo "<td>".$receber_cadastros['numero']."</td>";
+						    echo "<td>".$receber_cadastros['rua']."</td>";
+						    echo "<td>".$receber_cadastros['bairro']."</td>";
+						    echo "<td>".$receber_cadastros['cidade']."</td>";
+						    echo "<td>".$receber_cadastros['uf']."</td>";
 						    echo "<td>
     			                    
-    			                    <button onclick=\"location.href='editarchrome.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
-    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluirchrome.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
+    			                    <button onclick=\"location.href='editaraluno.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
+    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluiraluno.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
         				    	    
     			                  </td>";
 						    echo "</tr>";

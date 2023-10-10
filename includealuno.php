@@ -1,3 +1,4 @@
+
 <?php
 $dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "chromelocalhost";
@@ -25,26 +26,25 @@ if (mysqli_connect_errno()) {
 }
 
 // Obtém os dados do formulário e previne ataques de injeção de SQL
-$serial = mysqli_real_escape_string($conn, $_POST['serial']);
-$modelo = mysqli_real_escape_string($conn, $_POST['modelo']);
-<<<<<<< HEAD
-$ID = mysqli_real_escape_string($conn, $_POST['ID']);
-=======
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
-$dt_entrada = mysqli_real_escape_string($conn, $_POST['dt_entrada']);
-$localizacao = mysqli_real_escape_string($conn, $_POST['localizacao']);
+$aluno = mysqli_real_escape_string($conn, $_POST['aluno']);
+$responsavel = mysqli_real_escape_string($conn, $_POST['responsavel']);
+$ano = mysqli_real_escape_string($conn, $_POST['ano']);
+$cep = mysqli_real_escape_string($conn, $_POST['cep']);
+$numero = mysqli_real_escape_string($conn, $_POST['numero']);
+$rua = mysqli_real_escape_string($conn, $_POST['rua']);
+$bairro = mysqli_real_escape_string($conn, $_POST['bairro']);
+$cidade = mysqli_real_escape_string($conn, $_POST['cidade']);
+$uf = mysqli_real_escape_string($conn, $_POST['uf']);
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-<<<<<<< HEAD
-$sql = "INSERT INTO cadastrochrome (serial, modelo, ID, dt_entrada, localizacao) VALUES ('$serial', '$modelo', '$ID', '$dt_entrada', '$localizacao')";
-=======
-$sql = "INSERT INTO CADASTROCHROME (serial, modelo, dt_entrada, localizacao) VALUES ('$serial', '$modelo', '$dt_entrada', '$localizacao')";
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
+$sql = "INSERT INTO CADASTROALUNO (aluno, responsavel, ano, cep, numero, rua, bairro, cidade, uf) VALUES ('$aluno', '$responsavel', '$ano', '$cep', '$numero', '$rua', '$bairro', '$cidade', '$uf')";
+
+
 
 // Executa a consulta e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
     echo "<script>alert('Cadastro realizado com sucesso!');</script>";
-    echo "<script>location.href='estoque.php';</script>";
+    echo "<script>location.href='diretorioaluno.php';</script>";
 } else {
     echo "Erro ao cadastrar: " . mysqli_error($conn);
 }
