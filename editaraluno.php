@@ -34,7 +34,62 @@ if (!empty($_GET['ID'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Restante das suas importações de CSS e JavaScript permanecem inalteradas -->
+ <!-- Adicionando JavaScript -->
+    <script>
+    function limpa_formulário_cep() {
+        // Limpa valores do formulário de CEP.
+        document.getElementById('rua').value = "";
+        document.getElementById('bairro').value = "";
+        document.getElementById('cidade').value = "";
+        document.getElementById('uf').value = "";
+    }
 
+    function meu_callback(conteudo) {
+        if (!("erro" in conteudo)) {
+            // Atualiza os campos com os valores.
+            document.getElementById('rua').value = conteudo.logradouro;
+            document.getElementById('bairro').value = conteudo.bairro;
+            document.getElementById('cidade').value = conteudo.localidade;
+            document.getElementById('uf').value = conteudo.uf;
+        } else {
+            // CEP não Encontrado.
+            limpa_formulário_cep();
+            alert("CEP não encontrado.");
+        }
+    }
+
+    function pesquisacep(valor) {
+        var cep = valor.replace(/\D/g, '');
+
+        if (cep != "") {
+            var validacep = /^[0-9]{8}$/;
+
+            if (validacep.test(cep)) {
+                // Preenche os campos com "..." enquanto consulta o webservice.
+                document.getElementById('rua').value = "...";
+                document.getElementById('bairro').value = "...";
+                document.getElementById('cidade').value = "...";
+                document.getElementById('uf').value = "...";
+
+                // Cria um elemento javascript.
+                var script = document.createElement('script');
+
+                // Sincroniza com o callback.
+                script.src = 'https://viacep.com.br/ws/' + cep + '/json/?callback=meu_callback';
+
+                // Insere script no documento e carrega o conteúdo.
+                document.body.appendChild(script);
+            } else {
+                // CEP é inválido.
+                limpa_formulário_cep();
+                alert("Formato de CEP inválido.");
+            }
+        } else {
+            // CEP sem valor, limpa formulário.
+            limpa_formulário_cep();
+        }
+    };
+    </script>
     <title>Editar Cadastro</title>
 </head>
 
