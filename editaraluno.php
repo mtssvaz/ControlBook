@@ -120,13 +120,13 @@ if (!empty($_GET['ID'])) {
         <label>Ano:
             <select id="ano" name="ano" class="form-control input" required>
                 <option value="" selected disabled>Selecione</option>
-                <option value="6º ano" <?php if ($ano == "6º ano") echo "selected"; ?>>6º ano</option>
-                <option value="7º ano" <?php if ($ano == "7º ano") echo "selected"; ?>>7º ano</option>
-                <option value="8º ano" <?php if ($ano == "8º ano") echo "selected"; ?>>8º ano</option>
-                <option value="9º ano" <?php if ($ano == "9º ano") echo "selected"; ?>>9º ano</option>
-                <option value="1° Ano - Ensino Médio" <?php if ($ano == "1° Ano - Ensino Médio") echo "selected"; ?>>1° Ano - Ensino Médio</option>
-                <option value="2° Ano - Ensino Médio" <?php if ($ano == "2° Ano - Ensino Médio") echo "selected"; ?>>2° Ano - Ensino Médio</option>
-                <option value="3° Ano - Ensino Médio" <?php if ($ano == "3° Ano - Ensino Médio") echo "selected"; ?>>3° Ano - Ensino Médio</option>
+                <option value="6" <?php if ($ano == "6º ano") echo "selected"; ?>>6º ano</option>
+                <option value="7" <?php if ($ano == "7º ano") echo "selected"; ?>>7º ano</option>
+                <option value="8" <?php if ($ano == "8º ano") echo "selected"; ?>>8º ano</option>
+                <option value="9" <?php if ($ano == "9º ano") echo "selected"; ?>>9º ano</option>
+                <option value="1" <?php if ($ano == "1° Ano - Ensino Médio") echo "selected"; ?>>1° Ano - Ensino Médio</option>
+                <option value="2" <?php if ($ano == "2° Ano - Ensino Médio") echo "selected"; ?>>2° Ano - Ensino Médio</option>
+                <option value="3" <?php if ($ano == "3° Ano - Ensino Médio") echo "selected"; ?>>3° Ano - Ensino Médio</option>
             </select>
         </label><br />
         <label>Cep:
@@ -143,7 +143,9 @@ if (!empty($_GET['ID'])) {
         <label>Estado:
             <input name="uf" type="text" id="uf" value="<?php echo $uf; ?>" size="2" /></label><br />
 
-       
+        <div class="row justify-content-center align-items-center">
+            <input class="btn-primary button_a" type="submit" value="Cadastrar">
+        </div>
         <input type="hidden" name="ID" value="<?php echo $ID; ?>">
         <div class="row justify-content-center align-items-center">
             <input class="col-7 mt-4 button" type="submit" value="Salvar Alterações">
