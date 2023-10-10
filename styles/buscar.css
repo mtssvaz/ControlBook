@@ -1,0 +1,93 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background-color: #f1f1f1;
+    margin-top: 105px;
+}
+
+.barnav{
+    position: fixed;
+    top: 0;
+}
+
+.navbar-toggler {
+    border-color: rgb(255, 255, 255);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.logo{
+    width: 85px; 
+    height: 85px;
+    padding: 5px 0 5px 10px;
+}
+
+.link-nav{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.link-nav:hover{
+    background-color: #f8f8f8;
+    color: #324572;
+    font-weight: bold;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+.link-nav-logout{
+    background-color: #0098DA;
+    color: #f8f8f8 !important;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+.link-nav-logout:hover{
+    background-color: #f8f8f8;
+    color: #0098DA !important;
+    font-weight: bold;
+    transition: all 0.4s;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.input{
+    outline: none;
+    border-radius: 10px !important;
+    box-shadow: 0px 2px 6px #888888;
+    padding: 0px 10px 0px 10px;
+}
+
+.input:hover{
+    border: transparent;
+    box-shadow: 0px 1px 10px #324572;
+}
+
+.container-busca{
+    background-color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px #888888;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.btn-e{
+    padding: 4px 9px 4px 9px;
+}
