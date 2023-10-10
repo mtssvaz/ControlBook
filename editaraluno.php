@@ -49,13 +49,13 @@ if (!empty($_GET['ID'])) {
         <label>Ano:
             <select id="ano" name="ano" class="form-control input" required>
                 <option value="" selected disabled>Selecione</option>
-                <option value="6" <?php if ($ano == "6") echo "selected"; ?>>6º ano</option>
-                <option value="7" <?php if ($ano == "7") echo "selected"; ?>>7º ano</option>
-                <option value="8" <?php if ($ano == "8") echo "selected"; ?>>8º ano</option>
-                <option value="9" <?php if ($ano == "9") echo "selected"; ?>>9º ano</option>
-                <option value="1" <?php if ($ano == "1") echo "selected"; ?>>1° Ano - Ensino Médio</option>
-                <option value="2" <?php if ($ano == "2") echo "selected"; ?>>2° Ano - Ensino Médio</option>
-                <option value="3" <?php if ($ano == "3") echo "selected"; ?>>3° Ano - Ensino Médio</option>
+                <option value="6" <?php if ($ano == "6º ano") echo "selected"; ?>>6º ano</option>
+                <option value="7" <?php if ($ano == "7º ano") echo "selected"; ?>>7º ano</option>
+                <option value="8" <?php if ($ano == "8º ano") echo "selected"; ?>>8º ano</option>
+                <option value="9" <?php if ($ano == "9º ano") echo "selected"; ?>>9º ano</option>
+                <option value="1" <?php if ($ano == "1° Ano - Ensino Médio") echo "selected"; ?>>1° Ano - Ensino Médio</option>
+                <option value="2" <?php if ($ano == "2° Ano - Ensino Médio") echo "selected"; ?>>2° Ano - Ensino Médio</option>
+                <option value="3" <?php if ($ano == "3° Ano - Ensino Médio") echo "selected"; ?>>3° Ano - Ensino Médio</option>
             </select>
         </label><br />
         <label>Cep:
