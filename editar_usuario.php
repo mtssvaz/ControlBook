@@ -16,7 +16,6 @@
         	{
             	$aluno = $receber_cadastros['aluno'];
             	$matriucla = $receber_cadastros ['matricula'];
-            	$ano = $receber_cadastros['ano'];
                 $atendente = $receber_cadastros['atendente'];
             	$idchrome = $receber_cadastros['idchrome'];
                 $dt_entrega = $receber_cadastros['dt_entrega'];
@@ -132,31 +131,14 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                            <label for="forano" class="pt-3">Ano</label>
-                            <select id="idano" name="ano" class="form-control input" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option value="6">6º ano</option>
-                                <option value="7">7º ano</option>
-				                <option value="8">8º ano</option>
-                                <option value="9">9º ano</option> 
-				                <option value="8">8º ano</option>
-                                <option value="1">1° Ano - Ensino Médio</option> 
-				                <option value="2">2° Ano - Ensino Médio</option> 
-				                <option value="3">3° Ano - Ensino Médio</option> 
-                            </select>
-                        </div>    
+                       
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="foraten" class="pt-3">Atendente</label>
                             <select id="idaten" name="atendente" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
-                                <option value="mateus">Mateus Vaz</option>
-                                <option value="patrickrocha">Patrick Rocha</option>
-				                <option value="manzo">Patrick Manzo</option>
-                                <option value="solange">Solange Mendonça</option> 
-				                <option value="renato">Renato Vieira</option>
-                                <option value="rosana">Rosana Rosanita</option> 
-				                <option value="valdimey">Valdiney Costa</option> 
+                                <option value="Danilo">Danilo</option>
+                                <option value="Vanessa">Vanessa</option>
+				               
 				
                             </select>
                         </div>    
