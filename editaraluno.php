@@ -101,17 +101,8 @@ if (!empty($_GET['ID'])) {
             </ul>
         </div>
     </nav>
-
-
-	 <div class="container">
-        <div class="row justify-content-center align-items-center"> <!--style="height: 100vh;"-->
-            <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
-                <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center " >
-                    Editar Aluno
-                </h4>
-            </div>
-		
-     <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
+    <!-- Restante do seu código HTML permanece inalterado -->
+    
     <form action="aeditaraluno.php" method="post">
         <label>Aluno:
             <input name="aluno" type="text" id="aluno" size="60" value="<?php echo $aluno; ?>" /></label><br />
@@ -151,9 +142,6 @@ if (!empty($_GET['ID'])) {
             <input class="col-7 mt-4 button" type="submit" value="Salvar Alterações">
         </div>
     </form>
-  </div>
- </div>
-</div>
 </body>
 
 </html>
