@@ -15,15 +15,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-<<<<<<< HEAD
-    
-    <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
-    <link rel="stylesheet" href="styles/inicio.css"/>
-
-    <title>Página Inicial</title>
-=======
-    	
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
     <link rel="stylesheet" id="styleSheet" href="/styles/inicio.css"/>
@@ -31,33 +23,28 @@
     <title>Página Inicial</title>
 
 	
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 </head>
 <body>
     <script>
-      function verificarAcesso() {
-        var loggedIn = sessionStorage.getItem("loggedIn");
-    
-        if (loggedIn !== "true") {
-          loggedIn = localStorage.getItem("loggedIn");
+        function verificarAcesso() {
+            var loggedIn = sessionStorage.getItem("loggedIn");
+
+            if (loggedIn !== "true") {
+                loggedIn = localStorage.getItem("loggedIn");
+            }
+
+            if (loggedIn !== "true") {
+                window.location.href = "index.php";
+            }
         }
-    
-        if (loggedIn !== "true") {
-          window.location.href = "index.php";
-        }
-      }
-    
-      function logout() {
-        sessionStorage.removeItem("loggedIn");
-        localStorage.removeItem("loggedIn");
-        window.location.href = "index.php";
-      }
-      
-      verificarAcesso();
-<<<<<<< HEAD
-    </script>
-    
-=======
+
+            function logout() {
+                sessionStorage.removeItem("loggedIn");
+                localStorage.removeItem("loggedIn");
+                window.location.href = "index.php";
+            }
+        
+        verificarAcesso();
 
 	//INICIO ACESSIBILIDADE
 	function contrasteON() {
@@ -96,17 +83,10 @@
 
 	
 	
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 	<nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
         <a class="navbar-brand" href="#">
             <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
         </a>
-<<<<<<< HEAD
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    
-=======
 		<!-- INICIO ACESSIBILIDADE -->
 		<span class="font-con"><button id="ativaContraste" onClick="contrasteON()" class="btn btn-secondary btn-sm">Alto Constraste</button>
 		<button onClick="tamanhoFonte('mais');">A+</button>
@@ -116,7 +96,6 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
             <ul class="navbar-nav align-items-center">
                    <li class="nav-item">
@@ -127,16 +106,11 @@
         Cadastro
     </a>
     <div class="dropdown-menu" aria-labelledby="menuCadastro">
-<<<<<<< HEAD
-        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
-        <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-=======
 	<a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
 	<a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
         <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
       
 	 
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     </div>
 </li>
 <li class="nav-item dropdown">
@@ -144,15 +118,10 @@
         Diretório
     </a>
     <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-<<<<<<< HEAD
-        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
-        <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
-=======
 	<a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
 	<a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
         <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
       
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     </div>
 </li>
 <li class="nav-item">
@@ -168,11 +137,7 @@
     
     <div class="container">
         <div class="row justify-content-center align-items-center text-center" style="height: 85vh;">
-<<<<<<< HEAD
-            <h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor William Alecsandro de Melo Duarte.</h4>
-=======
 		<h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borge.</h4>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
         </div>
     </div>
     

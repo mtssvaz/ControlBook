@@ -14,11 +14,7 @@
 
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
     
-<<<<<<< HEAD
-    <link rel="stylesheet" href="styles/login.css"/>
-=======
     <link rel="stylesheet" href="/styles/login.css"/>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
     
     <title>Gerenciador de Chromebooks - Nahim Ahmad</title>
 </head>
@@ -28,11 +24,7 @@
         <div class="row justify-content-center align-items-center" style="height: 100vh;">
             <div class="col-12 col-md-8 col-lg-7 col-xl-6 col-xxl-5 pt-4 pb-5 pr-5 pl-5 container-login">
                 <div class="row justify-content-center">
-<<<<<<< HEAD
-                    <img class="imagem" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
-=======
                     <img class="imagem" src="/imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-autos login-form-title mt-3 mb-3">
@@ -47,11 +39,7 @@
                     <div class="form-group mb-2">
                         <label for="password" class="row justify-content-center label">Senha</label>
                         <input type="password" class="form-control input" id="password" placeholder="Digite sua senha">
-<<<<<<< HEAD
-                        <i class="bi-eye eye" id="btn-password" onclick="verSenha()"></i>
-=======
                         <i class="bi bi-eye eye" id="btn-password" onclick="mostrarSenha()"></i>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
                     </div>
                     <div class="row mb-3 mt-3">
                         <div class="col">
@@ -62,24 +50,15 @@
                         </div>
                     </div>
                     <div class="row justify-content-center align-items-center">
-<<<<<<< HEAD
                       <button class="button_a" type="button" onclick="logar()">Entrar</button>
-=======
-                        <input class="btn-primary button_a" onclick="logar()" value="Entrar">
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
                     </div>
-
                 </form>
             </div>
         </div>
     </div>
 
     <script>
-<<<<<<< HEAD
-        function verSenha(){
-=======
         function mostrarSenha(){
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
             var inputPass = document.getElementById('password')
             var bntShowPass = document.getElementById('btn-password')
 
