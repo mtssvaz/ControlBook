@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
-     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
@@ -19,10 +20,9 @@
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
     <link rel="stylesheet" href="/styles/cadastrar.css" />
-    <title>Cadastro de aluno</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
-    <!-- Adicionando JavaScript -->
+    <title> Cadastro de Aluno </title>
+  <!-- Adicionando JavaScript -->
     <script>
     function limpa_formulário_cep() {
         // Limpa valores do formulário de CEP.
@@ -78,9 +78,11 @@
         }
     };
     </script>
+	
 </head>
+
 <body>
-      <script>
+    <script>
       function verificarAcesso() {
         var loggedIn = sessionStorage.getItem("loggedIn");
     
@@ -154,9 +156,9 @@
                 <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center " >
                     Cadastro de Aluno
                 </h4>
-                
-    <!-- Inicio do formulário -->
-    <form method="post" action="includealuno.php">
+            </div>
+            <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
+               <form method="post" action="includealuno.php">
         <label>Aluno:
             <input name="aluno" type="text" id="aluno" size="60" /></label><br />
         <label>Responsável:
@@ -191,9 +193,10 @@
             <input class="btn-primary button_a" type="submit" value="Cadastrar">
         </div>
     </form>
-   </div>
- </div>
-</div>
-	
+            </div>
+        </div>
+    </div>
+
 </body>
+
 </html>
