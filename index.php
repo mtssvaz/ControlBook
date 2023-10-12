@@ -14,7 +14,7 @@
 
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
     
-    <link rel="stylesheet" href="/styles/login.css"/>
+    <link rel="stylesheet" href="styles/login.css"/>
     
     <title>Gerenciador de Chromebooks - Nahim Ahmad</title>
 </head>
