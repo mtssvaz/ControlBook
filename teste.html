@@ -21,7 +21,8 @@
 
     <link rel="stylesheet" href="/styles/cadastrar.css" />
 
-     <!-- Adicionando JavaScript -->
+    <title> Cadastro de Aluno </title>
+  <!-- Adicionando JavaScript -->
     <script>
     function limpa_formulário_cep() {
         // Limpa valores do formulário de CEP.
@@ -77,9 +78,7 @@
         }
     };
     </script>
-
-    <title> Cadastro de Chromebook </title>
-
+	
 </head>
 
 <body>
@@ -155,48 +154,45 @@
         <div class="row justify-content-center align-items-center">
             <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
                 <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center " >
-                    Cadastro de Chromebook
+                    Cadastro de Aluno
                 </h4>
             </div>
             <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
-                <form action="includealuno.php" method="post">
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Aluno</label>
-                            <input type="text" name="aluno" id="aluno" class="form-control input">
-                        </div>
-                         <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Responsavel</label>
-                            <input type="text" name="responsavel" id="responsavel" class="form-control input">
-                        </div>
-			
-                    <div class="row">
-                          <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">CEP</label>
-                            <input type="text" name="cep"  id="cep" value="" class="form-control input">
-                               onblur="pesquisacep(this.value);" /></label><br />
-                         <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Rua</label>
-                            <input type="text" name="rua" id="rua" class="form-control input">
-                        </div>
-                         <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Bairro</label>
-                            <input type="text" name="bairro" id="bairro" class="form-control input">
-                        </div>
-                        <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Cidade</label>
-                            <input type="text" name="cidade" id="cidade" class="form-control input">
-                        </div>
-                         <div class="col-12">
-                            <label for="usuario" class="pt-3 font-weight-bold">Estado</label>
-                            <input type="text" name="uf" name="uf" class="form-control input">
-                        </div>
-                       
-                    </div>
-                    <div class="row justify-content-center align-items-center">
-                        <input class="btn-primary button_a" type="submit" value="Cadastrar">
-                    </div>
-                </form>
+               <form method="post" action="includealuno.php">
+        <label>Aluno:
+            <input name="aluno" type="text" id="aluno" size="60" /></label><br />
+        <label>Responsável:
+            <input name="responsavel" type="text" id="responsavel" size="60" /></label><br />
+	 <label>Ano:
+            <select id="ano" name="ano" class="form-control input" required>
+                                <option value="" selected disabled>Selecione</option>
+                                <option value="6º ano">6º ano</option>
+                                <option value="7º ano">7º ano</option>
+				<option value="8º ano">8º ano</option>
+                                <option value="9º ano">9º ano</option> 
+				
+                                <option value="1° Ano - Ensino Médio">1° Ano - Ensino Médio</option> 
+				<option value="2° Ano - Ensino Médio">2° Ano - Ensino Médio</option> 
+				<option value="3° Ano - Ensino Médio">3° Ano - Ensino Médio</option> 
+                            </select> /></label><br />
+        <label>Cep:
+            <input name="cep" type="text" id="cep" value="" size="10" maxlength="9"
+                   onblur="pesquisacep(this.value);" /></label><br />
+	 <label>Nº:
+            <input name="numero" type="number" id="numero" size="60" /></label><br />
+        <label>Rua:
+            <input name="rua" type="text" id="rua" size="60" /></label><br />
+        <label>Bairro:
+            <input name="bairro" type="text" id="bairro" size="40" /></label><br />
+        <label>Cidade:
+            <input name="cidade" type="text" id="cidade" size="40" /></label><br />
+        <label>Estado:
+            <input name="uf" type="text" id="uf" size="2" /></label><br />
+       
+        <div class="row justify-content-center align-items-center">
+            <input class="btn-primary button_a" type="submit" value="Cadastrar">
+        </div>
+    </form>
             </div>
         </div>
     </div>
