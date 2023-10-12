@@ -208,9 +208,7 @@
         <label>Estado:
             <input name="uf" type="text" id="uf" value="<?php echo $uf; ?>" size="2" /></label><br />
 
-        <div class="row justify-content-center align-items-center">
-            <input class="btn-primary button_a" type="submit" value="Cadastrar">
-        </div>
+     
         <input type="hidden" name="ID" value="<?php echo $ID; ?>">
         <div class="row justify-content-center align-items-center">
             <input class="col-7 mt-4 button" type="submit" value="Salvar Alterações">
