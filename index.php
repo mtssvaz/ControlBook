@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center align-items-center">
-                        <input class="btn-primary button_a" onclick="logar()" value="Entrar">
+                        <input class="btn-primary button_a" onclick="logar()" value="Sair">
                     </div>
 
                 </form>
