@@ -18,7 +18,7 @@
 
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
     
-    <link rel="stylesheet" type="text/css" href="styles/tela_login.css">
+    <link rel="stylesheet" href="styles/tela_login.css">
     
     <title>Gerenciador de Chromebooks - Nahim Ahmad</title>
 </head>
@@ -163,7 +163,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center align-items-center">
-                      <button class="btn-primary button_a" type="button" onclick="logar()">Entrar</button>
+                        <button class="btn-primary button_a" type="button" onclick="logar()">Entrar</button>
                     </div>
                 </form>
             </div>
