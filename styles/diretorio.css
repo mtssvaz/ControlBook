@@ -2,13 +2,12 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
 }
 
 body{
-    background: #111111;
-    color: #e2e2e2;
+    background-color: #f1f1f1;
     margin-top: 150px;
+
 }
 
 .barnav{
@@ -66,6 +65,38 @@ body{
     transition: all 0.4s;
     text-decoration: none;
     cursor: pointer;
+}
+
+.input{
+    outline: none;
+    border-radius: 10px !important;
+    box-shadow: 0px 2px 6px #888888;
+    padding: 0px 10px 0px 10px;
+}
+
+.input:hover{
+    border: transparent;
+    box-shadow: 0px 1px 10px #324572;
+}
+
+.container-busca{
+    background-color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px #888888;
+}
+
+.table td, .table th {
+    vertical-align: middle;
+}
+
+.btn-e{
+    padding: 4px 9px 4px 9px;
+}
+
+.container-busca{
+    background-color: #ffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px #888888;
 }
 
 #ativaContraste{

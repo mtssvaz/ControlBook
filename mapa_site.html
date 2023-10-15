@@ -20,64 +20,64 @@
 
     <link rel="stylesheet" id="styleSheet" href="styles/pagina_inicial.css"/>
 
-    <title>Página Inicial</title>
+    <title>Mapa do Site</title>
 
 </head>
 <body>
     <script>
 
-        function verificarAcesso() {
-        var loggedIn = sessionStorage.getItem("loggedIn");
+    function verificarAcesso() {
+    var loggedIn = sessionStorage.getItem("loggedIn");
 
-            if (loggedIn !== "true") {
-                loggedIn = localStorage.getItem("loggedIn");
-            }
-
-            if (loggedIn !== "true") {
-                window.location.href = "index.php";
-            }
+        if (loggedIn !== "true") {
+            loggedIn = localStorage.getItem("loggedIn");
         }
 
-        function logout() {
-            sessionStorage.removeItem("loggedIn");
-            localStorage.removeItem("loggedIn");
+        if (loggedIn !== "true") {
             window.location.href = "index.php";
         }
-        
-        verificarAcesso();
+    }
 
-        // INICIO ACESSIBILIDADE
-        function contrasteON() {
-            var btnStyle = document.getElementById('ativaContraste')
-            var btnActive = btnStyle.classList.contains('active')
-            
-            if (btnActive) {
-                btnStyle.className = 'btn'
-                mudaStyleSheet('pagina_inicial.css')
-            } else {
-                btnStyle.className = 'btn'
-                mudaStyleSheet('iniciocon.css')
-            }
-        }
-            
-        function mudaStyleSheet(sheet) {
-            var baseUrl = window.location.origin + 'styles/'
-            var styleUrl = baseUrl + sheet
-            document.getElementById("styleSheet").setAttribute('href', styleUrl)
-        }
-        
-        function tamanhoFonte(tipo){
-            let elemento = $(".col-12");
-            let fonte = elemento.css('font-size');
-            
-            if (tipo == 'mais') {
-                //document.body.style.fontSize=parseInt(fonte) + 1+"px";
-                elemento.css("fontSize", parseInt(fonte) + 1, "px");
-            } else if('menos'){
-                elemento.css("fontSize", parseInt(fonte) - 1, "px");
-            }
-        }
-        // FIM ACESSIBILIDADE
+    function logout() {
+        sessionStorage.removeItem("loggedIn");
+        localStorage.removeItem("loggedIn");
+        window.location.href = "index.php";
+    }
+    
+    verificarAcesso();
+
+	// INICIO ACESSIBILIDADE
+	function contrasteON() {
+		var btnStyle = document.getElementById('ativaContraste')
+		var btnActive = btnStyle.classList.contains('active')
+		
+		if (btnActive) {
+			btnStyle.className = 'btn'
+			mudaStyleSheet('pagina_inicial.css')
+		} else {
+			btnStyle.className = 'btn'
+			mudaStyleSheet('iniciocon.css')
+		}
+	}
+		
+	function mudaStyleSheet(sheet) {
+		var baseUrl = window.location.origin + 'styles/'
+		var styleUrl = baseUrl + sheet
+		document.getElementById("styleSheet").setAttribute('href', styleUrl)
+	}
+	
+	function tamanhoFonte(tipo){
+		let elemento = $(".col-12");
+		let fonte = elemento.css('font-size');
+		
+		if (tipo == 'mais') {
+			//document.body.style.fontSize=parseInt(fonte) + 1+"px";
+			elemento.css("fontSize", parseInt(fonte) + 1, "px");
+		} else if('menos'){
+			elemento.css("fontSize", parseInt(fonte) - 1, "px");
+		}
+	}
+	// FIM ACESSIBILIDADE
     </script>
 
     <nav class="navbar-expand-md fixed-top">
@@ -88,10 +88,10 @@
                         <li>
                             <!-- INICIO ACESSIBILIDADE -->
                             <span class="font-con">
-                                <button id="ativaContraste" onclick="tamanhoFonte('menos');">A-</button>
-                                <button id="ativaContraste" onclick="tamanhoFonte('normal');">A</button> 
-                                <button id="ativaContraste" onclick="tamanhoFonte('mais');">A+</button>
-                                <button id="ativaContraste" onclick="contrasteON()">Alto Constraste</button>
+                                <button id="fonte" onClick="tamanhoFonte('menos');">A-</button>
+                                <button id="fonte" onClick="tamanhoFonte('normal');">A</button> 
+                                <button id="fonte" onClick="tamanhoFonte('mais');">A+</button>
+                                <button id="ativaContraste" onClick="contrasteON()">Alto Constraste</button>
                                 <a id="ativaContraste" href="mapa_site.html">Mapa do site</a>
                             </span>
                             <!-- FIM ACESSIBILIDADE -->	
@@ -144,8 +144,50 @@
     </nav>
 
     <div class="container">
-        <div class="row justify-content-center align-items-center text-center" style="height: 85vh; color: black">
-		<h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borges.</h4>
+        <div>
+            <h4>
+                Mapa do Site
+            </h4>
+            <ul>
+                <h4 class="#">Páginas</h4>
+                <li>
+                    <a class="nav-link link-nav" href="inicio.html">Início</a>
+                </li>
+                <li> Cadastrar
+                    <ul>
+                        <li>
+                            <a class="nav-link link-nav" href="cadastraraluno.html">Cadastrar Aluno</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-nav" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-nav" href="cadastrar.html">Cadastrar Contrato</a>
+                        </li>
+                    </ul>
+                </li>
+                <li> 
+                    Diretório
+                    <ul>
+                        <li>
+                            <a class="nav-link link-nav" href="diretorioaluno.php">Diretório Aluno</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-nav" href="estoque.php">Diretório Chromebooks</a>
+                        </li>
+                        <li>
+                            <a class="nav-link link-nav" href="buscardozero.php">Diretório Contrato</a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="duvidas.html">Dúvidas</a>
+                </li>
+                <li>
+                    <a class="link-nav-logout" onclick="logout()">Sair</a>
+                </li>
+            </ul>
+            
         </div>
     </div>
     

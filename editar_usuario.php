@@ -15,20 +15,12 @@
         	while($receber_cadastros = mysqli_fetch_array($query_cadastros))
         	{
             	$aluno = $receber_cadastros['aluno'];
-<<<<<<< HEAD
-            	$responsavel = $receber_cadastros ['responsavel'];
-            	$conservacao = $receber_cadastros['conservacao'];
-            	$dt_entrega = $receber_cadastros['dt_entrega'];
-            	$MATRICULA = $receber_cadastros['MATRICULA'];
-            	$n_de_serie = $receber_cadastros['n_de_serie'];
-=======
             	$matriucla = $receber_cadastros ['matricula'];
             	$ano = $receber_cadastros['ano'];
                 $atendente = $receber_cadastros['atendente'];
             	$idchrome = $receber_cadastros['idchrome'];
                 $dt_entrega = $receber_cadastros['dt_entrega'];
             	$contrato = $receber_cadastros['contrato'];
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
         	}
         }
         else{
@@ -53,20 +45,19 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
 
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 
-<<<<<<< HEAD
-    <link rel="stylesheet" href="styles/cadastrar.css" />
-=======
-    <link rel="stylesheet" href="/styles/cadastrar.css" />
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
+    <link rel="stylesheet" href="styles/cadastrar.css"/>
 
     <title>Editar Cadastro</title>
 
 </head>
 
 <body>
-<<<<<<< HEAD
 <script>
         function verificarAcesso() {
             var loggedIn = sessionStorage.getItem("loggedIn");
@@ -89,92 +80,66 @@
         
     </script>
 
-    <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
-        <a class="navbar-brand" href="#">
-            <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
-        </a>
-=======
-
-   <nav class="navbar navbar-expand-md fixed-top" style="background-color: #324572;">
-        <a class="navbar-brand" href="#">
-            <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
-        </a>
-		<!-- INICIO ACESSIBILIDADE -->
-		<span class="font-con"><button id="ativaContraste" onClick="contrasteON()" class="btn btn-secondary btn-sm">Alto Constraste</button>
-		<button onClick="tamanhoFonte('mais');">A+</button>
-		<button onClick="tamanhoFonte('menos');">A-</button>
-		</span>
-		<!-- FIM ACESSIBILIDADE -->			
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav align-items-center">
-<<<<<<< HEAD
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="inicio.html">Início</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Cadastro
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="menuCadastro">
-                        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
-                        <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Diretório
-                    </a>
-                <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-                    <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
-                    <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+<nav class="navbar-expand-md fixed-top">
+        <div>
+            <nav>
+                <div class="row justify-content-center align-items-center p-1" style="background-color: #FFFFFF;">
+                    <ul class="navbar-nav align-items-center">
+                        <li>
+                            <!-- INICIO ACESSIBILIDADE -->
+                            <span class="font-con">
+                                <button id="ativaContraste" onClick="tamanhoFonte('menos');">A-</button>
+                                <button id="ativaContraste" onClick="tamanhoFonte('normal');">A</button> 
+                                <button id="ativaContraste" onClick="tamanhoFonte('mais');">A+</button>
+                                <button id="ativaContraste" onClick="contrasteON()">Alto Constraste</button>
+                                <a id="ativaContraste" href="mapa_site.html">Mapa do site</a>
+                            </span>
+                            <!-- FIM ACESSIBILIDADE -->	
+                        </li>
+                    </ul>
                 </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
-                </li>
-=======
-                   <li class="nav-item">
-    <a class="nav-link link-nav" href="inicio.html">Início</a>
-</li>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Cadastro
-    </a>
-    <div class="dropdown-menu" aria-labelledby="menuCadastro">
-	<a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
-	<a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
-      
-	 
-    </div>
-</li>
-<li class="nav-item dropdown">
-    <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Diretório
-    </a>
-    <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-	<a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
-	<a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
-        <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
-      
-    </div>
-</li>
-<li class="nav-item">
-    <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
-</li>
-<li class="nav-item">
-    <a class="nav-link link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
-</li>
-
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
-            </ul>
+            </nav>
+            <nav class="navbar navbar-expand-md" style="background-color: #324572;">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
+                </a>  
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link link-nav" href="inicio.html">Início</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Cadastro
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="menuCadastro">
+                                <a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
+                                <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+                                <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+                            </div>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Diretório
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="menuDiretorio">
+                            <a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
+                            <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
+                            <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </nav>
 
@@ -185,8 +150,6 @@
                     Editar Cadastro
                 </h4>
             </div>
-        
-        
             
             <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
                 <form action="editar.php" method="post">
@@ -198,22 +161,6 @@
                     </div>
                     <div class="row">
                         <div class="col-12">
-<<<<<<< HEAD
-                            <label for="password" class="pt-3 font-weight-bold">Responsável financeiro</label>
-                            <input type="text" name="responsavel" class="form-control input" value="<?php echo $responsavel ?>"required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="usuario" class="pt-3 font-weight-bold">Núm. da matrícula</label>
-                            <input type="text" name="MATRICULA" class="form-control input" value="<?php echo $MATRICULA ?>" required>
-                        </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="password" class="pt-3 font-weight-bold">Serial</label>
-                            <input type="text" name="n_de_serie" class="form-control input" value="<?php echo $n_de_serie ?>" required>
-                        </div>
-                    </div>
-=======
                             <label for="password" class="pt-3 font-weight-bold">Núm. da matrícula</label>
                             <input type="text" name="matricula" class="form-control input" value="<?php echo $matricula ?>"required>
                         </div>
@@ -247,14 +194,13 @@
 				
                             </select>
                         </div>    
-                         <div class="row">
+                        <div class="row">
                         <div class="col-12">
                             <label for="usuario" class="pt-3 font-weight-bold">ID Chromebook</label>
                             <input type="text" name="idchrome" class="form-control input" value="<?php echo $idchrome ?>" required>
                         </div>
                     </div>
                     </div>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
                     <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="dt_entrega" class="pt-3 font-weight-bold">Data de entrega</label>
@@ -262,18 +208,10 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="status" class="pt-3">Status</label>
-<<<<<<< HEAD
-                            <select id="status" name="conservacao" class="form-control input" required>
-                                <option value="" selected disabled>Selecione</option>
-                                <option value="em_uso" <?php echo ($conservacao == 'em_uso') ? 'selected' : '' ?> >Em uso</option>
-                                <option value="manutenção" <?php echo ($conservacao == 'manutenção') ? 'selected' : '' ?> >Em manutenção</option>
-                                <option value="quebrado" <?php echo ($conservacao == 'quebrado') ? 'selected' : '' ?> >Quebrado</option>
-=======
                             <select id="status" name="contrato" class="form-control input" required>
                                 <option value="" selected disabled>Selecione</option>
                                 <option value="Ativo" <?php echo ($contrato == 'Ativo') ? 'selected' : '' ?> >Ativo</option>
                                 <option value="Inativo" <?php echo ($contrato == 'Inativo') ? 'selected' : '' ?> >Inativo</option>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
                             </select>
                         </div>
                     </div>
@@ -286,18 +224,6 @@
             </div>
         </div>
     </div>
-
-  
-
 </body>
 
 </html>
-<<<<<<< HEAD
-=======
-
-  
-
-</body>
-
-</html>
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2

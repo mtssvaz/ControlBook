@@ -19,29 +19,16 @@ mysqli_real_connect(
     0 // Sem SSL
 );
 // Obtém os dados do formulário
-<<<<<<< HEAD
-$serial = $_POST['serial'];
-$modelo = $_POST['modelo'];
-$ID = $_POST['ID'];
-=======
 $ID = $_POST['ID'];
 $serial = $_POST['serial'];
 $modelo = $_POST['modelo'];
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 $dt_entrada = $_POST['dt_entrada'];
 $localizacao = $_POST['localizacao'];
 
 // Prepara uma consulta SQL para atualizar os dados na tabela
-<<<<<<< HEAD
-$sql = "UPDATE CADASTRO SET
-            serial='{$serial}',
-            modelo='{$modelo}',
-            ID='{$ID}',
-=======
 $sql = "UPDATE CADASTROCHROME SET
             serial='{$serial}',
             modelo='{$modelo}',
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
             dt_entrada='{$dt_entrada}',
             localizacao='{$localizacao}'
         WHERE
