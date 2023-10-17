@@ -144,71 +144,87 @@
             </nav>
         </div>
     </nav>
-
     <div class="container">
         <div class="row align-items-center">
             <h4 class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 col-xxl-8 font-weight-bold text-center mt-4 mb-4" >
                 Dúvidas Frequentes
             </h4>
             <h5 class="mb-4">Aqui você encontrará as informações necessárias para utilizar a aplicação web de forma correta:</h5>
-            <div id="accordion">
-                <div class="container_duvidas">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" class="container_duvidas_titulo">Qual é a finalidade desse sistema?</a>
-                    <div id="collapse1" class="collapse container_duvidas">
-                        <div class="card-body container_duvidas_texto">
+            <div class="accordion col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 col-xxl-8" id="accordionExample">
+                <div class="mb-1">
+                    <div class="container_duvidas" id="headingOne">
+                        <button class="btn collapsed container_pergunta" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Qual é a finalidade desse sistema?
+                        </button>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                        <div class="card-body container_respostas">
                             Esse sistema foi desenvolvido com o objetivo de facilitar a gestão da informação relacionada à entrada e saída de Chromebooks, bem como acompanhar a vigência dos contratos desses dispositivos.<br>
                             Ele permite o registro e o fácil acesso a essas informações, proporcionando uma melhor organização e controle do inventário de Chromebooks, além de facilitar a identificação de dispositivos disponíveis e sua distribuição adequada.
                         </div>
                     </div>
                 </div>
-                <div class="container_duvidas">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" class="container_duvidas_titulo">Qual é o procedimento para dar entrada dos Chromebooks em estoque?</a>
-                    <div id="collapse2" class="collapse container_duvidas">
-                        <div class="card-body container_duvidas_texto"> Para registrar a entrada dos Chromebooks em estoque no sistema, siga os passos:<br><br>
-                        1. Clique em "Cadastrar" no menu acima.<br>
-                        2. No campo "Serial", insira o serial correspondente ao Chromebook.<br>
-                        3. Certifique-se de preencher corretamente o serial para cada Chromebook.<br>
-                        4. Em "Situação Contratual" selecione a opção "Em estoque".<br>
-                        5. Clique no botão "Cadastrar" e pronto!<br><br>
-                        Ao fazer isso, o sistema registra a quantidade de Chromebooks disponíveis para entregar aos alunos por parte do Colégio.</div>
+                <div class="mb-1">
+                    <div class="container_duvidas" id="headingTwo">
+                        <button class="btn collapsed container_pergunta" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Qual é o procedimento para dar entrada dos Chromebooks em estoque?
+                        </button>
                     </div>
-                </div>
-                <div class="container_duvidas">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" class="container_duvidas_titulo">Como registrar um contrato no sistema?</a>
-                    <div id="collapse3" class="collapse container_duvidas">
-                        <div class="card-body container_duvidas_texto">Após o responsável assinar o contrato e receber o Chromebook, o funcionário responsável pela entrega deve seguir estes passos:<br><br>
-                        1. Pesquisar o serial do Chromebook no Diretório.<br>
-                        2. Editar as informações nos campos indicados, incluindo:<br>
-                        -Nome do aluno;<br>
-                        -Nome do responsável financeiro;<br>
-                        -Número da matrícula;<br>
-                        -Data da entrega<br>
-                        -Situação contratual.<br>
-                        3. Certifique-se de inserir todas as informações corretamente.<br><br>
-                        Observação: Se na consulta do serial aparecer um contrato já preenchidos com dados, isso significa que o chromebook em questão já pertenceu a outro aluno e foi devolvido ao colégio,
-                        esse registro não poderá ser editado ou excluído. Deverá ser feito um novo registro."
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body container_respostas"> Para registrar a entrada dos Chromebooks em estoque no sistema, siga os passos:<br><br>
+                            1. Clique em "Cadastrar" no menu acima.<br>
+                            2. No campo "Serial", insira o serial correspondente ao Chromebook.<br>
+                            3. Certifique-se de preencher corretamente o serial para cada Chromebook.<br>
+                            4. Em "Situação Contratual" selecione a opção "Em estoque".<br>
+                            5. Clique no botão "Cadastrar" e pronto!<br><br>
+                            Ao fazer isso, o sistema registra a quantidade de Chromebooks disponíveis para entregar aos alunos por parte do Colégio.
                         </div>
                     </div>
                 </div>
-                <div class="container_duvidas">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse4" class="container_duvidas_titulo">Qual o procedimento quando o chromebook for devolvido?</a>
-                    <div id="collapse4" class="collapse container_duvidas"> 
-                        <div class="card-body container_duvidas_texto">
+                <div class="mb-1">
+                    <div class="container_duvidas" id="headingThree">
+                        <button class="btn collapsed container_pergunta" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Como registrar um contrato no sistema?
+                        </button>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div class="card-body container_respostas">
+                            Após o responsável assinar o contrato e receber o Chromebook, o funcionário responsável pela entrega deve seguir estes passos:<br><br>
+                            1. Pesquisar o serial do Chromebook no Diretório.<br>
+                            2. Editar as informações nos campos indicados, incluindo:<br>
+                            -Nome do aluno;<br>
+                            -Nome do responsável financeiro;<br>
+                            -Número da matrícula;<br>
+                            -Data da entrega<br>
+                            -Situação contratual.<br>
+                            3. Certifique-se de inserir todas as informações corretamente.<br><br>
+                            Observação: Se na consulta do serial aparecer um contrato já preenchidos com dados, isso significa que o chromebook em questão já pertenceu a outro aluno e foi devolvido ao colégio,
+                            esse registro não poderá ser editado ou excluído. Deverá ser feito um novo registro."
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-1">
+                    <div class="container_duvidas" id="headingFour">
+                        <button class="btn collapsed container_pergunta" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        Qual o procedimento quando o chromebook for devolvido?
+                        </button>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                        <div class="card-body container_respostas">
                             <p>
-                            Quando um Chromebook é devolvido, é importante seguir as etapas abaixo:<br><br>
-                            1. Verificar o estado do Chromebook: Examine o dispositivo para garantir que esteja em boas condições de funcionamento e que não haja danos físicos significativos.<br>
-                            2. Após o responsável financeiro assinar o distrato, pesquise no sistema pelo serial correspondente e atualize a situação contratual para "Inativo".<br>
-                            3. Faça um novo registro na tela de cadastro utilizando o serial do Chromebook devolvido e deixe a situação contratual como "Em estoque".<br><br>
-                            Dessa forma, ficará registrado no sistema que o responsável pelo Chromebook efetuou a devolução e o dispositivo estará disponível para ser entregue a um novo aluno.<br>
-                            Essas etapas ajudarão a gerenciar corretamente a devolução do Chromebook, atualizando as informações no sistema e tornando-o disponível para futuras alocações.
+                                Quando um Chromebook é devolvido, é importante seguir as etapas abaixo:<br><br>
+                                1. Verificar o estado do Chromebook: Examine o dispositivo para garantir que esteja em boas condições de funcionamento e que não haja danos físicos significativos.<br>
+                                2. Após o responsável financeiro assinar o distrato, pesquise no sistema pelo serial correspondente e atualize a situação contratual para "Inativo".<br>
+                                3. Faça um novo registro na tela de cadastro utilizando o serial do Chromebook devolvido e deixe a situação contratual como "Em estoque".<br><br>
+                                Dessa forma, ficará registrado no sistema que o responsável pelo Chromebook efetuou a devolução e o dispositivo estará disponível para ser entregue a um novo aluno.<br>
+                                Essas etapas ajudarão a gerenciar corretamente a devolução do Chromebook, atualizando as informações no sistema e tornando-o disponível para futuras alocações.
                             </p>
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
         </div>
     </div>
-
 </body>
 
 </html>
