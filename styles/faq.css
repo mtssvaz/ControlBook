@@ -68,10 +68,14 @@ body{
 }
 
 .container_duvidas{
-    margin-bottom: 20px;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
 }
 
-.container_duvidas_titulo{
+.container_pergunta{
     background-color: #0098DA;
     color: #f8f8f8 !important;
     text-decoration: none;
@@ -79,21 +83,17 @@ body{
     font-weight: bold;
     font-size: 1.2rem;
     border-radius: 5px;
-    padding: 10px 20px;
-    margin-bottom: 10px;
 }
 
-.container_duvidas_titulo:hover{
+.container_pergunta:hover{
     background-color: #f8f8f8;
     color: #0098DA !important;
     font-weight: bold;
-    transition: all 0.4s;
     text-decoration: none;
     cursor: pointer;
-    border: 2px solid #0098DA;
 }
 
-.container_duvidas_texto{
+.container_respostas{
     border-radius: 5px;
     background-color: #ffffff;
     border: 2px solid #0098DA;
