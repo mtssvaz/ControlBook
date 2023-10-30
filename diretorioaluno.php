@@ -7,7 +7,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
     ?>
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
