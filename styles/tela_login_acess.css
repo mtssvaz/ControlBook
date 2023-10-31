@@ -7,19 +7,19 @@
 body{
     background: linear-gradient(
         to bottom,
-        #324572 0% 40%,
-        #f1f1f1 40% 500%);
+        #f1f1f1 0% 40%,
+        #111111 40% 500%);
     background-repeat: no-repeat;
 }
 
-.acessibilidade{
-    background-color: #FFFFFF ;
+.container-login{
+    background-color: #111111;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px #f1f1f1;
 }
 
-.container-login{
-    background-color: #ffff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px #888888;
+.acessibilidade{
+    background-color: #111111;
 }
 
 .imagem{
@@ -33,25 +33,25 @@ body{
     padding-bottom: 15px;
     text-align: center;
     font-weight: bold;
-    color: #111111;
+    color: #f1f1f1;
 }
 
 .label{
     font-size: 20px;
     font-weight: bold;
-    color: #111111;
+    color: #f1f1f1;
 }
 
 .input{
     outline: none;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px #888888;
+    box-shadow: 0px 2px 2px #f1f1f1;
     padding: 0px 30px 0px 20px;
 }
 
 .input:hover{
     border: transparent;
-    box-shadow: 0px 1px 10px #324572;
+    box-shadow: 0px 1px 10px #f1f1f1;
 }
 
 .eye{
@@ -59,7 +59,7 @@ body{
     cursor: pointer;
     position: absolute;
     right: 11%;
-    top: 66%;
+    top: 66.5%;
     color: #646464;
 }
 
@@ -73,15 +73,15 @@ body{
 
 .remember{
     font-size: 16px;
-    color: #111111;
+    color: #FFFFFF;
 }
 
 .button_a{
     padding: 7px 20%;
     border-radius: 5px;
-    border: 2px solid #0098DA;
-    color: #ffff;
-    background-color: #0098DA;
+    border: 2px solid #FFFFFF;
+    color: #111111;
+    background-color: #FFFFFF;
     font-size: 20px;
     font-weight: bold;
     outline: none;
@@ -91,15 +91,15 @@ body{
 }
 
 .button_a:hover {
-    background-color: #ffff;
-    border: 2px solid #0098DA;
-    color: #0098DA;
+    background-color: #111111;
+    border: 2px solid #FFFFFF;
+    color: #FFFFFF;
     cursor: pointer;
 }
 
 #ativaContraste{
-    background-color: #FFFFFF;
-    color: #324572 !important;
+    background-color: #111111;
+    color: #f1f1f1 !important;
     text-decoration: underline;
     text-transform:inherit;
     font-weight: bold;

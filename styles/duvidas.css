@@ -7,10 +7,7 @@
 body{
     background-color: #f1f1f1;
     margin-top: 105px;
-<<<<<<< HEAD
-=======
     height: 100%;
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }
 
 .barnav{
@@ -22,10 +19,6 @@ body{
     border-color: rgb(255, 255, 255);
 }
 
-<<<<<<< HEAD
-=======
-
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
@@ -41,12 +34,9 @@ body{
     text-decoration: none;
     text-transform: none;
     font-weight: bold;
-<<<<<<< HEAD
     font-size: 1.1rem;
     border-radius: 5px;
     padding: 8px 10px;
-=======
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }
 
 .link-nav:hover{
@@ -57,7 +47,6 @@ body{
     text-decoration: none;
 }
 
-<<<<<<< HEAD
 .link-nav-logout{
     background-color: #0098DA;
     color: #f8f8f8 !important;
@@ -88,10 +77,10 @@ body{
     text-decoration: none;
     text-transform: none;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     border-radius: 5px;
     padding: 10px 20px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .container_duvidas_titulo:hover{
@@ -110,20 +99,4 @@ body{
     border: 2px solid #0098DA;
     margin-bottom: 20px;
     text-align: justify;
-=======
-p{
-    margin-bottom: 0;
-}
-
-.footer{
-    width: 100%;
-    min-height: 100px;
-    background: #324572;
-    color: #ffff;
-    font-size: 14px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
->>>>>>> c704b0bc3e234a9f3b4b3b7ed31e56c1d28dceb2
 }

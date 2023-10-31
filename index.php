@@ -18,7 +18,7 @@
 
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
     
-    <link rel="stylesheet" href="styles/tela_login.css">
+    <link rel="stylesheet" id="styleSheet" href="styles/tela_login.css">
     
     <title>Gerenciador de Chromebooks - Nahim Ahmad</title>
 </head>
@@ -85,38 +85,40 @@
             var btnActive = btnStyle.classList.contains('active')
             
             if (btnActive) {
-                btnStyle.className = 'btn'
-                mudaStyleSheet('pagina_inicial.css')
+                btnStyle.classList.remove('active') // Remova a classe 'active' se estiver presente
+                mudaStyleSheet('tela_login.css')
             } else {
-                btnStyle.className = 'btn'
-                mudaStyleSheet('iniciocon.css')
+                btnStyle.classList.add('active') // Adicione a classe 'active' se não estiver presente
+                mudaStyleSheet('tela_login_acess.css')
             }
         }
-            
+                
         function mudaStyleSheet(sheet) {
-            var baseUrl = window.location.origin + 'styles/'
-            var styleUrl = baseUrl + sheet
-            document.getElementById("styleSheet").setAttribute('href', styleUrl)
+            var baseUrl = window.location.origin + '/projeto/styles/';
+            var styleUrl = baseUrl + sheet;
+            document.getElementById("styleSheet").setAttribute('href', styleUrl);
         }
-        
+
         function tamanhoFonte(tipo){
             let elemento = $(".col-12");
             let fonte = elemento.css('font-size');
             
             if (tipo == 'mais') {
-                //document.body.style.fontSize=parseInt(fonte) + 1+"px";
-                elemento.css("fontSize", parseInt(fonte) + 1, "px");
-            } else if('menos'){
-                elemento.css("fontSize", parseInt(fonte) - 1, "px");
+                elemento.css("fontSize", parseInt(fonte) + 1 + "px");
+            } else if(tipo == 'menos'){
+                elemento.css("fontSize", parseInt(fonte) - 1 + "px");
+            } else if(tipo == 'normal'){
+                elemento.css("fontSize", "24px");
             }
         }
+
         // FIM ACESSIBILIDADE
     </script>
 
     <nav class="navbar-expand-md fixed-top">
         <div>
-            <nav>
-                <div class="row justify-content-center align-items-center p-1" style="background-color: #FFFFFF;">
+            <nav class="acessibilidade">
+                <div class="row justify-content-center align-items-center p-1">
                     <ul class="navbar-nav align-items-center">
                         <li>
                             <!-- INICIO ACESSIBILIDADE -->
@@ -141,7 +143,9 @@
                 </div>
                 <div class="row justify-content-center">
                     <div class="col-autos login-form-title mt-3 mb-3">
-                        Faça o Login
+                        <p>
+                            Faça o Login
+                        </p>
                     </div>
                 </div>
                 <form>
@@ -158,7 +162,7 @@
                         <div class="col">
                             <div class="form-check">
                                 <input type="checkbox" name="manterConectado" id="manterConectado" class="form-check-input">
-                                <label for="remember" class="form-check-label">Manter conectado</label>
+                                <label for="remember" class="form-check-label remember">Manter conectado</label>
                             </div>
                         </div>
                     </div>

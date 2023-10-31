@@ -52,18 +52,18 @@
             var btnActive = btnStyle.classList.contains('active')
             
             if (btnActive) {
-                btnStyle.className = 'btn'
+                btnStyle.classList.remove('active') // Remova a classe 'active' se estiver presente
                 mudaStyleSheet('pagina_inicial.css')
             } else {
-                btnStyle.className = 'btn'
+                btnStyle.classList.add('active') // Adicione a classe 'active' se não estiver presente
                 mudaStyleSheet('iniciocon.css')
             }
         }
-            
+                
         function mudaStyleSheet(sheet) {
-            var baseUrl = window.location.origin + 'styles/'
-            var styleUrl = baseUrl + sheet
-            document.getElementById("styleSheet").setAttribute('href', styleUrl)
+            var baseUrl = window.location.origin + '/projeto/styles/';
+            var styleUrl = baseUrl + sheet;
+            document.getElementById("styleSheet").setAttribute('href', styleUrl);
         }
         
         function tamanhoFonte(tipo){
@@ -73,8 +73,10 @@
             if (tipo == 'mais') {
                 //document.body.style.fontSize=parseInt(fonte) + 1+"px";
                 elemento.css("fontSize", parseInt(fonte) + 1, "px");
-            } else if('menos'){
+            } else if(tipo == 'menos'){
                 elemento.css("fontSize", parseInt(fonte) - 1, "px");
+            } else if(tipo == 'normal'){
+                elemento.css("fontSize", parseInt(24), "px");
             }
         }
         // FIM ACESSIBILIDADE
@@ -82,8 +84,8 @@
 
     <nav class="navbar-expand-md fixed-top">
         <div>
-            <nav>
-                <div class="row justify-content-center align-items-center p-1" style="background-color: #FFFFFF;">
+            <nav class="acessibilidade">
+                <div class="row justify-content-center align-items-center p-1">
                     <ul class="navbar-nav align-items-center">
                         <li>
                             <!-- INICIO ACESSIBILIDADE -->
@@ -99,7 +101,7 @@
                     </ul>
                 </div>
             </nav>
-            <nav class="navbar navbar-expand-md" style="background-color: #324572;">
+            <nav class="barnav navbar navbar-expand-md">
                 <a class="navbar-brand" href="#">
                     <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
                 </a>  
@@ -144,7 +146,7 @@
     </nav>
 
     <div class="container">
-        <div class="row justify-content-center align-items-center text-center" style="height: 85vh; color: black">
+        <div class="row justify-content-center align-items-center text-center" style="height: 85vh;">
 		<h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borges.</h4>
         </div>
     </div>

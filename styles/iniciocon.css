@@ -6,18 +6,13 @@
 }
 
 body{
-    background: #111111;
-    color: #e2e2e2;
+
+    color: #f1f1f1 !important;
     margin-top: 150px;
 }
 
-.barnav{
-    position: fixed;
-    top: 0;
-}
-
 .navbar-toggler {
-    border-color: rgb(255, 255, 255);
+    border-color: #111111;
 }
 
 .navbar-toggler-icon {
@@ -31,46 +26,50 @@ body{
 }
 
 .link-nav{
-    color: #ffffff;
+    color: #111111;
     text-decoration: none;
     text-transform: none;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 1.1rem;
     border-radius: 5px;
     padding: 8px 10px;
 }
 
 .link-nav:hover{
-    background-color: #f8f8f8;
-    color: #324572;
-    font-weight: bold;
+    background-color: #111111;
+    color: #f8f8f8;
+    font-weight: bolder;
     transition: all 0.4s;
     text-decoration: none;
 }
 
 .link-nav-logout{
-    background-color: #0098DA;
-    color: #f8f8f8 !important;
+    background-color: #FFE600;
+    color: #111111 !important;
     text-decoration: none;
     text-transform: none;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 1.2rem;
     border-radius: 5px;
     padding: 8px 10px;
 }
 
 .link-nav-logout:hover{
-    background-color: #f8f8f8;
-    color: #0098DA !important;
-    font-weight: bold;
+    background-color: #111111;
+    color: #f8f8f8 !important;
+    font-weight: bolder;
     transition: all 0.4s;
     text-decoration: none;
     cursor: pointer;
 }
 
+.barnav {
+    background-color: #FFFFFF !important;
+}
+
 #ativaContraste{
-    background-color: #FFFFFF;
-    color: #324572 !important;
+    background-color: #111111;
+    color: #ffffff !important;
     text-decoration: underline;
     text-transform:inherit;
     font-weight: bold;
