@@ -21,9 +21,9 @@ mysqli_real_connect(
 // Obtém os dados do formulário
 $ID = $_POST['ID'];
 $aluno = $_POST['aluno'];
-$MATRICULA = $_POST['MATRICULA'];
+$matricula = $_POST['matricula'];
 $ano = $_POST['ano'];
-$modelo = $_POST['atendente'];
+$atendente = $_POST['atendente'];
 $idchrome = $_POST['idchrome'];
 $dt_entrega = $_POST['dt_entrega'];
 $contrato = $_POST['contrato'];
@@ -31,18 +31,20 @@ $contrato = $_POST['contrato'];
 // Prepara uma consulta SQL para atualizar os dados na tabela
 $sql = "UPDATE CADASTRO SET
             aluno='{$aluno}',
-            MATRICULA='{$MATRICULA}',
+            matricula='{$matricula}',
             ano='{$ano}',
-            atendente='{$modelo}',
-            idchrome='{$idchrome}'
+            atendente='{$atendente}',
+            idchrome='{$idchrome}',
             dt_entrega='{$dt_entrega}',
-            contrato='{$contrato}',
+            contrato='{$contrato}'
+        WHERE
             ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
 
 // Executa a consulta e verifica se foi bem sucedida
 if (mysqli_query($conn, $sql)) {
   print "<script>alert('Cadastro editado com sucesso!');</script>";
   print "<script>location.href='buscardozero.php';</script>";
+} else {
   print "Erro ao cadastrar: " . mysqli_error($conn);
 }
 
