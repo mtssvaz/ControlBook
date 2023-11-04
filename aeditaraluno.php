@@ -23,9 +23,9 @@ $ID = $_POST['ID'];
 $aluno = $_POST['aluno'];
 $responsavel = $_POST['responsavel'];
 $ano = $_POST['ano'];
-$rua = $_POST['rua'];
-$numero = $_POST['numero'];
 $cep = $_POST['cep'];
+$numero = $_POST['numero'];
+$rua = $_POST['rua'];
 $bairro = $_POST['bairro'];
 $cidade = $_POST['cidade'];
 $uf = $_POST['uf'];
@@ -35,23 +35,23 @@ $sql = "UPDATE CADASTROALUNO SET
             aluno='{$aluno}',
             responsavel='{$responsavel}',
             ano='{$ano}',
-            rua='{$rua}',
+            cep='{$cep}',
             numero='{$numero}',
-            cep='{$cep}'
+            rua='{$rua}',
             bairro='{$bairro}',
-            cidade='{$cidade}'
+            cidade='{$cidade}',
             uf='{$uf}'
         WHERE
-            ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
+            ID='{$ID}'"; // Substitui REQUEST por POST e adiciona aspas simples
 
-// Executa a consulta e verifica se foi bem sucedida
+// Executa a consulta e verifica se foi bem-sucedida
 if (mysqli_query($conn, $sql)) {
-  print "<script>alert('Cadastro editado com sucesso!');</script>";
-  print "<script>location.href='diretorioaluno.php';</script>";
+    echo "<script>alert('Cadastro editado com sucesso!');</script>";
+    echo "<script>location.href='diretorioaluno.php';</script>";
 } else {
-  print "Erro ao cadastrar: " . mysqli_error($conn);
+    echo "Erro ao editar cadastro: " . mysqli_error($conn);
 }
 
-// Fecha a conex���o
+// Fecha a conexão
 mysqli_close($conn);
 ?>
