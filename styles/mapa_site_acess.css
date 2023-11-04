@@ -8,22 +8,11 @@
 body{
     background-color: #111111;
     color: #f1f1f1 !important;
-    margin-top: 150px;
+    margin-top: 170px;
 }
 
 .acessibilidade{
     background-color: #111111;
-}
-
-#ativaContraste{
-    background-color: #111111;
-    color: #ffffff !important;
-    text-decoration: underline;
-    text-transform:inherit;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-style: none;
-    padding: 5px 5px;
 }
 
 .navbar-toggler {
@@ -82,4 +71,70 @@ body{
 
 .barnav {
     background-color: #FFFFFF !important;
+}
+
+#ativaContraste{
+    background-color: #111111;
+    color: #ffffff !important;
+    text-decoration: underline;
+    text-transform:inherit;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-style: none;
+    padding: 5px 5px;
+}
+
+.titulo {
+    background-color: #FFFFFF;
+    color: #111111 !important;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 8px 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+.link-nav-map{
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    padding: 8px 30px;
+}
+
+.link-nav-map:hover{
+    background-color: #FFFFFF;
+    color: #111111;
+    font-weight: bold;
+    transition: all 0.4s;
+    text-decoration: none;
+}
+
+.link-nav-logout-map{
+    background-color: #FFE600;
+    color: #111111 !important;
+    border: 2px solid #111111;
+    text-decoration: none;
+    text-transform: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    padding: 8px 40px;
+}
+
+.link-nav-logout-map:hover{
+    background-color: #111111;
+    color: #FFE600 !important;
+    border: 2px solid #FFE600;
+    font-weight: bold;
+    transition: all 0.4s;
+    text-decoration: none;
+    cursor: pointer;
 }

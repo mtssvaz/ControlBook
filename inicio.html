@@ -65,19 +65,29 @@
             var styleUrl = baseUrl + sheet;
             document.getElementById("styleSheet").setAttribute('href', styleUrl);
         }
-        
+
+        let tamanhoOriginal;
+
+        function salvarTamanhoOriginal() {
+            let elemento = $(".fonte");
+            tamanhoOriginal = elemento.css('font-size');
+        }
+
         function tamanhoFonte(tipo){
-            let elemento = $(".col-12");
-            let fonte = elemento.css('font-size');
+            let elementos = $(".fonte"); // Seleciona elementos com a classe "fonte" dentro de "font-con"
             
-            if (tipo == 'mais') {
-                //document.body.style.fontSize=parseInt(fonte) + 1+"px";
-                elemento.css("fontSize", parseInt(fonte) + 1, "px");
-            } else if(tipo == 'menos'){
-                elemento.css("fontSize", parseInt(fonte) - 1, "px");
-            } else if(tipo == 'normal'){
-                elemento.css("fontSize", parseInt(24), "px");
-            }
+            elementos.each(function() {
+                let fonte = $(this).css('font-size'); // Obtém o tamanho da fonte atual
+                let tamanhoAtual = parseInt(fonte);
+                
+                if (tipo == 'mais') {
+                    $(this).css("font-size", tamanhoAtual + 1 + "px");
+                } else if(tipo == 'menos'){
+                    $(this).css("font-size", tamanhoAtual - 1 + "px");
+                } else if(tipo == 'normal'){
+                    $(this).css("font-size", ""); // Restaura para o tamanho definido no CSS
+                }
+            });
         }
         // FIM ACESSIBILIDADE
     </script>
@@ -111,33 +121,33 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link link-nav" href="inicio.html">Início</a>
+                            <a class="nav-link link-nav fonte" href="inicio.html">Início</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle link-nav fonte" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Cadastro
                             </a>
                             <div class="dropdown-menu" aria-labelledby="menuCadastro">
-                                <a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
-                                <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                                <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+                                <a class="dropdown-item fonte" href="cadastraraluno.html">Cadastrar Aluno</a>
+                                <a class="dropdown-item fonte" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+                                <a class="dropdown-item fonte" href="cadastrar.html">Cadastrar Contrato</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle link-nav fonte" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Diretório
                             </a>
                             <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-                            <a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
-                            <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
-                            <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+                            <a class="dropdown-item fonte" href="diretorioaluno.php">Diretório de Alunos</a>
+                            <a class="dropdown-item fonte" href="estoque.php">Diretório de Chromebooks</a>
+                            <a class="dropdown-item fonte" href="buscardozero.php">Diretório de Contratos</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+                            <a class="nav-link link-nav fonte" href="duvidas.html">Dúvidas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+                            <a class="link-nav-logout ml-md-3 pl-3 pr-3 fonte" onclick="logout()">Sair</a>
                         </li>
                     </ul>
                 </div>
@@ -146,8 +156,8 @@
     </nav>
 
     <div class="container">
-        <div class="row justify-content-center align-items-center text-center" style="height: 85vh;">
-		<h4 class="col-12">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borges.</h4>
+        <div class="row justify-content-center align-items-center text-center " style="height: 85vh;">
+		    <h4 class="col-12 fonte">Esta aplicação web foi desenvolvida em parceria com o Colégio Nahim Ahmad pelos alunos da Universidade Virtual do Estado de São Paulo (UNIVESP) como parte da disciplina "Projeto Integrador II", sob a orientação do Professor Vinicius Borges.</h4>
         </div>
     </div>
     

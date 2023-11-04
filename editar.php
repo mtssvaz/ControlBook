@@ -21,9 +21,9 @@ mysqli_real_connect(
 // Obtém os dados do formulário
 $ID = $_POST['ID'];
 $aluno = $_POST['aluno'];
-$matricula = $_POST['matricula'];
+$MATRICULA = $_POST['MATRICULA'];
 $ano = $_POST['ano'];
-$atendente = $_POST['atendente'];
+$modelo = $_POST['atendente'];
 $idchrome = $_POST['idchrome'];
 $dt_entrega = $_POST['dt_entrega'];
 $contrato = $_POST['contrato'];
@@ -31,14 +31,12 @@ $contrato = $_POST['contrato'];
 // Prepara uma consulta SQL para atualizar os dados na tabela
 $sql = "UPDATE CADASTRO SET
             aluno='{$aluno}',
-<<<<<<< HEAD
-            responsavel='{$responsavel}',
             MATRICULA='{$MATRICULA}',
-            n_de_serie='{$n_de_serie}',
+            ano='{$ano}',
+            atendente='{$modelo}',
+            idchrome='{$idchrome}'
             dt_entrega='{$dt_entrega}',
-            conservacao='{$conservacao}'
-=======
-            matricula='{$matricula}',
+            contrato='{$contrato}',
             ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
 
 // Executa a consulta e verifica se foi bem sucedida

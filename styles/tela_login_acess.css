@@ -79,9 +79,9 @@ body{
 .button_a{
     padding: 7px 20%;
     border-radius: 5px;
-    border: 2px solid #FFFFFF;
+    border: 2px solid #FFE600;
     color: #111111;
-    background-color: #FFFFFF;
+    background-color: #FFE600;
     font-size: 20px;
     font-weight: bold;
     outline: none;
@@ -92,8 +92,8 @@ body{
 
 .button_a:hover {
     background-color: #111111;
-    border: 2px solid #FFFFFF;
-    color: #FFFFFF;
+    border: 2px solid #FFE600;
+    color: #FFE600;
     cursor: pointer;
 }
 

@@ -2,26 +2,21 @@
     padding: 0px;
     margin: 0px;
     font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
 }
 
 body{
     background-color: #f1f1f1;
+    color: #111111;
     margin-top: 150px;
-    height: 100%;
 }
 
-.barnav{
-    position: fixed;
-    top: 0;
-}
-
-.barnav{
-    position: fixed;
-    top: 0;
+.acessibilidade{
+    background-color: #FFFFFF;
 }
 
 .navbar-toggler {
-    border-color: rgb(255, 255, 255);
+    border-color: #ffffff;
 }
 
 .navbar-toggler-icon {
@@ -55,6 +50,7 @@ body{
 .link-nav-logout{
     background-color: #0098DA;
     color: #f8f8f8 !important;
+    border: 2px solid #0098DA;
     text-decoration: none;
     text-transform: none;
     font-weight: bold;
@@ -66,10 +62,26 @@ body{
 .link-nav-logout:hover{
     background-color: #f8f8f8;
     color: #0098DA !important;
+    border: 2px solid #f8f8f8;
     font-weight: bold;
     transition: all 0.4s;
     text-decoration: none;
     cursor: pointer;
+}
+
+.barnav {
+    background-color: #324572 !important;
+}
+
+#ativaContraste{
+    background-color: #FFFFFF;
+    color: #324572 !important;
+    text-decoration: underline;
+    text-transform:inherit;
+    font-weight: bold;
+    font-size: 1.2rem;
+    border-style: none;
+    padding: 5px 5px;
 }
 
 .container-form{
@@ -94,19 +106,8 @@ body{
 }
 
 .button_a:hover {
-    background-color: #ffff;
+    background-color: #ffffff;
     border: 2px solid #0098DA;
     color: #0098DA;
     cursor: pointer;
-}
-
-#ativaContraste{
-    background-color: #FFFFFF;
-    color: #324572 !important;
-    text-decoration: underline;
-    text-transform:inherit;
-    font-weight: bold;
-    font-size: 1.2rem;
-    border-style: none;
-    padding: 5px 5px;
 }

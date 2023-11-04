@@ -10,10 +10,11 @@ body{
         #324572 0% 40%,
         #f1f1f1 40% 500%);
     background-repeat: no-repeat;
+    font-size: 16px;
 }
 
 .acessibilidade{
-    background-color: #FFFFFF ;
+    background-color: #FFFFFF;
 }
 
 .container-login{
@@ -29,7 +30,7 @@ body{
 }
 
 .login-form-title{
-    font-size: 30px;
+    font-size: 1.5rem;
     padding-bottom: 15px;
     text-align: center;
     font-weight: bold;
@@ -37,7 +38,7 @@ body{
 }
 
 .label{
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: bold;
     color: #111111;
 }
@@ -55,7 +56,7 @@ body{
 }
 
 .eye{
-    font-size: 34px;
+    font-size: 2rem;
     cursor: pointer;
     position: absolute;
     right: 11%;
@@ -72,7 +73,7 @@ body{
 }
 
 .remember{
-    font-size: 16px;
+    font-size: 1rem;
     color: #111111;
 }
 
@@ -82,7 +83,7 @@ body{
     border: 2px solid #0098DA;
     color: #ffff;
     background-color: #0098DA;
-    font-size: 20px;
+    font-size: 1.3rem;
     font-weight: bold;
     outline: none;
     transition-duration: 0.4s;

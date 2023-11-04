@@ -6,9 +6,13 @@
 }
 
 body{
-
+    background-color: #f1f1f1;
     color: #111111;
     margin-top: 150px;
+}
+
+.acessibilidade{
+    background-color: #FFFFFF;
 }
 
 .navbar-toggler {
@@ -46,6 +50,7 @@ body{
 .link-nav-logout{
     background-color: #0098DA;
     color: #f8f8f8 !important;
+    border: 2px solid #0098DA;
     text-decoration: none;
     text-transform: none;
     font-weight: bold;
@@ -57,6 +62,7 @@ body{
 .link-nav-logout:hover{
     background-color: #f8f8f8;
     color: #0098DA !important;
+    border: 2px solid #0098DA;
     font-weight: bold;
     transition: all 0.4s;
     text-decoration: none;
@@ -68,7 +74,7 @@ body{
 }
 
 #ativaContraste{
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     color: #324572 !important;
     text-decoration: underline;
     text-transform:inherit;

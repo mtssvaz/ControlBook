@@ -99,20 +99,31 @@
             document.getElementById("styleSheet").setAttribute('href', styleUrl);
         }
 
-        function tamanhoFonte(tipo){
-            let elemento = $(".col-12");
-            let fonte = elemento.css('font-size');
-            
-            if (tipo == 'mais') {
-                elemento.css("fontSize", parseInt(fonte) + 1 + "px");
-            } else if(tipo == 'menos'){
-                elemento.css("fontSize", parseInt(fonte) - 1 + "px");
-            } else if(tipo == 'normal'){
-                elemento.css("fontSize", "24px");
-            }
+        let tamanhoOriginal;
+
+        function salvarTamanhoOriginal() {
+            let elemento = $(".fonte");
+            tamanhoOriginal = elemento.css('font-size');
         }
 
+        function tamanhoFonte(tipo){
+            let elementos = $(".fonte"); // Seleciona elementos com a classe "fonte" dentro de "font-con"
+            
+            elementos.each(function() {
+                let fonte = $(this).css('font-size'); // Obtém o tamanho da fonte atual
+                let tamanhoAtual = parseInt(fonte);
+                
+                if (tipo == 'mais') {
+                    $(this).css("font-size", tamanhoAtual + 1 + "px");
+                } else if(tipo == 'menos'){
+                    $(this).css("font-size", tamanhoAtual - 1 + "px");
+                } else if(tipo == 'normal'){
+                    $(this).css("font-size", ""); // Restaura para o tamanho definido no CSS
+                }
+            });
+        }
         // FIM ACESSIBILIDADE
+        
     </script>
 
     <nav class="navbar-expand-md fixed-top">
@@ -142,7 +153,7 @@
                     <img class="imagem" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
                 </div>
                 <div class="row justify-content-center">
-                    <div class="col-autos login-form-title mt-3 mb-3">
+                    <div class="col login-form-title mt-3 mb-3 fonte">
                         <p>
                             Faça o Login
                         </p>
@@ -150,24 +161,24 @@
                 </div>
                 <form>
                     <div class="form-group">
-                        <label for="usuario" class="row justify-content-center label">Usuário</label>
-                        <input type="usuario" class="form-control input" id="usuario" aria-describedby="emailHelp" placeholder="Digite seu usuário">
+                        <label for="usuario" class="row justify-content-center label fonte">Usuário</label>
+                        <input type="usuario" class="form-control input fonte" id="usuario" aria-describedby="emailHelp" placeholder="Digite seu usuário">
                     </div>
                     <div class="form-group mb-2">
-                        <label for="password" class="row justify-content-center label">Senha</label>
-                        <input type="password" class="form-control input" id="password" placeholder="Digite sua senha">
+                        <label for="password" class="row justify-content-center label fonte">Senha</label>
+                        <input type="password" class="form-control input fonte" id="password" placeholder="Digite sua senha">
                         <i class="bi bi-eye eye" id="btn-password" onclick="mostrarSenha()"></i>
                     </div>
                     <div class="row mb-3 mt-3">
-                        <div class="col">
+                        <div class="col-12">
                             <div class="form-check">
-                                <input type="checkbox" name="manterConectado" id="manterConectado" class="form-check-input">
-                                <label for="remember" class="form-check-label remember">Manter conectado</label>
+                                <input type="checkbox" name="manterConectado" id="manterConectado" class="form-check-input fonte">
+                                <label for="remember" class="form-check-label remember fonte">Manter conectado</label>
                             </div>
                         </div>
                     </div>
                     <div class="row justify-content-center align-items-center">
-                        <button class="btn-primary button_a" type="button" onclick="logar()">Entrar</button>
+                        <button class="btn-primary button_a fonte" type="button" onclick="logar()">Entrar</button>
                     </div>
                 </form>
             </div>

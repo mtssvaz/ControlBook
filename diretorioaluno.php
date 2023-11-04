@@ -7,7 +7,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
     ?>
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -27,7 +27,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 
     <link rel="shortcut icon" href="imagens/fav_icon.png" type="image/x-icon"/>
 	
-	<link rel="stylesheet" href="styles/diretorio.css"/>
+	<link rel="stylesheet" id="styleSheet" href="styles/diretorio.css"/>
 
 	<title> Diretório de Alunos </title>
 
@@ -56,42 +56,55 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
 		verificarAcesso();
 
 		// INICIO ACESSIBILIDADE
-		function contrasteON() {
-			var btnStyle = document.getElementById('ativaContraste')
-			var btnActive = btnStyle.classList.contains('active')
-			
-			if (btnActive) {
-				btnStyle.className = 'btn'
-				mudaStyleSheet('pagina_inicial.css')
-			} else {
-				btnStyle.className = 'btn'
-				mudaStyleSheet('iniciocon.css')
-			}
-		}
-			
-		function mudaStyleSheet(sheet) {
-			var baseUrl = window.location.origin + 'styles/'
-			var styleUrl = baseUrl + sheet
-			document.getElementById("styleSheet").setAttribute('href', styleUrl)
-		}
+        function contrasteON() {
+            var btnStyle = document.getElementById('ativaContraste')
+            var btnActive = btnStyle.classList.contains('active')
+            
+            if (btnActive) {
+                btnStyle.classList.remove('active') // Remova a classe 'active' se estiver presente
+                mudaStyleSheet('diretorio.css')
+            } else {
+                btnStyle.classList.add('active') // Adicione a classe 'active' se não estiver presente
+                mudaStyleSheet('diretorio_acess.css')
+            }
+        }
+                
+        function mudaStyleSheet(sheet) {
+            var baseUrl = window.location.origin + '/projeto/styles/';
+            var styleUrl = baseUrl + sheet;
+            document.getElementById("styleSheet").setAttribute('href', styleUrl);
+        }
 
-		function tamanhoFonte(tipo){
-			let elemento = $(".col-12");
-			let fonte = elemento.css('font-size');
-			
-			if (tipo == 'mais') {
-				//document.body.style.fontSize=parseInt(fonte) + 1+"px";
-				elemento.css("fontSize", parseInt(fonte) + 1, "px");
-			} else if('menos'){
-				elemento.css("fontSize", parseInt(fonte) - 1, "px");
-			}
-		}
-		// FIM ACESSIBILIDADE
+        let tamanhoOriginal;
+
+        function salvarTamanhoOriginal() {
+            let elemento = $(".fonte");
+            tamanhoOriginal = elemento.css('font-size');
+        }
+
+        function tamanhoFonte(tipo){
+            let elementos = $(".fonte"); // Seleciona elementos com a classe "fonte" dentro de "font-con"
+            
+            elementos.each(function() {
+                let fonte = $(this).css('font-size'); // Obtém o tamanho da fonte atual
+                let tamanhoAtual = parseInt(fonte);
+                
+                if (tipo == 'mais') {
+                    $(this).css("font-size", tamanhoAtual + 1 + "px");
+                } else if(tipo == 'menos'){
+                    $(this).css("font-size", tamanhoAtual - 1 + "px");
+                } else if(tipo == 'normal'){
+                    $(this).css("font-size", ""); // Restaura para o tamanho definido no CSS
+                }
+            });
+        }
+        // FIM ACESSIBILIDADE
 	</script>
+
 	<nav class="navbar-expand-md fixed-top">
         <div>
-            <nav>
-                <div class="row justify-content-center align-items-center p-1" style="background-color: #FFFFFF;">
+            <nav class="acessibilidade">
+                <div class="row justify-content-center align-items-center p-1">
                     <ul class="navbar-nav align-items-center">
                         <li>
                             <!-- INICIO ACESSIBILIDADE -->
@@ -107,7 +120,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                     </ul>
                 </div>
             </nav>
-            <nav class="navbar navbar-expand-md" style="background-color: #324572;">
+            <nav class="barnav navbar navbar-expand-md">
                 <a class="navbar-brand" href="#">
                     <img class="logo" src="imagens/logo.png" alt="Logo do colégio Nahim Ahmad">
                 </a>  
@@ -117,33 +130,33 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav align-items-center">
                         <li class="nav-item">
-                            <a class="nav-link link-nav" href="inicio.html">Início</a>
+                            <a class="nav-link link-nav fonte" href="inicio.html">Início</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle link-nav" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle link-nav fonte" href="#" id="menuCadastro" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Cadastro
                             </a>
                             <div class="dropdown-menu" aria-labelledby="menuCadastro">
-                                <a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
-                                <a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                                <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+                                <a class="dropdown-item fonte" href="cadastraraluno.html">Cadastrar Aluno</a>
+                                <a class="dropdown-item fonte" href="cadastrarchrome.html">Cadastrar Chromebook</a>
+                                <a class="dropdown-item fonte" href="cadastrar.html">Cadastrar Contrato</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle link-nav" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle link-nav fonte" href="#" id="menuDiretorio" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Diretório
                             </a>
                             <div class="dropdown-menu" aria-labelledby="menuDiretorio">
-                            <a class="dropdown-item" href="diretorioaluno.php">Diretório de Alunos</a>
-                            <a class="dropdown-item" href="estoque.php">Diretório de Chromebooks</a>
-                            <a class="dropdown-item" href="buscardozero.php">Diretório de Contratos</a>
+                            <a class="dropdown-item fonte" href="diretorioaluno.php">Diretório de Alunos</a>
+                            <a class="dropdown-item fonte" href="estoque.php">Diretório de Chromebooks</a>
+                            <a class="dropdown-item fonte" href="buscardozero.php">Diretório de Contratos</a>
                             </div>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link link-nav" href="duvidas.html">Dúvidas</a>
+                            <a class="nav-link link-nav fonte" href="duvidas.html">Dúvidas</a>
                         </li>
                         <li class="nav-item">
-                            <a class="link-nav-logout ml-md-3 pl-3 pr-3" onclick="logout()">Sair</a>
+                            <a class="link-nav-logout ml-md-3 pl-3 pr-3 fonte" onclick="logout()">Sair</a>
                         </li>
                     </ul>
                 </div>
@@ -151,92 +164,99 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
         </div>
     </nav>
 
-    <div class="container">
-        <div class="row justify-content-center align-items-center"> <!--style="height: 100vh;"-->
-            <div class="col-12 col-sm-9 col-md-6 col-lg-7 col-xl-7 pt-1 pb-1 pr-5 pl-5">
-                <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center" >
-                    Diretório de Alunos
-                </h4>
-            </div>
-		</div>
-		<div class="form-group input-group">
-			<span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
-			<input name="consulta" id="txt_consulta" placeholder="Consultar" type="text" class="form-control">
-		</div>
-		<div class="container-busca">
-			<div class="row">
-				<div class="col-10">
-					<h4>Resultados</h4>
-				</div>
-
-				<div class="row">
-					<div class="col-12">
-						<nav aria-label="Navegação de página exemplo">
-							<ul class="pagination justify-content-end">
-								<li class="page-item">
-									<a class="page-link" href="#" aria-label="Anterior">
-										<span aria-hidden="true">&laquo;</span>
-										<span class="sr-only">Anterior</span>
-									</a>
-								</li>
-								<li class="page-item active"><a class="page-link" href="#">1</a></li>
-								<li class="page-item"><a class="page-link" href="#">2</a></li>
-								<li class="page-item"><a class="page-link" href="#">3</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#" aria-label="Próximo">
-										<span aria-hidden="true">&raquo;</span>
-										<span class="sr-only">Próximo</span>
-									</a>
-								</li>
-							</ul>
-						</nav>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center">
+			<h4 class="col-12 mt-3 mb-3 font-weight-bold text-center fonte" >
+				Diretório de Alunos
+			</h4>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 col-xxl-7">
+					<div class="row mb-3">
+						<input name="consulta" id="txt_consulta" placeholder="Busque pelo aluno, responsavel, ano ou endereço." type="text" class="form-control input fonte">
+					</div>
+			</div>
+			<div>
+				<div id="resultado" class="row justify-content-center pb-3"></div>
+			</div>
+			<div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-11 col-xxl-7 container-busca">
+				<div class="row justify-content-center align-items-center">
+					<div class="col table-responsive-sm table-responsive-md table-responsive-lg table-responsive-xl">
+						<div id="resultado" class="row justify-content-center p-2"></div>
+						<table id="tabela" class="table table-hover">
+							<thead>
+								<tr>
+									<th class="text-center align-items fonte">ID</th>
+									<th class="text-center align-items fonte">Aluno</th>
+									<th class="text-center align-items fonte">Responsavel</th>
+									<th class="text-center align-items fonte">Ano</th>
+									<th class="text-center align-items fonte">Rua</th>
+									<th class="text-center align-items fonte">Nº</th>
+									<th class="text-center align-items fonte">CEP</th>
+									<th class="text-center align-items fonte">Bairro</th>
+									<th class="text-center align-items fonte">Cidade</th>
+									<th class="text-center align-items fonte">Estado</th>
+									<th class="text-center align-items fonte">Ações</th>
+								</tr>
+							</thead>
+							
+							<tbody>
+								<?php
+									while($receber_cadastros = mysqli_fetch_array($query_cadastros))
+									{
+										echo "<tr>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['ID']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['aluno']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['responsavel']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['ano']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['rua']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['numero']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['cep']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['bairro']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['cidade']."</td>";
+										echo "<td class='text-center fonte'>".$receber_cadastros['uf']."</td>";
+										echo "<td>
+												<button onclick=\"location.href='editaraluno.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>
+													<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-pencil-fill' viewBox='0 0 16 16'>
+														<path d='M12.854.146a.5.5 0 0 0-.707 0L10.5 1.793 14.207 5.5l1.647-1.646a.5.5 0 0 0 0-.708l-3-3zm.646 6.061L9.793 2.5 3.293 9H3.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.207l6.5-6.5zm-7.468 7.468A.5.5 0 0 1 6 13.5V13h-.5a.5.5 0 0 1-.5-.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.5-.5V10h-.5a.499.499 0 0 1-.175-.032l-.179.178a.5.5 0 0 0-.11.168l-2 5a.5.5 0 0 0 .65.65l5-2a.5.5 0 0 0 .168-.11l.178-.178z'/>
+													</svg>
+												</button>
+												<button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluiraluno.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>
+													<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-trash-fill' viewBox='0 0 16 16'>
+														<path d='M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z'/>
+													</svg>
+												</button>
+												
+											</td>";
+										echo "</tr>";
+								?>
+								<?php }; ?>
+							</tbody>
+						</table>
+						<!--
+						<div class="row justify-content-center">
+							<nav aria-label="Navegação de página exemplo">
+								<ul class="pagination">
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Anterior">
+											<span aria-hidden="true">&laquo;</span>
+											<span class="sr-only">Anterior</span>
+										</a>
+									</li>
+									<li class="page-item active"><a class="page-link" href="#">1</a></li>
+									<li class="page-item"><a class="page-link" href="#">2</a></li>
+									<li class="page-item"><a class="page-link" href="#">3</a></li>
+									<li class="page-item">
+										<a class="page-link" href="#" aria-label="Próximo">
+											<span aria-hidden="true">&raquo;</span>
+											<span class="sr-only">Próximo</span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						-->
 					</div>
 				</div>
 			</div>
-
-			<table id="tabela" class="table table-hover">
-				<thead>
-					<tr>
-					    <th>ID</th>
-						<th>Aluno</th>
-						<th>Responsavel</th>
-						<th>Ano</th>
-						<th>CEP</th>
-						<th>Nº</th>
-						<th>Rua</th>
-						<th>Bairro</th>
-						<th>Cidade</th>
-						<th>Estado</th>
-						<th>Ações</th>
-					</tr>
-				</thead>
-				
-                <tbody>
-					<?php
-						while($receber_cadastros = mysqli_fetch_array($query_cadastros))
-						{
-						    echo "<tr>";
-						    echo "<td>".$receber_cadastros['ID']."</td>";
-						    echo "<td>".$receber_cadastros['aluno']."</td>";
-						    echo "<td>".$receber_cadastros['responsavel']."</td>";
-						    echo "<td>".$receber_cadastros['ano']."</td>";
-						    echo "<td>".$receber_cadastros['cep']."</td>";
-						    echo "<td>".$receber_cadastros['numero']."</td>";
-						    echo "<td>".$receber_cadastros['rua']."</td>";
-						    echo "<td>".$receber_cadastros['bairro']."</td>";
-						    echo "<td>".$receber_cadastros['cidade']."</td>";
-						    echo "<td>".$receber_cadastros['uf']."</td>";
-						    echo "<td>
-    			                    
-    			                    <button onclick=\"location.href='editaraluno.php?ID=$receber_cadastros[ID]';\" class='btn btn-primary'>EDITAR</button>
-    			                    <button onclick=\"if(confirm('Tem certeza que deseja excluir?')){location.href='excluiraluno.php?ID=$receber_cadastros[ID]';}else{false;}\" class='btn btn-danger'>EXCLUIR</button>
-        				    	    
-    			                  </td>";
-						    echo "</tr>";
-					?>
-				    <?php }; ?>
-				</tbody>
-            </table>
 		</div>
 	</div>
 

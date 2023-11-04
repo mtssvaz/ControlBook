@@ -23,9 +23,9 @@ $ID = $_POST['ID'];
 $aluno = $_POST['aluno'];
 $responsavel = $_POST['responsavel'];
 $ano = $_POST['ano'];
-$cep = $_POST['cep'];
-$numero = $_POST['numero'];
 $rua = $_POST['rua'];
+$numero = $_POST['numero'];
+$cep = $_POST['cep'];
 $bairro = $_POST['bairro'];
 $cidade = $_POST['cidade'];
 $uf = $_POST['uf'];
@@ -35,12 +35,12 @@ $sql = "UPDATE CADASTROALUNO SET
             aluno='{$aluno}',
             responsavel='{$responsavel}',
             ano='{$ano}',
-            cep='{$cep}'
-            numero='{$numero}',
             rua='{$rua}',
+            numero='{$numero}',
+            cep='{$cep}'
             bairro='{$bairro}',
             cidade='{$cidade}'
-            uf='{uf}'
+            uf='{$uf}'
         WHERE
             ID='{$_POST["ID"]}'"; // Substitui REQUEST por POST e adiciona aspas simples
 

@@ -6,13 +6,13 @@
 }
 
 body{
-    background-color: #f1f1f1;
-    color: #111111 !important;
+    background-color: #ffffff;
+    color: #ffffff !important;
     margin-top: 150px;
 }
 
 .acessibilidade{
-    background-color: #FFFFFF;
+    background-color: #ffffff !important;
 }
 
 .navbar-toggler {
@@ -33,49 +33,60 @@ body{
     color: #ffffff;
     text-decoration: none;
     text-transform: none;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 1.1rem;
     border-radius: 5px;
     padding: 8px 10px;
 }
 
 .link-nav:hover{
-    background-color: #f8f8f8;
-    color: #324572;
-    font-weight: bold;
+    background-color: #ffffff;
+    color: #111111;
+    font-weight: bolder;
     transition: all 0.4s;
     text-decoration: none;
 }
 
 .link-nav-logout{
-    background-color: #0098DA;
-    color: #f8f8f8 !important;
-    border: 2px solid #0098DA;
+    background-color: #FFE600;
+    color: #111111 !important;
+    border: 2px solid #FFE600;
     text-decoration: none;
     text-transform: none;
-    font-weight: bold;
+    font-weight: bolder;
     font-size: 1.2rem;
     border-radius: 5px;
     padding: 8px 10px;
 }
 
 .link-nav-logout:hover{
-    background-color: #f8f8f8;
-    color: #0098DA !important;
-    border: 2px solid #0098DA;
-    font-weight: bold;
+    background-color: #111111;
+    color: #FFE600 !important;
+    border: 2px solid #FFE600;
+    font-weight: bolder;
     transition: all 0.4s;
     text-decoration: none;
     cursor: pointer;
 }
 
 .barnav {
-    background-color: #324572 !important;
+    background-color: #111111 !important;
+}
+
+.container{
+    color: #111111 !important;
+}
+
+.container-form{
+    background-color: #111111;
+    color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 6px #888888;
 }
 
 #ativaContraste{
-    background-color: #FFFFFF;
-    color: #324572 !important;
+    background-color: #ffffff;
+    color: #111111 !important;
     text-decoration: underline;
     text-transform:inherit;
     font-weight: bold;
@@ -84,36 +95,24 @@ body{
     padding: 5px 5px;
 }
 
-.container-busca{
-    background-color: #ffff;
+.button_a{
+    padding: 5px;
     border-radius: 5px;
-    box-shadow: 0px 2px 6px #888888;
-}
-
-.input{
+    border: 2px solid #FFE600;
+    color: #111111;
+    background-color: #FFE600;
+    font-size: 20px;
+    font-weight: bold;
     outline: none;
-    border-radius: 5px !important;
-    box-shadow: 0px 2px 6px #888888;
-    padding: 0px 10px 0px 10px;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 7px 12px;
 }
 
-.input:hover{
-    border: transparent;
-    box-shadow: 0px 2px 6px #324572;
-}
-
-.container-busca{
-    font-size: 50px;
-    background-color: #ffff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 6px #324572;
-}
-
-.table td, .table th {
-    vertical-align: middle;
-    padding: 0px !important;
-}
-
-.btn-e{
-    padding: 4px 9px 4px 9px;
+.button_a:hover {
+    background-color: #111111;
+    border: 2px solid #FFE600;
+    color: #FFE600;
+    cursor: pointer;
 }
