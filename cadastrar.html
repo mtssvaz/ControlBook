@@ -204,10 +204,8 @@
                         <label for="idchrome" class="pt-3 fonte">ID do Chromebook</label>
                         <select name="idchrome" class="form-control input fonte" required>
                             <option class="fonte" value="" selected disabled>Selecione</option>
-                              </select>
                             <!-- Aqui você pode preencher as opções com os IDs disponíveis da tabela CADASTROCHROME -->
                             <!-- Você pode usar PHP ou outra linguagem do lado do servidor para preencher essas opções -->
-                        
                             <?php
 $dbhost = "chromelocalhost.mysql.database.azure.com";
 $dbuser = "chromelocalhost";
@@ -237,8 +235,8 @@ if (mysqli_real_connect(
         if (mysqli_num_rows($result) > 0) {
             echo '<option class="fonte" value="" selected disabled>Selecione</option>';
             while ($row = mysqli_fetch_assoc($result)) {
-                $id = $row['ID'];
-                echo '<option class="fonte" value="' . $id . '">' . $id . '</option>';
+                $ID = $row['ID'];
+                echo '<option class="fonte" value="' . $ID . '">' . $ID . '</option>';
             }
         } else {
             echo 'Nenhum resultado encontrado na tabela CADASTROCHROME.';
@@ -254,7 +252,7 @@ if (mysqli_real_connect(
 }
 ?>
 
-                      
+                        </select>
                     </div>
                     <div class="col-12 col-sm-12 col-md-6">
                         <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
