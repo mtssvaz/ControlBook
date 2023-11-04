@@ -155,78 +155,75 @@
         </div>
     </nav>
     
-<div class="container">
-    <div class="row justify-content-center align-items-center">
-        <div class="col-11 col-sm-9 col-md-7 col-lg-7 col-xl-6 pt-1 pb-1 pr-5 pl-5">
-            <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center fonte">
-                Cadastro de Contrato
-            </h4>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-7 col-xl-6 pt-1 pb-1 pr-5 pl-5">
+                <h4 class="col-12 mt-3 mb-3 font-weight-bold text-center fonte" >
+                    Cadastro de Contrato
+                </h4>
+            </div>
+            <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
+                <form action="include.php" method="post">
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="usuario" class="pt-3 font-weight-bold fonte">Nome do aluno</label>
+                            <input type="text" name="aluno" class="form-control input fonte">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
+                            <input type="number" name="matricula" class="form-control input fonte">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="forano" class="pt-3 fonte">Ano</label>
+                            <select id="idano" name="ano" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
+                                <option class="fonte" value="6º ano">6º ano</option>
+                                <option class="fonte" value="7º ano">7º ano</option>
+                                <option class="fonte" value="8º ano">8º ano</option>
+                                <option class="fonte" value="9º ano">9º ano</option> 
+                                <option class="fonte" value="8º ano">8º ano</option>
+                                <option class="fonte" value="1º ano - Ensino Médio">1° Ano - Ensino Médio</option> 
+                                <option class="fonte" value="2º ano - Ensino Médio">2° Ano - Ensino Médio</option> 
+                                <option class="fonte" value="3º ano - Ensino Médio">3° Ano - Ensino Médio</option> 
+                            </select>
+                        </div>    
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="foraten" class="pt-3 fonte">Atendente</label>
+                            <select id="idaten" name="atendente" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
+                                <option class="fonte" value="Mateus Vaz">Mateus Vaz</option>
+                                <option class="fonte" value="Patrick Rocha">Patrick Rocha</option>
+                                <option class="fonte" value="Patrick Manzo">Patrick Manzo</option>
+                                <option class="fonte" value="Solange Mendonça">Solange Mendonça</option> 
+                                <option class="fonte" value="Renato Vieira">Renato Vieira</option>
+                                <option class="fonte" value="Rosana Rosanita">Rosana Rosanita</option> 
+                                <option class="fonte" value="Valdiney Costa">Valdiney Costa</option> 
+                            </select>
+                        </div>    
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="password" class="pt-3 font-weight-bold fonte">ID do Chromebook</label>
+                            <input type="number" name="idchrome" class="form-control input fonte" required>
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
+                            <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
+                            <input type="date" name="dt_entrega" class="form-control input fonte">
+                        </div>
+                        <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+                            <label for="statuscontrato" class="pt-3 fonte">Contrato</label>
+                            <select id="idcontrato" name="contrato" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
+                                <option class="fonte" value="Ativo">Ativo</option>
+                                <option class="fonte" value="Inativo">Inativo</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center align-items-center">
+                        <input class="btn-primary button_a fonte" type="submit" value="Cadastrar">
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
-            <form action="include.php" method="post" action="requestchrome.php" method="post" >
-                <div class="row">
-                    <div class="col-12">
-                        <label for="aluno" class="pt-3 font-weight-bold fonte">Nome do aluno</label>
-                        <input type="text" name="aluno" class="form-control input fonte">
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <label for="matricula" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
-                        <input type="number" name="matricula" class="form-control input fonte">
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                        <label for="ano" class="pt-3 fonte">Ano</label>
-                        <select name="ano" class="form-control input fonte" required>
-                            <option class="fonte" value="" selected disabled>Selecione</option>
-                            <option class="fonte" value="6º ano">6º ano</option>
-                            <option class="fonte" value="7º ano">7º ano</option>
-                            <option class="fonte" value="8º ano">8º ano</option>
-                            <option class="fonte" value="9º ano">9º ano</option>
-                            <option class="fonte" value="8º ano">8º ano</option>
-                            <option class="fonte" value="1º ano - Ensino Médio">1° Ano - Ensino Médio</option>
-                            <option class="fonte" value="2º ano - Ensino Médio">2° Ano - Ensino Médio</option>
-                            <option class="fonte" value="3º ano - Ensino Médio">3° Ano - Ensino Médio</option>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                        <label for="atendente" class="pt-3 fonte">Atendente</label>
-                        <select name="atendente" class="form-control input fonte" required>
-                            <option class="fonte" value="" selected disabled>Selecione</option>
-                            <option class="fonte" value="Mateus Vaz">Mateus Vaz</option>
-                            <option class="fonte" value="Patrick Rocha">Patrick Rocha</option>
-                            <option class="fonte" value="Patrick Manzo">Patrick Manzo</option>
-                            <option class="fonte" value="Solange Mendonça">Solange Mendonça</option>
-                            <option class="fonte" value="Renato Vieira">Renato Vieira</option>
-                            <option class="fonte" value="Rosana Rosanita">Rosana Rosanita</option>
-                            <option class="fonte" value="Valdiney Costa">Valdiney Costa</option>
-                        </select>
-                    </div>
-                   <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-        <label for="idchrome" class="pt-3 fonte">ID do Chromebook</label>
-        <select name="idchrome" class="form-control input fonte" required>
-            <option class="fonte" value="" selected disabled>Selecione</option>
-        </select>
     </div>
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
-                        <input type="date" name="dt_entrega" class="form-control input fonte">
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                        <label for="contrato" class="pt-3 fonte">Contrato</label>
-                        <select name="contrato" class="form-control input fonte" required>
-                            <option class="fonte" value="" selected disabled>Selecione</option>
-                            <option class="fonte" value="Ativo">Ativo</option>
-                            <option class="fonte" value="Inativo">Inativo</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="row justify-content-center align-items-center">
-                    <input class="btn-primary button_a fonte" type="submit" value="Cadastrar">
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-
 </body>
 
 </html>
