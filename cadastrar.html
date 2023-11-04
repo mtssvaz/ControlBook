@@ -200,35 +200,56 @@
                             <option class="fonte" value="Valdiney Costa">Valdiney Costa</option>
                         </select>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                        <label for="idchrome" class="pt-3 fonte">ID do Chromebook</label>
-                        <select name="idchrome" class="form-control input fonte" required>
-                            <option class="fonte" value="" selected disabled>Selecione</option>
-                            <!-- Aqui você pode preencher as opções com os IDs disponíveis da tabela CADASTROCHROME -->
-                            <!-- Você pode usar PHP ou outra linguagem do lado do servidor para preencher essas opções -->
-                            <?php
-                                // Exemplo de código PHP para preencher as opções com IDs do banco de dados
-                                // Substitua com a lógica real para acessar os IDs da tabela CADASTROCHROME
-                                $idsChromebook = ["ID1", "ID2", "ID3"];
-                                foreach ($idsChromebook as $id) {
-                                    echo '<option class="fonte" value="' . $id . '">' . $id . '</option>';
-                                }
-                            ?>
-                        </select>
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6">
-                        <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
-                        <input type="date" name="dt_entrega" class="form-control input fonte">
-                    </div>
-                    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                        <label for="contrato" class="pt-3 fonte">Contrato</label>
-                        <select name="contrato" class="form-control input fonte" required>
-                            <option class="fonte" value="" selected disabled>Selecione</option>
-                            <option class="fonte" value="Ativo">Ativo</option>
-                            <option class="fonte" value="Inativo">Inativo</option>
-                        </select>
-                    </div>
-                </div>
+                   <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+    <label for="idchrome" class="pt-3 fonte">ID do Chromebook</label>
+    <select name="idchrome" class="form-control input fonte" required>
+        <option class="fonte" value="" selected disabled>Selecione</option>
+        <?php
+        $dbhost = "chromelocalhost.mysql.database.azure.com";
+        $dbuser = "chromelocalhost";
+        $dbpass = "mateus@2023";
+        $db = "colegiocontrolechrome";
+
+        // Inicializa o MySQLi
+        $conn = mysqli_init();
+
+        // Estabelece a conexão
+        mysqli_real_connect(
+            $conn,
+            $dbhost,
+            $dbuser,
+            $dbpass,
+            $db,
+            3306,
+            NULL,
+            0 // Sem SSL
+        );
+
+        // Se a conexão falhar, exibe o erro
+        if (mysqli_connect_errno()) {
+            die('Failed to connect to MySQL: ' . mysqli_connect_error());
+        }
+
+        // Execute a consulta SQL para buscar os IDs da tabela CADASTROCHROME
+        $sql = "SELECT id FROM CADASTROCHROME";
+        $result = mysqli_query($conn, $sql);
+
+        // Verifique se a consulta foi bem-sucedida
+        if ($result) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['id'];
+                echo '<option class="fonte" value="' . $id . '">' . $id . '</option>';
+            }
+        } else {
+            echo 'Erro na consulta: ' . mysqli_error($conn);
+        }
+
+        // Feche a conexão com o banco de dados
+        mysqli_close($conn);
+        ?>
+    </select>
+</div>
+
                 <div class="row justify-content-center align-items-center">
                     <input class="btn-primary button_a fonte" type="submit" value="Cadastrar">
                 </div>
