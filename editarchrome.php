@@ -92,7 +92,7 @@
         }
                 
         function mudaStyleSheet(sheet) {
-            var baseUrl = window.location.origin + 'styles/';
+            var baseUrl = window.location.origin + '/styles/';
             var styleUrl = baseUrl + sheet;
             document.getElementById("styleSheet").setAttribute('href', styleUrl);
         }
