@@ -22,6 +22,7 @@ mysqli_real_connect(
 $ID = $_POST['ID'];
 $aluno = $_POST['aluno'];
 $matricula = $_POST['matricula'];
+$ano = $_POST['ano'];
 $atendente = $_POST['atendente'];
 $idchrome = $_POST['idchrome'];
 $dt_entrega = $_POST['dt_entrega'];
@@ -31,6 +32,7 @@ $contrato = $_POST['contrato'];
 $sql = "UPDATE CADASTRO SET
             aluno='{$aluno}',
             matricula='{$matricula}',
+            ano='{$ano}',
             atendente='{$atendente}',
             idchrome='{$idchrome}',
             dt_entrega='{$dt_entrega}',
