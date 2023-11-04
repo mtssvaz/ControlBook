@@ -163,7 +163,7 @@
             </h4>
         </div>
         <div class="col-12 col-md-11 col-lg-9 col-xl-8 col-xxl-7 pt-2 pb-4 pr-3 pr-sm-4 pr-md-5 pl-3 pl-sm-4 pl-md-5 mb-1 container-form">
-            <form action="include.php" method="post">
+            <form action="include.php" method="post" action="requestchrome.php" method="post" >
                 <div class="row">
                     <div class="col-12">
                         <label for="aluno" class="pt-3 font-weight-bold fonte">Nome do aluno</label>
@@ -200,60 +200,12 @@
                             <option class="fonte" value="Valdiney Costa">Valdiney Costa</option>
                         </select>
                     </div>
-                    <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
-                        <label for="idchrome" class="pt-3 fonte">ID do Chromebook</label>
-                        <select name="idchrome" class="form-control input fonte" required>
-                            <option class="fonte" value="" selected disabled>Selecione</option>
-                            <!-- Aqui você pode preencher as opções com os IDs disponíveis da tabela CADASTROCHROME -->
-                            <!-- Você pode usar PHP ou outra linguagem do lado do servidor para preencher essas opções -->
-                            <?php
-$dbhost = "chromelocalhost.mysql.database.azure.com";
-$dbuser = "chromelocalhost";
-$dbpass = "mateus@2023";
-$db = "colegiocontrolechrome";
-
-// Inicializa o MySQLi
-$conn = mysqli_init();
-
-// Estabelece a conexão
-if (mysqli_real_connect(
-    $conn,
-    $dbhost,
-    $dbuser,
-    $dbpass,
-    $db,
-    3306,
-    NULL,
-    0 // Sem SSL
-)) {
-    // Execute a consulta SQL para buscar os IDs da tabela CADASTROCHROME
-    $sql = "SELECT ID FROM CADASTROCHROME";
-    $result = mysqli_query($conn, $sql);
-
-    // Verifique se a consulta foi bem-sucedida
-    if ($result) {
-        if (mysqli_num_rows($result) > 0) {
-            echo '<option class="fonte" value="" selected disabled>Selecione</option>';
-            while ($row = mysqli_fetch_assoc($result)) {
-                $ID = $row['ID'];
-                echo '<option class="fonte" value="' . $ID . '">' . $ID . '</option>';
-            }
-        } else {
-            echo 'Nenhum resultado encontrado na tabela CADASTROCHROME.';
-        }
-    } else {
-        echo 'Erro na consulta: ' . mysqli_error($conn);
-    }
-
-    // Feche a conexão com o banco de dados
-    mysqli_close($conn);
-} else {
-    echo 'Falha na conexão com o MySQL: ' . mysqli_connect_error();
-}
-?>
-
-                        </select>
-                    </div>
+                   <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
+        <label for="idchrome" class="pt-3 fonte">ID do Chromebook</label>
+        <select name="idchrome" class="form-control input fonte" required>
+            <option class="fonte" value="" selected disabled>Selecione</option>
+        </select>
+    </div>
                     <div class="col-12 col-sm-12 col-md-6">
                         <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
                         <input type="date" name="dt_entrega" class="form-control input fonte">
