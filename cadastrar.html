@@ -90,6 +90,11 @@
             });
         }
         // FIM ACESSIBILIDADE
+
+        // TESTE CONSULTA ID CHROMEBOOK
+        $buscar_cb = " SELECT ID FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
+        $query_cb = mysqli_query($conn, $buscar_cb);
+        // FIM TESTE CONSULTA ID CHROMEBOOK
     </script>
 
     <nav class="navbar-expand-md fixed-top">
@@ -189,7 +194,25 @@
                         </div>    
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="password" class="pt-3 font-weight-bold fonte">ID do Chromebook</label>
-                            <input type="number" name="idchrome" class="form-control input fonte" required>
+                            <select id="idaten" name="IdCB" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
+                                <?php 
+                                    // use a while loop to fetch data 
+                                    // from the $all_categories variable 
+                                    // and individually display as an option
+                                    while ($CB = mysqli_fetch_array($query_cb)):; 
+                                    ?>
+                                        <option value="<?php echo $CB["ID"];// The value we usually set is the primary key
+                                        ?>">
+                                        <?php echo $CB["ID"];// To show the category name to the user
+                                        ?>
+                                        </option>
+                                    <?php 
+                                    endwhile; 
+                                    // While loop must be terminated
+                                ?> 
+                            </select>
+                            <!--<input type="number" name="idchrome" class="form-control input fonte" required>-->
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
