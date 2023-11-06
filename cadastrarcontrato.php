@@ -7,13 +7,7 @@
     //CONSULTA ALUNO
     $buscar_aluno = " SELECT * FROM CADASTROALUNO";
     $query_aluno = mysqli_query($conn, $buscar_aluno);
-    // FIM CONSULTA ALUNO<?php 
-    //CONSULTA RM
-    if(!empty($selaluno)){
-        $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ID = $selaluno";
-        $query_RM = mysqli_query($conn, $buscar_RM);
-    }
-    // FIM CONSULTA RM
+    // FIM CONSULTA ALUNO
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -189,28 +183,34 @@
                                 <?php 
                                     while ($ALUNO = mysqli_fetch_array($query_aluno)):; 
                                     ?>
-                                        <option value="<?php echo $ALUNO["ID"];
+                                        <option value="<?php echo $ALUNO["aluno"];
                                         ?>">
                                         <?php echo $ALUNO["aluno"];
                                         ?>
                                         </option>
                                     <?php 
                                     endwhile; 
-                                    if(!empty($_GET['aluno']))
-                                    {
-                                        $selaluno = $_GET['aluno'];
-                                    }else{
-                                        $selaluno = "";
-                                    }
-                                    //$selaluno = $('#idaluno :selected').text();
                                 ?> 
-                               
                             </select>
                             <!--<input type="text" name="aluno" class="form-control input fonte">-->
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
-                            <input type="number" name="matricula" class="form-control input fonte" disabled value="<?php echo $selaluno?>">
+                            <select id="rm" name="matricula" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
+                                <?php 
+                                    while ($ALUNO = mysqli_fetch_array($query_aluno)):; 
+                                    ?>
+                                        <option value="<?php echo $ALUNO["matricula"];
+                                        ?>">
+                                        <?php echo $ALUNO["matricula"];
+                                        ?>
+                                        </option>
+                                    <?php 
+                                    endwhile; 
+                                ?> 
+                            </select>
+                            <!--<input type="number" name="matricula" class="form-control input fonte">-->
                         </div>
                        
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
