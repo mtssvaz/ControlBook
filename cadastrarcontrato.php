@@ -9,8 +9,8 @@
     $query_aluno = mysqli_query($conn, $buscar_aluno);
     // FIM CONSULTA ALUNO<?php 
     //CONSULTA RM
-    //$buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ALUNO = '$selaluno'";
-    //$query_RM = mysqli_query($conn, $buscar_RM);
+    $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ALUNO = $selaluno";
+    $query_RM = mysqli_query($conn, $buscar_RM);
     // FIM CONSULTA RM
 ?>
 <!DOCTYPE html>
@@ -203,7 +203,7 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
-                            <!--<input type="number" name="matricula" class="form-control input fonte" disabled value="<//?php echo $RM ?>">-->
+                            <input type="number" name="matricula" class="form-control input fonte" disabled value="<?php echo $RM ?>">
                         </div>
                        
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
