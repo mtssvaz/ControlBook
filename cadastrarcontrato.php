@@ -9,8 +9,10 @@
     $query_aluno = mysqli_query($conn, $buscar_aluno);
     // FIM CONSULTA ALUNO<?php 
     //CONSULTA RM
-    $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ALUNO = $selaluno";
-    $query_RM = mysqli_query($conn, $buscar_RM);
+    if(!empty($selaluno)){
+        $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ALUNO = $selaluno";
+        $query_RM = mysqli_query($conn, $buscar_RM);
+    }
     // FIM CONSULTA RM
 ?>
 <!DOCTYPE html>
@@ -193,8 +195,13 @@
                                         ?>
                                         </option>
                                     <?php 
-                                    endwhile;  
-                                    $selaluno = $_POST['aluno'];
+                                    endwhile; 
+                                    if(!empty($_GET['aluno']))
+                                    {
+                                        $selaluno = $_GET['aluno'];
+                                    }else{
+                                        $selaluno = "";
+                                    }
                                     //$selaluno = $('#idaluno :selected').text();
                                 ?> 
                                
