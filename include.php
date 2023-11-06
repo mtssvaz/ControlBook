@@ -28,14 +28,13 @@ if (mysqli_connect_errno()) {
 // Obtém os dados do formulário e previne ataques de injeção de SQL
 $aluno = mysqli_real_escape_string($conn, $_POST['aluno']);
 $matricula = mysqli_real_escape_string($conn, $_POST['matricula']);
-$ano = mysqli_real_escape_string($conn, $_POST['ano']);
 $atendente = mysqli_real_escape_string($conn, $_POST['atendente']);
 $idchrome = mysqli_real_escape_string($conn, $_POST['idchrome']);
 $dt_entrega = mysqli_real_escape_string($conn, $_POST['dt_entrega']);
 $contrato = mysqli_real_escape_string($conn, $_POST['contrato']);
 
 // Prepara uma consulta SQL segura para inserir os dados na tabela
-$sql = "INSERT INTO cadastro (aluno, matricula, ano, atendente, idchrome, dt_entrega, contrato) VALUES ('$aluno', '$matricula', '$ano', '$atendente', '$idchrome', '$dt_entrega', '$contrato')";
+$sql = "INSERT INTO cadastro (aluno, matricula, atendente, idchrome, dt_entrega, contrato) VALUES ('$aluno', '$matricula',  '$atendente', '$idchrome', '$dt_entrega', '$contrato')";
 
 
 
