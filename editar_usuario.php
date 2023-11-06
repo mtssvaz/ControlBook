@@ -79,7 +79,7 @@
     <div class="dropdown-menu" aria-labelledby="menuCadastro">
 	<a class="dropdown-item" href="cadastraraluno.html">Cadastrar Aluno</a>
 	<a class="dropdown-item" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-        <a class="dropdown-item" href="cadastrar.html">Cadastrar Contrato</a>
+        <a class="dropdown-item" href="cadastrarcontrato.php">Cadastrar Contrato</a>
       
 	 
     </div>
