@@ -197,7 +197,7 @@
                         </div>    
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="password" class="pt-3 font-weight-bold fonte">ID do Chromebook</label>
-                            <select id="idaten" name="IdCB" class="form-control input fonte" required>
+                            <select id="idchrome" name="IdCB" class="form-control input fonte" required>
                                 <option class="fonte" value="" selected disabled>Selecione</option>
                                 <?php 
                                     while ($CB = mysqli_fetch_array($query_cb)):; 
