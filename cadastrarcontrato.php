@@ -194,6 +194,7 @@
                                         </option>
                                     <?php 
                                     endwhile;  
+                                    $selaluno = $_POST['aluno'];
                                     //$selaluno = $('#idaluno :selected').text();
                                 ?> 
                                
