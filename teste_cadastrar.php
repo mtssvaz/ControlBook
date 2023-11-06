@@ -2,7 +2,7 @@
     //TESTE CONSULTA ID CHROMEBOOK
     include 'conexao.php';
     
-    $buscar_cb = " SELECT ID FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
+    $buscar_cb = " SELECT * FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
     $query_cb = mysqli_query($conn, $buscar_cb);
     // FIM TESTE CONSULTA ID CHROMEBOOK
 ?>
