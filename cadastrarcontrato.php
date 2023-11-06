@@ -210,7 +210,7 @@
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
-                            <input type="number" name="matricula" class="form-control input fonte" disabled value="<?php echo $RM ?>">
+                            <input type="number" name="matricula" class="form-control input fonte" disabled value="<?php echo $selaluno?>">
                         </div>
                        
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
