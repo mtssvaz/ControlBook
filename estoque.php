@@ -139,7 +139,7 @@ $query_cadastros = mysqli_query($conn, $buscar_cadastros);
                             <div class="dropdown-menu" aria-labelledby="menuCadastro">
                                 <a class="dropdown-item fonte" href="cadastraraluno.html">Cadastrar Aluno</a>
                                 <a class="dropdown-item fonte" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                                <a class="dropdown-item fonte" href="cadastrar.html">Cadastrar Contrato</a>
+                                <a class="dropdown-item fonte" href="cadastrarcontrato.php">Cadastrar Contrato</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
