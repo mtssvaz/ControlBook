@@ -10,7 +10,7 @@
     // FIM CONSULTA ALUNO<?php 
     //CONSULTA RM
     if(!empty($selaluno)){
-        $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ALUNO = $selaluno";
+        $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ID = $selaluno";
         $query_RM = mysqli_query($conn, $buscar_RM);
     }
     // FIM CONSULTA RM
