@@ -1,3 +1,13 @@
+//TESTE CONSULTA ID CHROMEBOOK
+<?php
+
+    include 'conexao.php';
+    
+    $buscar_cb = " SELECT ID FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
+    $query_cb = mysqli_query($conn, $buscar_cb);
+
+?>
+// FIM TESTE CONSULTA ID CHROMEBOOK
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -91,19 +101,8 @@
         }
         // FIM ACESSIBILIDADE
 
-        // TESTE CONSULTA ID CHROMEBOOK
-        <?php
-
-            include 'conexao.php';
-            
-            $buscar_cb = " SELECT ID FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
-            $query_cb = mysqli_query($conn, $buscar_cb);
-
-        ?>
-        // FIM TESTE CONSULTA ID CHROMEBOOK
-    </script>
-
-    <nav class="navbar-expand-md fixed-top">
+        </script>
+        <nav class="navbar-expand-md fixed-top">
         <div>
             <nav class="acessibilidade">
                 <div class="row justify-content-center align-items-center p-1">
