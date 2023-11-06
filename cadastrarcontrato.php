@@ -1,16 +1,17 @@
 <?php
-    //CONSULTA ID CHROMEBOOK
     include 'conexao.php';
-    
+    //CONSULTA ID CHROMEBOOK
     $buscar_cb = " SELECT * FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
     $query_cb = mysqli_query($conn, $buscar_cb);
     // FIM CONSULTA ID CHROMEBOOK
     //CONSULTA ALUNO
-    include 'conexao.php';
-    
     $buscar_aluno = " SELECT * FROM CADASTROALUNO";
     $query_aluno = mysqli_query($conn, $buscar_aluno);
-    // FIM CONSULTA ID CHROMEBOOK
+    // FIM CONSULTA ALUNO<?php 
+    //CONSULTA RM
+    $buscar_RM = " SELECT matricula FROM CADASTROALUNO WHERE ALUNO = '$selaluno'";
+    $query_RM = mysqli_query($conn, $buscar_RM);
+    // FIM CONSULTA RM
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -186,20 +187,21 @@
                                 <?php 
                                     while ($ALUNO = mysqli_fetch_array($query_aluno)):; 
                                     ?>
-                                        <option value="<?php echo $ALUNO["aluno"];
+                                        <option value="<?php echo $ALUNO["ID"];
                                         ?>">
                                         <?php echo $ALUNO["aluno"];
                                         ?>
                                         </option>
                                     <?php 
                                     endwhile; 
+                                    $selaluno = $('#idaluno :selected').text();
                                 ?> 
                             </select>
                             <!--<input type="text" name="aluno" class="form-control input fonte">-->
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
-                            <input type="number" name="matricula" class="form-control input fonte">
+                            <input type="number" name="matricula" class="form-control input fonte" disabled value="<?php echo $RM ?>">
                         </div>
                        
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
