@@ -42,7 +42,7 @@
 
 <body>
     <script>
-        alterado = false
+        alterado = false;
         $('#idaluno').change(function(){
             alterado = true;
         }
