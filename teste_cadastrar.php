@@ -202,19 +202,15 @@
                             <select id="idaten" name="IdCB" class="form-control input fonte" required>
                                 <option class="fonte" value="" selected disabled>Selecione</option>
                                 <?php 
-                                    // use a while loop to fetch data 
-                                    // from the $all_categories variable 
-                                    // and individually display as an option
                                     while ($CB = mysqli_fetch_array($query_cb)):; 
                                     ?>
-                                        <option value="<?php echo $CB["ID"];// The value we usually set is the primary key
+                                        <option value="<?php echo $CB["ID"];
                                         ?>">
-                                        <?php echo $CB["ID"];// To show the category name to the user
+                                        <?php echo $CB["serial"];
                                         ?>
                                         </option>
                                     <?php 
                                     endwhile; 
-                                    // While loop must be terminated
                                 ?> 
                             </select>
                             <!--<input type="number" name="idchrome" class="form-control input fonte" required>-->
