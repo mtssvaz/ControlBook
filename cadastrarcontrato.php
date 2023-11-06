@@ -42,10 +42,6 @@
 
 <body>
     <script>
-        alterado = false;
-        $('#idaluno').change(function(){
-            alterado = true;
-        });
         function verificarAcesso() {
             var loggedIn = sessionStorage.getItem("loggedIn");
         
@@ -197,9 +193,14 @@
                                         ?>
                                         </option>
                                     <?php 
-                                    endwhile; 
+                                    endwhile;  
+                                    $alterado = false;
+                                    $('#idaluno').change(function(){
+                                        $alterado = true;
+                                    });
                                     //$selaluno = $('#idaluno :selected').text();
                                 ?> 
+                               
                             </select>
                             <!--<input type="text" name="aluno" class="form-control input fonte">-->
                         </div>
