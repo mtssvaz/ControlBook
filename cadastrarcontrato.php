@@ -45,7 +45,7 @@
         alterado = false;
         $('#idaluno').change(function(){
             alterado = true;
-        }
+        });
         function verificarAcesso() {
             var loggedIn = sessionStorage.getItem("loggedIn");
         
