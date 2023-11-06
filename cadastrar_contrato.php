@@ -1,10 +1,16 @@
 <?php
-    //TESTE CONSULTA ID CHROMEBOOK
+    //CONSULTA ID CHROMEBOOK
     include 'conexao.php';
     
     $buscar_cb = " SELECT * FROM CADASTROCHROME WHERE LOCALIZACAO='Estoque'";
     $query_cb = mysqli_query($conn, $buscar_cb);
-    // FIM TESTE CONSULTA ID CHROMEBOOK
+    // FIM CONSULTA ID CHROMEBOOK
+    //CONSULTA ALUNO
+    include 'conexao.php';
+    
+    $buscar_aluno = " SELECT * FROM CADASTROALUNO";
+    $query_aluno = mysqli_query($conn, $buscar_aluno);
+    // FIM CONSULTA ID CHROMEBOOK
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -138,7 +144,7 @@
                             <div class="dropdown-menu" aria-labelledby="menuCadastro">
                                 <a class="dropdown-item fonte" href="cadastraraluno.html">Cadastrar Aluno</a>
                                 <a class="dropdown-item fonte" href="cadastrarchrome.html">Cadastrar Chromebook</a>
-                                <a class="dropdown-item fonte" href="cadastrar.html">Cadastrar Contrato</a>
+                                <a class="dropdown-item fonte" href="cadastrar_contrato.php">Cadastrar Contrato</a>
                             </div>
                         </li>
                         <li class="nav-item dropdown">
@@ -175,7 +181,21 @@
                     <div class="row">
                         <div class="col-12">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">Nome do aluno</label>
-                            <input type="text" name="aluno" class="form-control input fonte">
+                            <select id="idaluno" name="aluno" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
+                                <?php 
+                                    while ($ALUNO = mysqli_fetch_array($query_aluno)):; 
+                                    ?>
+                                        <option value="<?php echo $ALUNO["aluno"];
+                                        ?>">
+                                        <?php echo $ALUNO["aluno"];
+                                        ?>
+                                        </option>
+                                    <?php 
+                                    endwhile; 
+                                ?> 
+                            </select>
+                            <!--<input type="text" name="aluno" class="form-control input fonte">-->
                         </div>
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
@@ -197,7 +217,7 @@
                         </div>    
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="password" class="pt-3 font-weight-bold fonte">ID do Chromebook</label>
-                            <select id="idchrome" name="IdCB" class="form-control input fonte" required>
+                            <select id="chrome" name="idchrome" class="form-control input fonte" required>
                                 <option class="fonte" value="" selected disabled>Selecione</option>
                                 <?php 
                                     while ($CB = mysqli_fetch_array($query_cb)):; 
