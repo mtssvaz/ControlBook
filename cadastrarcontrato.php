@@ -194,10 +194,6 @@
                                         </option>
                                     <?php 
                                     endwhile;  
-                                    $alterado = false;
-                                    $('#idaluno').change(function(){
-                                        $alterado = true;
-                                    });
                                     //$selaluno = $('#idaluno :selected').text();
                                 ?> 
                                
