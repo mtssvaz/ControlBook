@@ -15,7 +15,6 @@
         	while($receber_cadastros = mysqli_fetch_array($query_cadastros))
         	{
             	$aluno = $receber_cadastros['aluno'];
-            	$matriucla = $receber_cadastros ['matricula'];
                 $atendente = $receber_cadastros['atendente'];
             	$idchrome = $receber_cadastros['idchrome'];
                 $dt_entrega = $receber_cadastros['dt_entrega'];
@@ -124,12 +123,7 @@
                             <input type="text" name="aluno" class="form-control input" value="<?php echo $aluno ?>" required>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-12">
-                            <label for="password" class="pt-3 font-weight-bold">Núm. da matrícula</label>
-                            <input type="text" name="matricula" class="form-control input" value="<?php echo $matricula ?>"required>
-                        </div>
-                    </div>
+                  
                     <div class="row">
                        
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
