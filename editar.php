@@ -21,7 +21,6 @@ mysqli_real_connect(
 // Obtém os dados do formulário
 $ID = $_POST['ID'];
 $aluno = $_POST['aluno'];
-$matricula = $_POST['matricula'];
 $atendente = $_POST['atendente'];
 $idchrome = $_POST['idchrome'];
 $dt_entrega = $_POST['dt_entrega'];
@@ -30,7 +29,6 @@ $contrato = $_POST['contrato'];
 // Prepara uma consulta SQL para atualizar os dados na tabela
 $sql = "UPDATE CADASTRO SET
             aluno='{$aluno}',
-            matricula='{$matricula}',
             atendente='{$atendente}',
             idchrome='{$idchrome}',
             dt_entrega='{$dt_entrega}',
