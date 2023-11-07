@@ -194,24 +194,7 @@
                             </select>
                             <!--<input type="text" name="aluno" class="form-control input fonte">-->
                         </div>
-                        <div class="col-12 col-sm-12 col-md-6">
-                            <label for="usuario" class="pt-3 font-weight-bold fonte">Núm. da matrícula</label>
-                            <select id="rm" name="matricula" class="form-control input fonte" required>
-                                <option class="fonte" value="" selected disabled>Selecione</option>
-                                <?php 
-                                    while ($ALUNO = mysqli_fetch_array($query_aluno)):; 
-                                    ?>
-                                        <option value="<?php echo $ALUNO["matricula"];
-                                        ?>">
-                                        <?php echo $ALUNO["matricula"];
-                                        ?>
-                                        </option>
-                                    <?php 
-                                    endwhile; 
-                                ?> 
-                            </select>
-                            <!--<input type="number" name="matricula" class="form-control input fonte">-->
-                        </div>
+                       
                        
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="foraten" class="pt-3 fonte">Atendente</label>
