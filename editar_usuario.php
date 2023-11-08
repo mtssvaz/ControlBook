@@ -223,6 +223,7 @@
                             <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
                             <input type="date" name="dt_entrega" class="form-control input fonte" value="<?php echo $dt_entrega ?>" required>
                         </div>
+                        </div>
                             <label for="status" class="pt-3 font-weight-bold fonte">Status</label>
                             <select id="status" name="contrato" class="form-control input fonte" required>
                                 <option class="fonte" value="" selected disabled>Selecione</option>
