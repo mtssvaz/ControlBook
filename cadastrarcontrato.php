@@ -199,14 +199,8 @@
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="foraten" class="pt-3 fonte">Atendente</label>
                             <select id="idaten" name="atendente" class="form-control input fonte" required>
-                                <option class="fonte" value="" selected disabled>Selecione</option>
-                                <option class="fonte" value="Mateus Vaz">Mateus Vaz</option>
-                                <option class="fonte" value="Patrick Rocha">Patrick Rocha</option>
-                                <option class="fonte" value="Patrick Manzo">Patrick Manzo</option>
-                                <option class="fonte" value="Solange Mendonça">Solange Mendonça</option> 
-                                <option class="fonte" value="Renato Vieira">Renato Vieira</option>
-                                <option class="fonte" value="Rosana Rosanita">Rosana Rosanita</option> 
-                                <option class="fonte" value="Valdiney Costa">Valdiney Costa</option> 
+                                <option class="fonte" value="Danilo">Danilo</option>
+                                <option class="fonte" value="Vanessa">Vanessa</option>
                             </select>
                         </div>    
                         <div class="col-12 col-sm-12 col-md-6">
