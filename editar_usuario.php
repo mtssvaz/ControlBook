@@ -212,7 +212,6 @@
                                 <option class="fonte" value="Vanessa">Vanessa</option>
                             </select>
                         </div>    
-                        <div class="row">
                         <div class="col-12 col-sm-12 col-md-6">
                             <label for="usuario" class="pt-3 font-weight-bold fonte">ID Chromebook</label>
                             <input type="text" name="idchrome" class="form-control input fonte" value="<?php echo $idchrome ?>" required>
@@ -223,7 +222,7 @@
                             <label for="dt_entrega" class="pt-3 font-weight-bold fonte">Data de entrega</label>
                             <input type="date" name="dt_entrega" class="form-control input fonte" value="<?php echo $dt_entrega ?>" required>
                         </div>
-                        </div>
+                        <div class="col-12 col-sm-12 col-md-6">
                             <label for="status" class="pt-3 font-weight-bold fonte">Status</label>
                             <select id="status" name="contrato" class="form-control input fonte" required>
                                 <option class="fonte" value="" selected disabled>Selecione</option>
