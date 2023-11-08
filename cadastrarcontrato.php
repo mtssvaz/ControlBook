@@ -199,6 +199,7 @@
                         <div class="col-12 col-sm-12 col-md-6 font-weight-bold">
                             <label for="foraten" class="pt-3 fonte">Atendente</label>
                             <select id="idaten" name="atendente" class="form-control input fonte" required>
+                                <option class="fonte" value="" selected disabled>Selecione</option>
                                 <option class="fonte" value="Danilo">Danilo</option>
                                 <option class="fonte" value="Vanessa">Vanessa</option>
                             </select>
